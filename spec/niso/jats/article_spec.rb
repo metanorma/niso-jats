@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../../../lib/niso/jats/article"
+require_relative "../../../lib/niso/jats"
 
 RSpec.describe Niso::Jats::Article do
   def file_contents(filename)

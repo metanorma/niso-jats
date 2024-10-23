@@ -11,312 +11,304 @@ module Niso
   module Jats
     class Error < StandardError; end
 
-    class Abbrev < Lutaml::Model::Serializable; end
-    class AbbrevJournalTitle < Lutaml::Model::Serializable; end
-    class Abstract < Lutaml::Model::Serializable; end
-    class AccessDate < Lutaml::Model::Serializable; end
-    class Ack < Lutaml::Model::Serializable; end
-    class AddrLine < Lutaml::Model::Serializable; end
-    class Address < Lutaml::Model::Serializable; end
-    class Aff < Lutaml::Model::Serializable; end
-    class AffAlternatives < Lutaml::Model::Serializable; end
-    class AltText < Lutaml::Model::Serializable; end
-    class AltTitle < Lutaml::Model::Serializable; end
-    class Alternatives < Lutaml::Model::Serializable; end
-    class Annotation < Lutaml::Model::Serializable; end
-    class Anonymous < Lutaml::Model::Serializable; end
-    class Answer < Lutaml::Model::Serializable; end
-    class AnswerSet < Lutaml::Model::Serializable; end
-    class App < Lutaml::Model::Serializable; end
-    class AppGroup < Lutaml::Model::Serializable; end
-    class Array < Lutaml::Model::Serializable; end
-    class Article < Lutaml::Model::Serializable; end
-    class ArticleCategories < Lutaml::Model::Serializable; end
-    class ArticleId < Lutaml::Model::Serializable; end
-    class ArticleMeta < Lutaml::Model::Serializable; end
-    class ArticleTitle < Lutaml::Model::Serializable; end
-    class ArticleVersion < Lutaml::Model::Serializable; end
-    class ArticleVersionAlternatives < Lutaml::Model::Serializable; end
-    class Attrib < Lutaml::Model::Serializable; end
-    class AuthorComment < Lutaml::Model::Serializable; end
-    class AuthorNotes < Lutaml::Model::Serializable; end
-    class AwardDesc < Lutaml::Model::Serializable; end
-    class AwardGroup < Lutaml::Model::Serializable; end
-    class AwardId < Lutaml::Model::Serializable; end
-    class AwardName < Lutaml::Model::Serializable; end
-    class Back < Lutaml::Model::Serializable; end
-    class Bio < Lutaml::Model::Serializable; end
-    class BlockAlternatives < Lutaml::Model::Serializable; end
-    class Body < Lutaml::Model::Serializable; end
-    class Bold < Lutaml::Model::Serializable; end
-    class BoxedText < Lutaml::Model::Serializable; end
-    class Break < Lutaml::Model::Serializable; end
-    class Caption < Lutaml::Model::Serializable; end
-    class ChapterTitle < Lutaml::Model::Serializable; end
-    class ChemStruct < Lutaml::Model::Serializable; end
-    class ChemStructWrap < Lutaml::Model::Serializable; end
-    class CitationAlternatives < Lutaml::Model::Serializable; end
-    class City < Lutaml::Model::Serializable; end
-    class Code < Lutaml::Model::Serializable; end
-    class Col < Lutaml::Model::Serializable; end
-    class Colgroup < Lutaml::Model::Serializable; end
-    class Collab < Lutaml::Model::Serializable; end
-    class CollabAlternatives < Lutaml::Model::Serializable; end
-    class Comment < Lutaml::Model::Serializable; end
-    class CompoundKwd < Lutaml::Model::Serializable; end
-    class CompoundKwdPart < Lutaml::Model::Serializable; end
-    class CompoundSubject < Lutaml::Model::Serializable; end
-    class CompoundSubjectPart < Lutaml::Model::Serializable; end
-    class ConfAcronym < Lutaml::Model::Serializable; end
-    class ConfDate < Lutaml::Model::Serializable; end
-    class ConfLoc < Lutaml::Model::Serializable; end
-    class ConfName < Lutaml::Model::Serializable; end
-    class ConfNum < Lutaml::Model::Serializable; end
-    class ConfSponsor < Lutaml::Model::Serializable; end
-    class ConfTheme < Lutaml::Model::Serializable; end
-    class Conference < Lutaml::Model::Serializable; end
-    class Contrib < Lutaml::Model::Serializable; end
-    class ContribGroup < Lutaml::Model::Serializable; end
-    class ContribId < Lutaml::Model::Serializable; end
-    class ContributedResourceGroup < Lutaml::Model::Serializable; end
-    class CopyrightHolder < Lutaml::Model::Serializable; end
-    class CopyrightStatement < Lutaml::Model::Serializable; end
-    class CopyrightYear < Lutaml::Model::Serializable; end
-    class Corresp < Lutaml::Model::Serializable; end
-    class Count < Lutaml::Model::Serializable; end
-    class Country < Lutaml::Model::Serializable; end
-    class Counts < Lutaml::Model::Serializable; end
-    class CustomMeta < Lutaml::Model::Serializable; end
-    class CustomMetaGroup < Lutaml::Model::Serializable; end
-    class DataTitle < Lutaml::Model::Serializable; end
-    class Date < Lutaml::Model::Serializable; end
-    class DateInCitation < Lutaml::Model::Serializable; end
-    class Day < Lutaml::Model::Serializable; end
-    class Def < Lutaml::Model::Serializable; end
-    class DefHead < Lutaml::Model::Serializable; end
-    class DefItem < Lutaml::Model::Serializable; end
-    class DefList < Lutaml::Model::Serializable; end
-    class Degrees < Lutaml::Model::Serializable; end
-    class DispFormula < Lutaml::Model::Serializable; end
-    class DispFormulaGroup < Lutaml::Model::Serializable; end
-    class DispQuote < Lutaml::Model::Serializable; end
-    class Edition < Lutaml::Model::Serializable; end
-    class ElementCitation < Lutaml::Model::Serializable; end
-    class ElocationId < Lutaml::Model::Serializable; end
-    class Email < Lutaml::Model::Serializable; end
-    class EquationCount < Lutaml::Model::Serializable; end
-    class Era < Lutaml::Model::Serializable; end
-    class Etal < Lutaml::Model::Serializable; end
-    class Event < Lutaml::Model::Serializable; end
-    class EventDesc < Lutaml::Model::Serializable; end
-    class Explanation < Lutaml::Model::Serializable; end
-    class ExtLink < Lutaml::Model::Serializable; end
-    class ExtendedBy < Lutaml::Model::Serializable; end
-    class Fax < Lutaml::Model::Serializable; end
-    class Fig < Lutaml::Model::Serializable; end
-    class FigCount < Lutaml::Model::Serializable; end
-    class FigGroup < Lutaml::Model::Serializable; end
-    class FixedCase < Lutaml::Model::Serializable; end
-    class FloatsGroup < Lutaml::Model::Serializable; end
-    class Fn < Lutaml::Model::Serializable; end
-    class FnGroup < Lutaml::Model::Serializable; end
-    class Fpage < Lutaml::Model::Serializable; end
-    class Front < Lutaml::Model::Serializable; end
-    class FrontStub < Lutaml::Model::Serializable; end
-    class FundingGroup < Lutaml::Model::Serializable; end
-    class FundingSource < Lutaml::Model::Serializable; end
-    class FundingStatement < Lutaml::Model::Serializable; end
-    class GivenNames < Lutaml::Model::Serializable; end
-    class Glossary < Lutaml::Model::Serializable; end
-    class GlyphData < Lutaml::Model::Serializable; end
-    class GlyphRef < Lutaml::Model::Serializable; end
-    class Gov < Lutaml::Model::Serializable; end
-    class Graphic < Lutaml::Model::Serializable; end
-    class History < Lutaml::Model::Serializable; end
-    class Hr < Lutaml::Model::Serializable; end
-    class IndexTerm < Lutaml::Model::Serializable; end
-    class IndexTermRangeEnd < Lutaml::Model::Serializable; end
-    class InlineFormula < Lutaml::Model::Serializable; end
-    class InlineGraphic < Lutaml::Model::Serializable; end
-    class InlineMedia < Lutaml::Model::Serializable; end
-    class InlineSupplementaryMaterial < Lutaml::Model::Serializable; end
-    class Institution < Lutaml::Model::Serializable; end
-    class InstitutionId < Lutaml::Model::Serializable; end
-    class InstitutionWrap < Lutaml::Model::Serializable; end
-    class Isbn < Lutaml::Model::Serializable; end
-    class Issn < Lutaml::Model::Serializable; end
-    class IssnL < Lutaml::Model::Serializable; end
-    class Issue < Lutaml::Model::Serializable; end
-    class IssueId < Lutaml::Model::Serializable; end
-    class IssuePart < Lutaml::Model::Serializable; end
-    class IssueSponsor < Lutaml::Model::Serializable; end
-    class IssueSubtitle < Lutaml::Model::Serializable; end
-    class IssueTitle < Lutaml::Model::Serializable; end
-    class IssueTitleGroup < Lutaml::Model::Serializable; end
-    class Italic < Lutaml::Model::Serializable; end
-    class JournalId < Lutaml::Model::Serializable; end
-    class JournalMeta < Lutaml::Model::Serializable; end
-    class JournalSubtitle < Lutaml::Model::Serializable; end
-    class JournalTitle < Lutaml::Model::Serializable; end
-    class JournalTitleGroup < Lutaml::Model::Serializable; end
-    class Kwd < Lutaml::Model::Serializable; end
-    class KwdGroup < Lutaml::Model::Serializable; end
-    class Label < Lutaml::Model::Serializable; end
-    class Label < Lutaml::Model::Serializable; end
-    class License < Lutaml::Model::Serializable; end
-    class LicenseP < Lutaml::Model::Serializable; end
-    class LicenseParagraph < Lutaml::Model::Serializable; end
-    class List < Lutaml::Model::Serializable; end
-    class ListItem < Lutaml::Model::Serializable; end
-    class LongDesc < Lutaml::Model::Serializable; end
-    class Lpage < Lutaml::Model::Serializable; end
-    class Media < Lutaml::Model::Serializable; end
-    class MetaName < Lutaml::Model::Serializable; end
-    class MetaValue < Lutaml::Model::Serializable; end
-    class MilestoneEnd < Lutaml::Model::Serializable; end
-    class MilestoneStart < Lutaml::Model::Serializable; end
-    class MixedCitation < Lutaml::Model::Serializable; end
-    class Monospace < Lutaml::Model::Serializable; end
-    class Month < Lutaml::Model::Serializable; end
-    class Name < Lutaml::Model::Serializable; end
-    class NameAlternatives < Lutaml::Model::Serializable; end
-    class NamedContent < Lutaml::Model::Serializable; end
-    class NestedKwd < Lutaml::Model::Serializable; end
-    class NlmCitation < Lutaml::Model::Serializable; end
-    class Note < Lutaml::Model::Serializable; end
-    class Notes < Lutaml::Model::Serializable; end
-    class ObjectId < Lutaml::Model::Serializable; end
-    class OnBehalfOf < Lutaml::Model::Serializable; end
-    class OpenAccess < Lutaml::Model::Serializable; end
-    class Option < Lutaml::Model::Serializable; end
-    class Overline < Lutaml::Model::Serializable; end
-    class OverlineEnd < Lutaml::Model::Serializable; end
-    class OverlineStart < Lutaml::Model::Serializable; end
-    class P < Lutaml::Model::Serializable; end
-    class PageCount < Lutaml::Model::Serializable; end
-    class PageRange < Lutaml::Model::Serializable; end
-    class Paragraph < Lutaml::Model::Serializable; end
-    class PartTitle < Lutaml::Model::Serializable; end
-    class Patent < Lutaml::Model::Serializable; end
-    class Permissions < Lutaml::Model::Serializable; end
-    class PersonGroup < Lutaml::Model::Serializable; end
-    class Phone < Lutaml::Model::Serializable; end
-    class PostalCode < Lutaml::Model::Serializable; end
-    class Prefix < Lutaml::Model::Serializable; end
-    class Preformat < Lutaml::Model::Serializable; end
-    class Price < Lutaml::Model::Serializable; end
-    class PrincipalAwardRecipient < Lutaml::Model::Serializable; end
-    class PrincipalInvestigator < Lutaml::Model::Serializable; end
-    class PrivateChar < Lutaml::Model::Serializable; end
-    class ProcessingMeta < Lutaml::Model::Serializable; end
-    class Product < Lutaml::Model::Serializable; end
-    class PubDate < Lutaml::Model::Serializable; end
-    class PubDateNotAvailable < Lutaml::Model::Serializable; end
-    class PubHistory < Lutaml::Model::Serializable; end
-    class PubId < Lutaml::Model::Serializable; end
-    class Publisher < Lutaml::Model::Serializable; end
-    class PublisherLoc < Lutaml::Model::Serializable; end
-    class PublisherName < Lutaml::Model::Serializable; end
-    class Question < Lutaml::Model::Serializable; end
-    class QuestionPreamble < Lutaml::Model::Serializable; end
-    class QuestionWrap < Lutaml::Model::Serializable; end
-    class QuestionWrapGroup < Lutaml::Model::Serializable; end
-    class Rb < Lutaml::Model::Serializable; end
-    class Ref < Lutaml::Model::Serializable; end
-    class RefCount < Lutaml::Model::Serializable; end
-    class RefList < Lutaml::Model::Serializable; end
-    class RelatedArticle < Lutaml::Model::Serializable; end
-    class RelatedObject < Lutaml::Model::Serializable; end
-    class ResourceGroup < Lutaml::Model::Serializable; end
-    class ResourceId < Lutaml::Model::Serializable; end
-    class ResourceName < Lutaml::Model::Serializable; end
-    class ResourceWrap < Lutaml::Model::Serializable; end
-    class Response < Lutaml::Model::Serializable; end
-    class RestrictedBy < Lutaml::Model::Serializable; end
-    class Role < Lutaml::Model::Serializable; end
-    class Roman < Lutaml::Model::Serializable; end
-    class Rp < Lutaml::Model::Serializable; end
-    class Rt < Lutaml::Model::Serializable; end
-    class Ruby < Lutaml::Model::Serializable; end
-    class SansSerif < Lutaml::Model::Serializable; end
-    class Sc < Lutaml::Model::Serializable; end
-    class Season < Lutaml::Model::Serializable; end
-    class Sec < Lutaml::Model::Serializable; end
-    class SecMeta < Lutaml::Model::Serializable; end
-    class See < Lutaml::Model::Serializable; end
-    class SeeAlso < Lutaml::Model::Serializable; end
-    class SelfUri < Lutaml::Model::Serializable; end
-    class Series < Lutaml::Model::Serializable; end
-    class SeriesText < Lutaml::Model::Serializable; end
-    class SeriesTitle < Lutaml::Model::Serializable; end
-    class Sig < Lutaml::Model::Serializable; end
-    class SigBlock < Lutaml::Model::Serializable; end
-    class Size < Lutaml::Model::Serializable; end
-    class Source < Lutaml::Model::Serializable; end
-    class Speaker < Lutaml::Model::Serializable; end
-    class Speech < Lutaml::Model::Serializable; end
-    class State < Lutaml::Model::Serializable; end
-    class Statement < Lutaml::Model::Serializable; end
-    class Std < Lutaml::Model::Serializable; end
-    class StdOrganization < Lutaml::Model::Serializable; end
-    class Strike < Lutaml::Model::Serializable; end
-    class StringConf < Lutaml::Model::Serializable; end
-    class StringDate < Lutaml::Model::Serializable; end
-    class StringName < Lutaml::Model::Serializable; end
-    class StyledContent < Lutaml::Model::Serializable; end
-    class Sub < Lutaml::Model::Serializable; end
-    class SubArticle < Lutaml::Model::Serializable; end
-    class SubjGroup < Lutaml::Model::Serializable; end
-    class Subject < Lutaml::Model::Serializable; end
-    class Subtitle < Lutaml::Model::Serializable; end
-    class Suffix < Lutaml::Model::Serializable; end
-    class Sup < Lutaml::Model::Serializable; end
-    class Supplement < Lutaml::Model::Serializable; end
-    class SupplementaryMaterial < Lutaml::Model::Serializable; end
-    class SupportDescription < Lutaml::Model::Serializable; end
-    class SupportGroup < Lutaml::Model::Serializable; end
-    class SupportSource < Lutaml::Model::Serializable; end
-    class Surname < Lutaml::Model::Serializable; end
-    class Table < Lutaml::Model::Serializable; end
-    class TableCount < Lutaml::Model::Serializable; end
-    class TableWrap < Lutaml::Model::Serializable; end
-    class TableWrapFoot < Lutaml::Model::Serializable; end
-    class TableWrapGroup < Lutaml::Model::Serializable; end
-    class Target < Lutaml::Model::Serializable; end
-    class Tbody < Lutaml::Model::Serializable; end
-    class Td < Lutaml::Model::Serializable; end
-    class Term < Lutaml::Model::Serializable; end
-    class TermHead < Lutaml::Model::Serializable; end
-    class TexMath < Lutaml::Model::Serializable; end
-    class TextualForm < Lutaml::Model::Serializable; end
-    class Tfoot < Lutaml::Model::Serializable; end
-    class Th < Lutaml::Model::Serializable; end
-    class Thead < Lutaml::Model::Serializable; end
-    class TimeStamp < Lutaml::Model::Serializable; end
-    class Title < Lutaml::Model::Serializable; end
-    class TitleGroup < Lutaml::Model::Serializable; end
-    class Tr < Lutaml::Model::Serializable; end
-    class TransAbstract < Lutaml::Model::Serializable; end
-    class TransSource < Lutaml::Model::Serializable; end
-    class TransSubtitle < Lutaml::Model::Serializable; end
-    class TransTitle < Lutaml::Model::Serializable; end
-    class TransTitleGroup < Lutaml::Model::Serializable; end
-    class Underline < Lutaml::Model::Serializable; end
-    class UnderlineEnd < Lutaml::Model::Serializable; end
-    class UnderlineStart < Lutaml::Model::Serializable; end
-    class UnstructuredKwdGroup < Lutaml::Model::Serializable; end
-    class Uri < Lutaml::Model::Serializable; end
-    class VerseGroup < Lutaml::Model::Serializable; end
-    class VerseLine < Lutaml::Model::Serializable; end
-    class VersionElement < Lutaml::Model::Serializable; end
-    class Volume < Lutaml::Model::Serializable; end
-    class VolumeId < Lutaml::Model::Serializable; end
-    class VolumeIssueGroup < Lutaml::Model::Serializable; end
-    class VolumeSeries < Lutaml::Model::Serializable; end
-    class WordCount < Lutaml::Model::Serializable; end
-    class X < Lutaml::Model::Serializable; end
-    class Xref < Lutaml::Model::Serializable; end
-    class Year < Lutaml::Model::Serializable; end
+    LibJatsPath = File.dirname(__FILE__) + '/jats'
+
+    autoload :Abbrev, "#{LibJatsPath}/abbrev.rb"
+    autoload :AbbrevJournalTitle, "#{LibJatsPath}/abbrev_journal_title.rb"
+    autoload :Abstract, "#{LibJatsPath}/abstract.rb"
+    autoload :AccessDate, "#{LibJatsPath}/access_date.rb"
+    autoload :Ack, "#{LibJatsPath}/ack.rb"
+    autoload :AddrLine, "#{LibJatsPath}/addr_line.rb"
+    autoload :Address, "#{LibJatsPath}/address.rb"
+    autoload :Aff, "#{LibJatsPath}/aff.rb"
+    autoload :AffAlternatives, "#{LibJatsPath}/aff_alternatives.rb"
+    autoload :AltText, "#{LibJatsPath}/alt_text.rb"
+    autoload :AltTitle, "#{LibJatsPath}/alt_title.rb"
+    autoload :Alternatives, "#{LibJatsPath}/alternatives.rb"
+    autoload :Annotation, "#{LibJatsPath}/annotation.rb"
+    autoload :Anonymous, "#{LibJatsPath}/anonymous.rb"
+    autoload :Answer, "#{LibJatsPath}/answer.rb"
+    autoload :AnswerSet, "#{LibJatsPath}/answer_set.rb"
+    autoload :App, "#{LibJatsPath}/app.rb"
+    autoload :AppGroup, "#{LibJatsPath}/app_group.rb"
+    autoload :Array, "#{LibJatsPath}/array.rb"
+    autoload :Article, "#{LibJatsPath}/article.rb"
+    autoload :ArticleCategories, "#{LibJatsPath}/article_categories.rb"
+    autoload :ArticleId, "#{LibJatsPath}/article_id.rb"
+    autoload :ArticleMeta, "#{LibJatsPath}/article_meta.rb"
+    autoload :ArticleTitle, "#{LibJatsPath}/article_title.rb"
+    autoload :ArticleVersion, "#{LibJatsPath}/article_version.rb"
+    autoload :ArticleVersionAlternatives, "#{LibJatsPath}/article_version_alternatives.rb"
+    autoload :Attrib, "#{LibJatsPath}/attrib.rb"
+    autoload :AuthorComment, "#{LibJatsPath}/author_comment.rb"
+    autoload :AuthorNotes, "#{LibJatsPath}/author_notes.rb"
+    autoload :AwardDesc, "#{LibJatsPath}/award_desc.rb"
+    autoload :AwardGroup, "#{LibJatsPath}/award_group.rb"
+    autoload :AwardId, "#{LibJatsPath}/award_id.rb"
+    autoload :AwardName, "#{LibJatsPath}/award_name.rb"
+    autoload :Back, "#{LibJatsPath}/back.rb"
+    autoload :BasicText, "#{LibJatsPath}/basic_text.rb"
+    autoload :Bio, "#{LibJatsPath}/bio.rb"
+    autoload :BlockAlternatives, "#{LibJatsPath}/block_alternatives.rb"
+    autoload :Body, "#{LibJatsPath}/body.rb"
+    autoload :Bold, "#{LibJatsPath}/bold.rb"
+    autoload :BoxedText, "#{LibJatsPath}/boxed_text.rb"
+    autoload :Break, "#{LibJatsPath}/break.rb"
+    autoload :Caption, "#{LibJatsPath}/caption.rb"
+    autoload :ChapterTitle, "#{LibJatsPath}/chapter_title.rb"
+    autoload :ChemStruct, "#{LibJatsPath}/chem_struct.rb"
+    autoload :ChemStructWrap, "#{LibJatsPath}/chem_struct_wrap.rb"
+    autoload :CitationAlternatives, "#{LibJatsPath}/citation_alternatives.rb"
+    autoload :City, "#{LibJatsPath}/city.rb"
+    autoload :Code, "#{LibJatsPath}/code.rb"
+    autoload :Col, "#{LibJatsPath}/col.rb"
+    autoload :Colgroup, "#{LibJatsPath}/colgroup.rb"
+    autoload :Collab, "#{LibJatsPath}/collab.rb"
+    autoload :CollabAlternatives, "#{LibJatsPath}/collab_alternatives.rb"
+    autoload :Comment, "#{LibJatsPath}/comment.rb"
+    autoload :CompoundKwd, "#{LibJatsPath}/compound_kwd.rb"
+    autoload :CompoundKwdPart, "#{LibJatsPath}/compound_kwd_part.rb"
+    autoload :CompoundSubject, "#{LibJatsPath}/compound_subject.rb"
+    autoload :CompoundSubjectPart, "#{LibJatsPath}/compound_subject_part.rb"
+    autoload :ConfAcronym, "#{LibJatsPath}/conf_acronym.rb"
+    autoload :ConfDate, "#{LibJatsPath}/conf_date.rb"
+    autoload :ConfLoc, "#{LibJatsPath}/conf_loc.rb"
+    autoload :ConfName, "#{LibJatsPath}/conf_name.rb"
+    autoload :ConfNum, "#{LibJatsPath}/conf_num.rb"
+    autoload :ConfSponsor, "#{LibJatsPath}/conf_sponsor.rb"
+    autoload :ConfTheme, "#{LibJatsPath}/conf_theme.rb"
+    autoload :Conference, "#{LibJatsPath}/conference.rb"
+    autoload :Contrib, "#{LibJatsPath}/contrib.rb"
+    autoload :ContribGroup, "#{LibJatsPath}/contrib_group.rb"
+    autoload :ContribId, "#{LibJatsPath}/contrib_id.rb"
+    autoload :ContributedResourceGroup, "#{LibJatsPath}/contributed_resource_group.rb"
+    autoload :CopyrightHolder, "#{LibJatsPath}/copyright_holder.rb"
+    autoload :CopyrightStatement, "#{LibJatsPath}/copyright_statement.rb"
+    autoload :CopyrightYear, "#{LibJatsPath}/copyright_year.rb"
+    autoload :Corresp, "#{LibJatsPath}/corresp.rb"
+    autoload :Count, "#{LibJatsPath}/count.rb"
+    autoload :Country, "#{LibJatsPath}/country.rb"
+    autoload :Counts, "#{LibJatsPath}/counts.rb"
+    autoload :CustomMeta, "#{LibJatsPath}/custom_meta.rb"
+    autoload :CustomMetaGroup, "#{LibJatsPath}/custom_meta_group.rb"
+    autoload :DataTitle, "#{LibJatsPath}/data_title.rb"
+    autoload :Date, "#{LibJatsPath}/date.rb"
+    autoload :DateInCitation, "#{LibJatsPath}/date_in_citation.rb"
+    autoload :Day, "#{LibJatsPath}/day.rb"
+    autoload :Def, "#{LibJatsPath}/def.rb"
+    autoload :DefHead, "#{LibJatsPath}/def_head.rb"
+    autoload :DefItem, "#{LibJatsPath}/def_item.rb"
+    autoload :DefList, "#{LibJatsPath}/def_list.rb"
+    autoload :Degrees, "#{LibJatsPath}/degrees.rb"
+    autoload :DispFormula, "#{LibJatsPath}/disp_formula.rb"
+    autoload :DispFormulaGroup, "#{LibJatsPath}/disp_formula_group.rb"
+    autoload :DispQuote, "#{LibJatsPath}/disp_quote.rb"
+    autoload :Edition, "#{LibJatsPath}/edition.rb"
+    autoload :ElementCitation, "#{LibJatsPath}/element_citation.rb"
+    autoload :ElocationId, "#{LibJatsPath}/elocation_id.rb"
+    autoload :Email, "#{LibJatsPath}/email.rb"
+    autoload :EquationCount, "#{LibJatsPath}/equation_count.rb"
+    autoload :Era, "#{LibJatsPath}/era.rb"
+    autoload :Etal, "#{LibJatsPath}/etal.rb"
+    autoload :Event, "#{LibJatsPath}/event.rb"
+    autoload :EventDesc, "#{LibJatsPath}/event_desc.rb"
+    autoload :Explanation, "#{LibJatsPath}/explanation.rb"
+    autoload :ExtLink, "#{LibJatsPath}/ext_link.rb"
+    autoload :ExtendedBy, "#{LibJatsPath}/extended_by.rb"
+    autoload :Fax, "#{LibJatsPath}/fax.rb"
+    autoload :Fig, "#{LibJatsPath}/fig.rb"
+    autoload :FigCount, "#{LibJatsPath}/fig_count.rb"
+    autoload :FigGroup, "#{LibJatsPath}/fig_group.rb"
+    autoload :FixedCase, "#{LibJatsPath}/fixed_case.rb"
+    autoload :FloatsGroup, "#{LibJatsPath}/floats_group.rb"
+    autoload :Fn, "#{LibJatsPath}/fn.rb"
+    autoload :FnGroup, "#{LibJatsPath}/fn_group.rb"
+    autoload :Fpage, "#{LibJatsPath}/fpage.rb"
+    autoload :Front, "#{LibJatsPath}/front.rb"
+    autoload :FrontStub, "#{LibJatsPath}/front_stub.rb"
+    autoload :FundingGroup, "#{LibJatsPath}/funding_group.rb"
+    autoload :FundingSource, "#{LibJatsPath}/funding_source.rb"
+    autoload :FundingStatement, "#{LibJatsPath}/funding_statement.rb"
+    autoload :GivenNames, "#{LibJatsPath}/given_names.rb"
+    autoload :Glossary, "#{LibJatsPath}/glossary.rb"
+    autoload :GlyphData, "#{LibJatsPath}/glyph_data.rb"
+    autoload :GlyphRef, "#{LibJatsPath}/glyph_ref.rb"
+    autoload :Gov, "#{LibJatsPath}/gov.rb"
+    autoload :Graphic, "#{LibJatsPath}/graphic.rb"
+    autoload :History, "#{LibJatsPath}/history.rb"
+    autoload :Hr, "#{LibJatsPath}/hr.rb"
+    autoload :IndexTerm, "#{LibJatsPath}/index_term.rb"
+    autoload :IndexTermRangeEnd, "#{LibJatsPath}/index_term_range_end.rb"
+    autoload :InlineFormula, "#{LibJatsPath}/inline_formula.rb"
+    autoload :InlineGraphic, "#{LibJatsPath}/inline_graphic.rb"
+    autoload :InlineMedia, "#{LibJatsPath}/inline_media.rb"
+    autoload :InlineSupplementaryMaterial, "#{LibJatsPath}/inline_supplementary_material.rb"
+    autoload :Institution, "#{LibJatsPath}/institution.rb"
+    autoload :InstitutionId, "#{LibJatsPath}/institution_id.rb"
+    autoload :InstitutionWrap, "#{LibJatsPath}/institution_wrap.rb"
+    autoload :Isbn, "#{LibJatsPath}/isbn.rb"
+    autoload :Issn, "#{LibJatsPath}/issn.rb"
+    autoload :IssnL, "#{LibJatsPath}/issn_l.rb"
+    autoload :Issue, "#{LibJatsPath}/issue.rb"
+    autoload :IssueId, "#{LibJatsPath}/issue_id.rb"
+    autoload :IssuePart, "#{LibJatsPath}/issue_part.rb"
+    autoload :IssueSponsor, "#{LibJatsPath}/issue_sponsor.rb"
+    autoload :IssueSubtitle, "#{LibJatsPath}/issue_subtitle.rb"
+    autoload :IssueTitle, "#{LibJatsPath}/issue_title.rb"
+    autoload :IssueTitleGroup, "#{LibJatsPath}/issue_title_group.rb"
+    autoload :Italic, "#{LibJatsPath}/italic.rb"
+    autoload :JournalId, "#{LibJatsPath}/journal_id.rb"
+    autoload :JournalMeta, "#{LibJatsPath}/journal_meta.rb"
+    autoload :JournalSubtitle, "#{LibJatsPath}/journal_subtitle.rb"
+    autoload :JournalTitle, "#{LibJatsPath}/journal_title.rb"
+    autoload :JournalTitleGroup, "#{LibJatsPath}/journal_title_group.rb"
+    autoload :Kwd, "#{LibJatsPath}/kwd.rb"
+    autoload :KwdGroup, "#{LibJatsPath}/kwd_group.rb"
+    autoload :Label, "#{LibJatsPath}/label.rb"
+    autoload :License, "#{LibJatsPath}/license.rb"
+    autoload :LicenseParagraph, "#{LibJatsPath}/license_paragraph.rb"
+    autoload :List, "#{LibJatsPath}/list.rb"
+    autoload :ListItem, "#{LibJatsPath}/list_item.rb"
+    autoload :LongDesc, "#{LibJatsPath}/long_desc.rb"
+    autoload :Lpage, "#{LibJatsPath}/lpage.rb"
+    autoload :Media, "#{LibJatsPath}/media.rb"
+    autoload :MetaName, "#{LibJatsPath}/meta_name.rb"
+    autoload :MetaValue, "#{LibJatsPath}/meta_value.rb"
+    autoload :MilestoneEnd, "#{LibJatsPath}/milestone_end.rb"
+    autoload :MilestoneStart, "#{LibJatsPath}/milestone_start.rb"
+    autoload :MixedCitation, "#{LibJatsPath}/mixed_citation.rb"
+    autoload :Monospace, "#{LibJatsPath}/monospace.rb"
+    autoload :Month, "#{LibJatsPath}/month.rb"
+    autoload :Name, "#{LibJatsPath}/name.rb"
+    autoload :NameAlternatives, "#{LibJatsPath}/name_alternatives.rb"
+    autoload :NamedContent, "#{LibJatsPath}/named_content.rb"
+    autoload :NestedKwd, "#{LibJatsPath}/nested_kwd.rb"
+    autoload :NlmCitation, "#{LibJatsPath}/nlm_citation.rb"
+    autoload :Note, "#{LibJatsPath}/note.rb"
+    autoload :Notes, "#{LibJatsPath}/notes.rb"
+    autoload :ObjectId, "#{LibJatsPath}/object_id.rb"
+    autoload :OnBehalfOf, "#{LibJatsPath}/on_behalf_of.rb"
+    autoload :OpenAccess, "#{LibJatsPath}/open_access.rb"
+    autoload :Option, "#{LibJatsPath}/option.rb"
+    autoload :Overline, "#{LibJatsPath}/overline.rb"
+    autoload :PageCount, "#{LibJatsPath}/page_count.rb"
+    autoload :PageRange, "#{LibJatsPath}/page_range.rb"
+    autoload :Paragraph, "#{LibJatsPath}/paragraph.rb"
+    autoload :PartTitle, "#{LibJatsPath}/part_title.rb"
+    autoload :Patent, "#{LibJatsPath}/patent.rb"
+    autoload :Permissions, "#{LibJatsPath}/permissions.rb"
+    autoload :PersonGroup, "#{LibJatsPath}/person_group.rb"
+    autoload :Phone, "#{LibJatsPath}/phone.rb"
+    autoload :PostalCode, "#{LibJatsPath}/postal_code.rb"
+    autoload :Prefix, "#{LibJatsPath}/prefix.rb"
+    autoload :Preformat, "#{LibJatsPath}/preformat.rb"
+    autoload :Price, "#{LibJatsPath}/price.rb"
+    autoload :PrincipalAwardRecipient, "#{LibJatsPath}/principal_award_recipient.rb"
+    autoload :PrincipalInvestigator, "#{LibJatsPath}/principal_investigator.rb"
+    autoload :PrivateChar, "#{LibJatsPath}/private_char.rb"
+    autoload :ProcessingMeta, "#{LibJatsPath}/processing_meta.rb"
+    autoload :Product, "#{LibJatsPath}/product.rb"
+    autoload :PubDate, "#{LibJatsPath}/pub_date.rb"
+    autoload :PubDateNotAvailable, "#{LibJatsPath}/pub_date_not_available.rb"
+    autoload :PubHistory, "#{LibJatsPath}/pub_history.rb"
+    autoload :PubId, "#{LibJatsPath}/pub_id.rb"
+    autoload :Publisher, "#{LibJatsPath}/publisher.rb"
+    autoload :PublisherLoc, "#{LibJatsPath}/publisher_loc.rb"
+    autoload :PublisherName, "#{LibJatsPath}/publisher_name.rb"
+    autoload :Question, "#{LibJatsPath}/question.rb"
+    autoload :QuestionPreamble, "#{LibJatsPath}/question_preamble.rb"
+    autoload :QuestionWrap, "#{LibJatsPath}/question_wrap.rb"
+    autoload :QuestionWrapGroup, "#{LibJatsPath}/question_wrap_group.rb"
+    autoload :Rb, "#{LibJatsPath}/rb.rb"
+    autoload :Ref, "#{LibJatsPath}/ref.rb"
+    autoload :RefCount, "#{LibJatsPath}/ref_count.rb"
+    autoload :RefList, "#{LibJatsPath}/ref_list.rb"
+    autoload :RelatedArticle, "#{LibJatsPath}/related_article.rb"
+    autoload :RelatedObject, "#{LibJatsPath}/related_object.rb"
+    autoload :ResourceGroup, "#{LibJatsPath}/resource_group.rb"
+    autoload :ResourceId, "#{LibJatsPath}/resource_id.rb"
+    autoload :ResourceName, "#{LibJatsPath}/resource_name.rb"
+    autoload :ResourceWrap, "#{LibJatsPath}/resource_wrap.rb"
+    autoload :Response, "#{LibJatsPath}/response.rb"
+    autoload :RestrictedBy, "#{LibJatsPath}/restricted_by.rb"
+    autoload :Role, "#{LibJatsPath}/role.rb"
+    autoload :Roman, "#{LibJatsPath}/roman.rb"
+    autoload :Rt, "#{LibJatsPath}/rt.rb"
+    autoload :Ruby, "#{LibJatsPath}/ruby.rb"
+    autoload :SansSerif, "#{LibJatsPath}/sans_serif.rb"
+    autoload :Sc, "#{LibJatsPath}/sc.rb"
+    autoload :Season, "#{LibJatsPath}/season.rb"
+    autoload :Sec, "#{LibJatsPath}/sec.rb"
+    autoload :SecMeta, "#{LibJatsPath}/sec_meta.rb"
+    autoload :See, "#{LibJatsPath}/see.rb"
+    autoload :SeeAlso, "#{LibJatsPath}/see_also.rb"
+    autoload :SelfUri, "#{LibJatsPath}/self_uri.rb"
+    autoload :Series, "#{LibJatsPath}/series.rb"
+    autoload :SeriesText, "#{LibJatsPath}/series_text.rb"
+    autoload :SeriesTitle, "#{LibJatsPath}/series_title.rb"
+    autoload :Sig, "#{LibJatsPath}/sig.rb"
+    autoload :SigBlock, "#{LibJatsPath}/sig_block.rb"
+    autoload :Size, "#{LibJatsPath}/size.rb"
+    autoload :Source, "#{LibJatsPath}/source.rb"
+    autoload :Speaker, "#{LibJatsPath}/speaker.rb"
+    autoload :Speech, "#{LibJatsPath}/speech.rb"
+    autoload :State, "#{LibJatsPath}/state.rb"
+    autoload :Statement, "#{LibJatsPath}/statement.rb"
+    autoload :Std, "#{LibJatsPath}/std.rb"
+    autoload :StdOrganization, "#{LibJatsPath}/std_organization.rb"
+    autoload :Strike, "#{LibJatsPath}/strike.rb"
+    autoload :StringDate, "#{LibJatsPath}/string_date.rb"
+    autoload :StringName, "#{LibJatsPath}/string_name.rb"
+    autoload :StyledContent, "#{LibJatsPath}/styled_content.rb"
+    autoload :Sub, "#{LibJatsPath}/sub.rb"
+    autoload :SubArticle, "#{LibJatsPath}/sub_article.rb"
+    autoload :SubjGroup, "#{LibJatsPath}/subj_group.rb"
+    autoload :Subject, "#{LibJatsPath}/subject.rb"
+    autoload :Subtitle, "#{LibJatsPath}/subtitle.rb"
+    autoload :Suffix, "#{LibJatsPath}/suffix.rb"
+    autoload :Sup, "#{LibJatsPath}/sup.rb"
+    autoload :Supplement, "#{LibJatsPath}/supplement.rb"
+    autoload :SupplementaryMaterial, "#{LibJatsPath}/supplementary_material.rb"
+    autoload :SupportDescription, "#{LibJatsPath}/support_description.rb"
+    autoload :SupportGroup, "#{LibJatsPath}/support_group.rb"
+    autoload :SupportSource, "#{LibJatsPath}/support_source.rb"
+    autoload :Surname, "#{LibJatsPath}/surname.rb"
+    autoload :Table, "#{LibJatsPath}/table.rb"
+    autoload :TableCount, "#{LibJatsPath}/table_count.rb"
+    autoload :TableWrap, "#{LibJatsPath}/table_wrap.rb"
+    autoload :TableWrapFoot, "#{LibJatsPath}/table_wrap_foot.rb"
+    autoload :TableWrapGroup, "#{LibJatsPath}/table_wrap_group.rb"
+    autoload :Target, "#{LibJatsPath}/target.rb"
+    autoload :Tbody, "#{LibJatsPath}/tbody.rb"
+    autoload :Td, "#{LibJatsPath}/td.rb"
+    autoload :Term, "#{LibJatsPath}/term.rb"
+    autoload :TermHead, "#{LibJatsPath}/term_head.rb"
+    autoload :TexMath, "#{LibJatsPath}/tex_math.rb"
+    autoload :TextualForm, "#{LibJatsPath}/textual_form.rb"
+    autoload :Tfoot, "#{LibJatsPath}/tfoot.rb"
+    autoload :Th, "#{LibJatsPath}/th.rb"
+    autoload :Thead, "#{LibJatsPath}/thead.rb"
+    autoload :TimeStamp, "#{LibJatsPath}/time_stamp.rb"
+    autoload :Title, "#{LibJatsPath}/title.rb"
+    autoload :TitleGroup, "#{LibJatsPath}/title_group.rb"
+    autoload :Tr, "#{LibJatsPath}/tr.rb"
+    autoload :TransAbstract, "#{LibJatsPath}/trans_abstract.rb"
+    autoload :TransSource, "#{LibJatsPath}/trans_source.rb"
+    autoload :TransSubtitle, "#{LibJatsPath}/trans_subtitle.rb"
+    autoload :TransTitle, "#{LibJatsPath}/trans_title.rb"
+    autoload :TransTitleGroup, "#{LibJatsPath}/trans_title_group.rb"
+    autoload :Underline, "#{LibJatsPath}/underline.rb"
+    autoload :Uri, "#{LibJatsPath}/uri.rb"
+    autoload :VerseGroup, "#{LibJatsPath}/verse_group.rb"
+    autoload :VerseLine, "#{LibJatsPath}/verse_line.rb"
+    autoload :Version, "#{LibJatsPath}/version.rb"
+    autoload :Volume, "#{LibJatsPath}/volume.rb"
+    autoload :VolumeId, "#{LibJatsPath}/volume_id.rb"
+    autoload :VolumeIssueGroup, "#{LibJatsPath}/volume_issue_group.rb"
+    autoload :VolumeSeries, "#{LibJatsPath}/volume_series.rb"
+    autoload :WordCount, "#{LibJatsPath}/word_count.rb"
+    autoload :Xref, "#{LibJatsPath}/xref.rb"
+    autoload :Year, "#{LibJatsPath}/year.rb"
   end
 end
 
