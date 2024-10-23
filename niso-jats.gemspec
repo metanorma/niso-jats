@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "lutaml-model"
   spec.add_runtime_dependency "nokogiri"
-  spec.add_dependency "zeitwerk", "~> 2.7"
+  spec.add_runtime_dependency "zeitwerk", "~> 2.6"
 
   spec.add_development_dependency "equivalent-xml"
   spec.add_development_dependency "pry", "~> 0.12.2"
