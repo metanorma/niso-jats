@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "back"
-require_relative "body"
-require_relative "floats_group"
-require_relative "front"
-require_relative "front_stub"
-require_relative "processing_meta"
 
 module Niso
   module Jats

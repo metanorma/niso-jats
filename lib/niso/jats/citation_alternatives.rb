@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "element_citation"
-require_relative "mixed_citation"
-require_relative "nlm_citation"
-require_relative "object_id"
 
 module Niso
   module Jats

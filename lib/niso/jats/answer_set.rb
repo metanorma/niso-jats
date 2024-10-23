@@ -2,14 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alt_title"
-require_relative "answer"
-require_relative "explanation"
-require_relative "label"
-require_relative "object_id"
-require_relative "paragraph"
-require_relative "subtitle"
-require_relative "title"
 
 module Niso
   module Jats

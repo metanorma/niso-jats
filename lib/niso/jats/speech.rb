@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "object_id"
-require_relative "paragraph"
-require_relative "speaker"
 
 module Niso
   module Jats

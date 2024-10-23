@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alt_title"
-require_relative "article_title"
-require_relative "fn_group"
-require_relative "subtitle"
-require_relative "trans_title_group"
 
 module Niso
   module Jats

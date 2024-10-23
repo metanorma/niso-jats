@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "corresp"
-require_relative "fn"
-require_relative "label"
-require_relative "paragraph"
-require_relative "title"
 
 module Niso
   module Jats

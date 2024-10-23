@@ -2,17 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alt_text"
-require_relative "alternatives"
-require_relative "attrib"
-require_relative "email"
-require_relative "ext_link"
-require_relative "graphic"
-require_relative "long_desc"
-require_relative "media"
-require_relative "permissions"
-require_relative "tbody"
-require_relative "uri"
 
 module Niso
   module Jats

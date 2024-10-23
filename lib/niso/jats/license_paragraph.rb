@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "paragraph"
-require_relative "price"
 
 module Niso
   module Jats

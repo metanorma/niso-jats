@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "glyph_data"
-require_relative "glyph_ref"
-require_relative "inline_graphic"
 
 module Niso
   module Jats

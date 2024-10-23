@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "publisher_loc"
-require_relative "publisher_name"
 
 module Niso
   module Jats

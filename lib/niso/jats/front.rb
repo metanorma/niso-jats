@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "article_meta"
-require_relative "journal_meta"
-require_relative "notes"
 
 module Niso
   module Jats

@@ -2,13 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "conf_acronym"
-require_relative "conf_date"
-require_relative "conf_loc"
-require_relative "conf_name"
-require_relative "conf_num"
-require_relative "conf_sponsor"
-require_relative "conf_theme"
 
 module Niso
   module Jats

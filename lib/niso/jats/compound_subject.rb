@@ -2,7 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "compound_subject_part"
 
 module Niso
   module Jats

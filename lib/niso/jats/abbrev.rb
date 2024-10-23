@@ -2,7 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "def"
 
 module Niso
   module Jats

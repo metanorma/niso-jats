@@ -2,19 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "article_id"
-require_relative "article_version"
-require_relative "article_version_alternatives"
-require_relative "date"
-require_relative "event_desc"
-require_relative "isbn"
-require_relative "issn"
-require_relative "issn_l"
-require_relative "notes"
-require_relative "permissions"
-require_relative "pub_date"
-require_relative "pub_date_not_available"
-require_relative "self_uri"
 
 module Niso
   module Jats

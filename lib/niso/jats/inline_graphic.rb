@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alt_text"
-require_relative "long_desc"
 
 module Niso
   module Jats

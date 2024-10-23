@@ -2,17 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "aff"
-require_relative "aff_alternatives"
-require_relative "contrib_group"
-require_relative "isbn"
-require_relative "issn"
-require_relative "issn_l"
-require_relative "journal_id"
-require_relative "journal_title_group"
-require_relative "notes"
-require_relative "publisher"
-require_relative "self_uri"
 
 module Niso
   module Jats

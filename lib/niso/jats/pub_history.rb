@@ -2,7 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "event"
 
 module Niso
   module Jats

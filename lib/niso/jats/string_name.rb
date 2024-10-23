@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "degrees"
-require_relative "given_names"
-require_relative "prefix"
-require_relative "suffix"
-require_relative "surname"
 
 module Niso
   module Jats

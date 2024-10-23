@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "label"
-require_relative "list_item"
-require_relative "object_id"
-require_relative "title"
 
 module Niso
   module Jats

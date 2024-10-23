@@ -2,19 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alternatives"
-require_relative "block_alternatives"
-require_relative "boxed_text"
-require_relative "chem_struct_wrap"
-require_relative "code"
-require_relative "fig"
-require_relative "fig_group"
-require_relative "graphic"
-require_relative "media"
-require_relative "preformat"
-require_relative "supplementary_material"
-require_relative "table_wrap"
-require_relative "table_wrap_group"
 
 module Niso
   module Jats

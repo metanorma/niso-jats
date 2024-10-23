@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "col"
-require_relative "colgroup"
-require_relative "tbody"
-require_relative "tfoot"
-require_relative "thead"
-require_relative "tr"
 
 module Niso
   module Jats

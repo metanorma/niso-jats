@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "meta_name"
-require_relative "meta_value"
 
 module Niso
   module Jats

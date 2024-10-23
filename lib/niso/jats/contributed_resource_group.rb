@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "award_group"
-require_relative "resource_group"
-require_relative "support_description"
 
 module Niso
   module Jats

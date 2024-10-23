@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "answer"
-require_relative "answer_set"
-require_relative "explanation"
-require_relative "object_id"
-require_relative "question"
 
 module Niso
   module Jats

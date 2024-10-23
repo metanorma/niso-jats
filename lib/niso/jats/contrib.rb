@@ -2,25 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "address"
-require_relative "aff"
-require_relative "aff_alternatives"
-require_relative "anonymous"
-require_relative "author_comment"
-require_relative "bio"
-require_relative "collab"
-require_relative "collab_alternatives"
-require_relative "contrib_id"
-require_relative "degrees"
-require_relative "email"
-require_relative "ext_link"
-require_relative "name"
-require_relative "name_alternatives"
-require_relative "on_behalf_of"
-require_relative "role"
-require_relative "string_name"
-require_relative "uri"
-require_relative "xref"
 
 module Niso
   module Jats

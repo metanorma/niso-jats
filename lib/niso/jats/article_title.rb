@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "break"
-require_relative "basic_text"
 
 module Niso
   module Jats

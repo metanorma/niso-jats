@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "institution"
-require_relative "institution_wrap"
-require_relative "sub"
-require_relative "sup"
 
 module Niso
   module Jats

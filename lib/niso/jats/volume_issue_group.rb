@@ -2,15 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "issue"
-require_relative "issue_id"
-require_relative "issue_part"
-require_relative "issue_sponsor"
-require_relative "issue_title"
-require_relative "issue_title_group"
-require_relative "volume"
-require_relative "volume_id"
-require_relative "volume_series"
 
 module Niso
   module Jats

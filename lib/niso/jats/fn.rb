@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-# require_relative "label"
-# require_relative "paragraph"
 
 module Niso
   module Jats

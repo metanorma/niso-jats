@@ -2,29 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "alt_text"
-require_relative "alternatives"
-require_relative "bold"
-require_relative "chem_struct"
-require_relative "fixed_case"
-require_relative "inline_graphic"
-require_relative "inline_media"
-require_relative "italic"
-require_relative "long_desc"
-require_relative "monospace"
-require_relative "named_content"
-require_relative "overline"
-require_relative "private_char"
-require_relative "roman"
-require_relative "ruby"
-require_relative "sans_serif"
-require_relative "sc"
-require_relative "strike"
-require_relative "styled_content"
-require_relative "sub"
-require_relative "sup"
-require_relative "tex_math"
-require_relative "underline"
 
 module Niso
   module Jats

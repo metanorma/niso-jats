@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "attrib"
-require_relative "fn"
-require_relative "fn_group"
-require_relative "paragraph"
-require_relative "permissions"
-require_relative "title"
 
 module Niso
   module Jats

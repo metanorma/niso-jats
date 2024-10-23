@@ -2,17 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "bold"
-require_relative "fixed_case"
-require_relative "italic"
-require_relative "monospace"
-require_relative "overline"
-require_relative "roman"
-require_relative "ruby"
-require_relative "sans_serif"
-require_relative "sc"
-require_relative "strike"
-require_relative "underline"
 
 module Niso
   module Jats

@@ -2,7 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "date"
 
 module Niso
   module Jats

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "name"
-require_relative "string_name"
 
 module Niso
   module Jats

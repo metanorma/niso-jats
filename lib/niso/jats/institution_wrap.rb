@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "institution"
-require_relative "institution_id"
 
 module Niso
   module Jats

@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "day"
-require_relative "era"
-require_relative "month"
-require_relative "season"
-require_relative "year"
 
 module Niso
   module Jats

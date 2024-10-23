@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "contributed_resource_group"
-require_relative "funding_group"
 
 module Niso
   module Jats

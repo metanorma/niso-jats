@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "compound_kwd"
-require_relative "kwd"
-require_relative "label"
-require_relative "nested_kwd"
-require_relative "title"
 
 module Niso
   module Jats

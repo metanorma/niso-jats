@@ -2,7 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "license_paragraph"
 
 module Niso
   module Jats

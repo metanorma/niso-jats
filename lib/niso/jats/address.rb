@@ -2,18 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "addr_line"
-require_relative "city"
-require_relative "country"
-require_relative "email"
-require_relative "ext_link"
-require_relative "fax"
-require_relative "institution"
-require_relative "institution_wrap"
-require_relative "phone"
-require_relative "postal_code"
-require_relative "state"
-require_relative "uri"
 
 module Niso
   module Jats
