@@ -11,7 +11,6 @@ require "zeitwerk"
 
 loader = Zeitwerk::Loader.for_gem
 loader.push_dir(__dir__, namespace: Niso)
-loader.log!
 loader.setup
 loader.eager_load
 
