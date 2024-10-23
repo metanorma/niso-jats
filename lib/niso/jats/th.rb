@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class Th < Lutaml::Model::Serializable
@@ -24,7 +21,8 @@ module Niso
       attribute :ext_link, ExtLink, collection: true
       attribute :uri, Uri, collection: true
       attribute :hr, Hr, collection: true
-      attribute :inline_supplementary_material, InlineSupplementaryMaterial, collection: true
+      attribute :inline_supplementary_material, InlineSupplementaryMaterial,
+                collection: true
       attribute :related_article, RelatedArticle, collection: true
       attribute :related_object, RelatedObject, collection: true
       attribute :disp_formula, DispFormula, collection: true
@@ -105,7 +103,8 @@ module Niso
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri
         map_element "hr", to: :hr
-        map_element "inline-supplementary-material", to: :inline_supplementary_material
+        map_element "inline-supplementary-material",
+                    to: :inline_supplementary_material
         map_element "related-article", to: :related_article
         map_element "related-object", to: :related_object
         map_element "disp-formula", to: :disp_formula

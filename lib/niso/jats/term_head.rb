@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class TermHead < Lutaml::Model::Serializable
@@ -17,7 +14,8 @@ module Niso
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri
-        map_element "inline-supplementary-material", to: :inline_supplementary_material
+        map_element "inline-supplementary-material",
+                    to: :inline_supplementary_material
         map_element "related-article", to: :related_article
         map_element "related-object", to: :related_object
         map_element "bold", to: :bold

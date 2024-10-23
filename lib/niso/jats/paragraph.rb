@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
-    class P < Lutaml::Model::Serializable
+    class Paragraph < Lutaml::Model::Serializable
       attribute :content, :string
       attribute :content_type, :string
       attribute :id, :string
@@ -14,7 +11,8 @@ module Niso
       attribute :email, Email, collection: true
       attribute :ext_link, ExtLink, collection: true
       attribute :uri, Uri, collection: true
-      attribute :inline_supplementary_material, InlineSupplementaryMaterial, collection: true
+      attribute :inline_supplementary_material, InlineSupplementaryMaterial,
+                collection: true
       attribute :related_article, RelatedArticle, collection: true
       attribute :related_object, RelatedObject, collection: true
       attribute :address, Address, collection: true
@@ -95,7 +93,8 @@ module Niso
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri
-        map_element "inline-supplementary-material", to: :inline_supplementary_material
+        map_element "inline-supplementary-material",
+                    to: :inline_supplementary_material
         map_element "related-article", to: :related_article
         map_element "related-object", to: :related_object
         map_element "address", to: :address

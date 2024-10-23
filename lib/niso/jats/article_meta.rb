@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class ArticleMeta < Lutaml::Model::Serializable
@@ -60,7 +57,8 @@ module Niso
         map_attribute "id", to: :id
         map_element "article-id", to: :article_id
         map_element "article-version", to: :article_version
-        map_element "article-version-alternatives", to: :article_version_alternatives
+        map_element "article-version-alternatives",
+                    to: :article_version_alternatives
         map_element "article-categories", to: :article_categories
         map_element "title-group", to: :title_group
         map_element "contrib-group", to: :contrib_group

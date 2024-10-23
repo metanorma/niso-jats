@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class Ack < Lutaml::Model::Serializable

@@ -8,7 +8,7 @@ RSpec.describe Niso::Jats::Article do
   end
 
   glob_path = Pathname.new(__dir__)
-                      .join("../../fixtures/*.xml")
+    .join("../../fixtures/*.xml")
 
   Dir.glob(glob_path)[0..1].each do |filename|
     fn = Pathname.new(filename).basename

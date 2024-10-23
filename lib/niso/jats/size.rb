@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
 module Niso
   module Jats
     class Size < Lutaml::Model::Serializable

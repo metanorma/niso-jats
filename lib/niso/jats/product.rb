@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class Product < Lutaml::Model::Serializable
@@ -12,7 +9,8 @@ module Niso
       attribute :product_type, :string
       attribute :specific_use, :string
       attribute :lang, :string
-      attribute :inline_supplementary_material, InlineSupplementaryMaterial, collection: true
+      attribute :inline_supplementary_material, InlineSupplementaryMaterial,
+                collection: true
       attribute :related_article, RelatedArticle, collection: true
       attribute :related_object, RelatedObject, collection: true
       attribute :break, Break, collection: true
@@ -116,7 +114,8 @@ module Niso
         map_attribute "product-type", to: :product_type
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang
-        map_element "inline-supplementary-material", to: :inline_supplementary_material
+        map_element "inline-supplementary-material",
+                    to: :inline_supplementary_material
         map_element "related-article", to: :related_article
         map_element "related-object", to: :related_object
         map_element "break", to: :break

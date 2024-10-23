@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "lutaml/model"
-
-
 module Niso
   module Jats
     class Event < Lutaml::Model::Serializable
@@ -34,7 +31,8 @@ module Niso
         map_element "event-desc", to: :event_desc
         map_element "article-id", to: :article_id
         map_element "article-version", to: :article_version
-        map_element "article-version-alternatives", to: :article_version_alternatives
+        map_element "article-version-alternatives",
+                    to: :article_version_alternatives
         map_element "pub-date", to: :pub_date
         map_element "pub-date-not-available", to: :pub_date_not_available
         map_element "date", to: :date
