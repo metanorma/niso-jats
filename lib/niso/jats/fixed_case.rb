@@ -45,7 +45,6 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      include BasicText
 
       xml do
         root "fixed-case"

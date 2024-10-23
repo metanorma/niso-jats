@@ -51,7 +51,6 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      include BasicText
       attribute :break, Break, collection: true
       attribute :citation_alternatives, CitationAlternatives, collection: true
       attribute :element_citation, ElementCitation, collection: true

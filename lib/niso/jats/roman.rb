@@ -45,7 +45,6 @@ module Niso
       attribute :id, :string
       attribute :specific_use, :string
       attribute :toggle, :string, default: -> { "no" }
-      include BasicText
 
       xml do
         root "roman"

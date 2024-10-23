@@ -55,7 +55,6 @@ module Niso
       attribute :rid, :string
       attribute :specific_use, :string
       attribute :lang, :string
-      include BasicText
       attribute :disp_formula, DispFormula, collection: true
       attribute :disp_formula_group, DispFormulaGroup, collection: true
       attribute :array, Array, collection: true

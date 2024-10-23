@@ -26,6 +26,7 @@ require_relative "sub"
 require_relative "sup"
 require_relative "underline"
 require_relative "year"
+require_relative "include_basic_text"
 
 module Niso
   module Jats

@@ -45,7 +45,6 @@ module Niso
       attribute :id, :string
       attribute :specific_use, :string
       attribute :toggle, :string, default: -> { "yes" }
-      include BasicText
 
       xml do
         root "italic"

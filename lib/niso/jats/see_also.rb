@@ -59,7 +59,6 @@ module Niso
       attribute :vocab_term, :string
       attribute :vocab_term_identifier, :string
       attribute :lang, :string
-      include BasicText
       attribute :disp_formula, DispFormula, collection: true
       attribute :disp_formula_group, DispFormulaGroup, collection: true
       attribute :array, Array, collection: true

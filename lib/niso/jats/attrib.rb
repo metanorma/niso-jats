@@ -46,7 +46,6 @@ module Niso
       attribute :id, :string
       attribute :specific_use, :string
       attribute :lang, :string
-      include BasicText
 
       xml do
         root "attrib"

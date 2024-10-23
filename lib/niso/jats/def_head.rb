@@ -44,7 +44,6 @@ module Niso
     class DefHead < Lutaml::Model::Serializable
       attribute :content, :string
       attribute :id, :string
-      include BasicText
 
       xml do
         root "def-head"

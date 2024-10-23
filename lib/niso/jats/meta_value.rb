@@ -44,7 +44,6 @@ module Niso
     class MetaValue < Lutaml::Model::Serializable
       attribute :content, :string
       attribute :id, :string
-      include BasicText
 
       xml do
         root "meta-value"
