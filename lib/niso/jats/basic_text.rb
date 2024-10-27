@@ -2,7 +2,7 @@ module Niso
   module Jats
     module BasicText
       def self.included(base) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-        base.class_eval do
+        base.instance_eval do
           attribute :email, Email, collection: true
           attribute :ext_link, ExtLink, collection: true
           attribute :uri, Uri, collection: true

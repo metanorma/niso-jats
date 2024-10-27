@@ -2,9 +2,6 @@
 
 module Niso
   module Jats
-    class P < Lutaml::Model::Serializable
-    end
-
     class Annotation < Lutaml::Model::Serializable
       attribute :content_type, :string
       attribute :id, :string

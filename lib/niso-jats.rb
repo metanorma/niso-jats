@@ -1,1 +1,1 @@
-require_relative "niso_jats"
+require_relative "niso/jats"
