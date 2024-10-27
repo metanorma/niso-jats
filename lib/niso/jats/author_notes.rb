@@ -20,8 +20,8 @@ module Niso
         map_attribute "specific-use", to: :specific_use
         map_element "label", to: :label
         map_element "title", to: :title
-        map_element "corresp", to: :corresp
         map_element "fn", to: :fn
+        map_element "corresp", to: :corresp
         map_element "p", to: :p
       end
     end

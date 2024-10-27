@@ -24,9 +24,9 @@ module Niso
         map_element "ack", to: :ack
         map_element "app-group", to: :app_group
         map_element "bio", to: :bio
+        map_element "ref-list", to: :ref_list
         map_element "fn-group", to: :fn_group
         map_element "glossary", to: :glossary
-        map_element "ref-list", to: :ref_list
         map_element "notes", to: :notes
         map_element "sec", to: :sec
       end

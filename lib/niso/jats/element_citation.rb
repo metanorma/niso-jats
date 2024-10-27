@@ -136,6 +136,7 @@ module Niso
         map_element "named-content", to: :named_content
         map_element "styled-content", to: :styled_content
         map_element "annotation", to: :annotation
+        map_element "person-group", to: :person_group
         map_element "article-title", to: :article_title
         map_element "chapter-title", to: :chapter_title
         map_element "collab", to: :collab
@@ -155,7 +156,6 @@ module Niso
         map_element "elocation-id", to: :elocation_id
         map_element "etal", to: :etal
         map_element "ext-link", to: :ext_link
-        map_element "fpage", to: :fpage
         map_element "gov", to: :gov
         map_element "institution", to: :institution
         map_element "institution-wrap", to: :institution_wrap
@@ -166,18 +166,12 @@ module Niso
         map_element "issue-id", to: :issue_id
         map_element "issue-part", to: :issue_part
         map_element "issue-title", to: :issue_title
-        map_element "lpage", to: :lpage
-        map_element "month", to: :month
         map_element "name", to: :name
         map_element "name-alternatives", to: :name_alternatives
         map_element "object-id", to: :object_id
         map_element "page-range", to: :page_range
         map_element "part-title", to: :part_title
         map_element "patent", to: :patent
-        map_element "person-group", to: :person_group
-        map_element "pub-id", to: :pub_id
-        map_element "publisher-loc", to: :publisher_loc
-        map_element "publisher-name", to: :publisher_name
         map_element "role", to: :role
         map_element "season", to: :season
         map_element "series", to: :series
@@ -186,15 +180,21 @@ module Niso
         map_element "std", to: :std
         map_element "string-date", to: :string_date
         map_element "string-name", to: :string_name
-        map_element "supplement", to: :supplement
         map_element "trans-source", to: :trans_source
         map_element "trans-title", to: :trans_title
         map_element "uri", to: :uri
         map_element "version", to: :version
+        map_element "month", to: :month
+        map_element "year", to: :year
         map_element "volume", to: :volume
         map_element "volume-id", to: :volume_id
         map_element "volume-series", to: :volume_series
-        map_element "year", to: :year
+        map_element "supplement", to: :supplement
+        map_element "publisher-loc", to: :publisher_loc
+        map_element "publisher-name", to: :publisher_name
+        map_element "fpage", to: :fpage
+        map_element "lpage", to: :lpage
+        map_element "pub-id", to: :pub_id
         map_element "sub", to: :sub
         map_element "sup", to: :sup
       end
