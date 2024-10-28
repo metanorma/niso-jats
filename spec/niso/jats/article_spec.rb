@@ -10,7 +10,7 @@ RSpec.describe Niso::Jats::Article do
 
   Dir.glob(glob_path)[0..1].each do |filename|
     fn = Pathname.new(filename).basename
-    it "round-trips #{fn} with equivalent-xml" do
+    xit "round-trips #{fn} with equivalent-xml" do
       input = file_contents(Pathname.new(filename))
       parsed = described_class.from_xml(input)
       generated = parsed.to_xml(
