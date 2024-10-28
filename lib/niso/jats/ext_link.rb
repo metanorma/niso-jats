@@ -6,6 +6,7 @@ module Niso
       attribute :content, :string
       attribute :assigning_authority, :string
       attribute :ext_link_type, :string
+      attribute :href, :string
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
@@ -30,6 +31,7 @@ module Niso
         root "ext-link", mixed: true
 
         map_content to: :content
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink"
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "ext-link-type", to: :ext_link_type
         map_attribute "hreflang", to: :hreflang

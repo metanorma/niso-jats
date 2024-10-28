@@ -16,7 +16,7 @@ module Niso
       attribute :p, Paragraph, collection: true
 
       xml do
-        root "fn"
+        root "fn", mixed: true
 
         map_attribute "custom-type", to: :custom_type
         map_attribute "fn-type", to: :fn_type

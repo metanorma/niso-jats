@@ -13,16 +13,16 @@ module Niso
       attribute :p, Paragraph, collection: true
 
       xml do
-        root "author-notes"
+        root "author-notes", ordered: true
 
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
         map_element "label", to: :label
         map_element "title", to: :title
-        map_element "fn", to: :fn
-        map_element "corresp", to: :corresp
         map_element "p", to: :p
+        map_element "corresp", to: :corresp
+        map_element "fn", to: :fn
       end
     end
   end
