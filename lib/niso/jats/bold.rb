@@ -9,7 +9,7 @@ module Niso
       attribute :toggle, :string
 
       xml do
-        root "bold"
+        root "bold", mixed: true
 
         map_content to: :content
         map_attribute "id", to: :id

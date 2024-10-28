@@ -11,7 +11,7 @@ module Niso
       attribute :lang, :string
 
       xml do
-        root "email"
+        root "email", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

@@ -35,7 +35,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "inline-formula"
+        root "inline-formula", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

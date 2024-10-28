@@ -41,7 +41,7 @@ module Niso
       attribute :institution_wrap, InstitutionWrap, collection: true
 
       xml do
-        root "funding-source"
+        root "funding-source", mixed: true
 
         map_content to: :content
         map_attribute "country", to: :country

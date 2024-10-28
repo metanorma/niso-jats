@@ -101,7 +101,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "mixed-citation"
+        root "mixed-citation", mixed: true
 
         map_content to: :content
         map_attribute "hreflang", to: :hreflang

@@ -50,7 +50,7 @@ module Niso
       attribute :ref_list, RefList, collection: true
 
       xml do
-        root "sec"
+        root "sec", mixed: true
 
         map_attribute "id", to: :id
         map_attribute "sec-type", to: :sec_type

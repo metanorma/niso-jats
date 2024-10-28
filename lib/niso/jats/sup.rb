@@ -9,7 +9,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "sup"
+        root "sup", mixed: true
 
         map_content to: :content
         map_attribute "arrange", to: :arrange

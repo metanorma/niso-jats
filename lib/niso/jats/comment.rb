@@ -10,7 +10,7 @@ module Niso
       attribute :lang, :string
 
       xml do
-        root "comment"
+        root "comment", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

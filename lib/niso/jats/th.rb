@@ -83,7 +83,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "th"
+        root "th", mixed: true
 
         map_content to: :content
         map_attribute "abbr", to: :abbr

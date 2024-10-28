@@ -38,7 +38,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "corresp"
+        root "corresp", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
