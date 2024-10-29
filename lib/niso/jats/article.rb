@@ -23,7 +23,7 @@ module Niso
         map_attribute "dtd-version", to: :dtd_version
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, render_default: true
+        map_attribute "lang", to: :lang
         map_element "processing-meta", to: :processing_meta
         map_element "front", to: :front
         map_element "body", to: :body

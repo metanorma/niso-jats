@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class Underline < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string

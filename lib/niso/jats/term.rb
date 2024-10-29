@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class Term < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :id, :string
       attribute :rid, :string

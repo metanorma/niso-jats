@@ -5,7 +5,7 @@ module Niso
     class Name < Lutaml::Model::Serializable
       attribute :content_type, :string
       attribute :id, :string
-      attribute :name_style, :string, default: -> { "western" }
+      attribute :name_style, :string
       attribute :specific_use, :string
       attribute :lang, :string
       attribute :surname, Surname

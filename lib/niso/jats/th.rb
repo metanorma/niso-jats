@@ -9,11 +9,11 @@ module Niso
       attribute :axis, :string
       attribute :char, :string
       attribute :charoff, :string
-      attribute :colspan, :string, default: -> { "1" }
+      attribute :colspan, :string
       attribute :content_type, :string
       attribute :headers, :string
       attribute :id, :string
-      attribute :rowspan, :string, default: -> { "1" }
+      attribute :rowspan, :string
       attribute :scope, :string
       attribute :style, :string
       attribute :valign, :string

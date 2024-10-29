@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class Title < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :content_type, :string
       attribute :id, :string

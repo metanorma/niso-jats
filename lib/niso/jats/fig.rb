@@ -5,8 +5,8 @@ module Niso
     class Fig < Lutaml::Model::Serializable
       attribute :fig_type, :string
       attribute :id, :string
-      attribute :orientation, :string, default: -> { "portrait" }
-      attribute :position, :string, default: -> { "float" }
+      attribute :orientation, :string
+      attribute :position, :string
       attribute :specific_use, :string
       attribute :lang, :string
       attribute :object_id, ObjectId, collection: true

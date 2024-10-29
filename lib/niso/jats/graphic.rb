@@ -9,8 +9,8 @@ module Niso
       attribute :id, :string
       attribute :mime_subtype, :string
       attribute :mimetype, :string
-      attribute :orientation, :string, default: -> { "portrait" }
-      attribute :position, :string, default: -> { "float" }
+      attribute :orientation, :string
+      attribute :position, :string
       attribute :specific_use, :string
       attribute :lang, :string
       attribute :alt_text, AltText, collection: true

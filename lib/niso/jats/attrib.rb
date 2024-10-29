@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class Attrib < Lutaml::Model::Serializable
+      include Niso::Jats::BasicText
+
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string

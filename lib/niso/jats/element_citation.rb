@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class ElementCitation < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :hreflang, :string
       attribute :id, :string
       attribute :publication_format, :string

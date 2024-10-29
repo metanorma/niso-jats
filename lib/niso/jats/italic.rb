@@ -3,10 +3,12 @@
 module Niso
   module Jats
     class Italic < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :toggle, :string, default: -> { "yes" }
+      attribute :toggle, :string
 
       xml do
         root "italic", mixed: true
