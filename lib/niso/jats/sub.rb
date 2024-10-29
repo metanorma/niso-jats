@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class Sub < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :arrange, :string
       attribute :id, :string

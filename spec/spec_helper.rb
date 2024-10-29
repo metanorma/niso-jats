@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "pry"
 require "niso-jats"
 require "xml-c14n"
 require "equivalent-xml"
@@ -7,18 +8,12 @@ require "lutaml/model"
 require "lutaml/model/xml_adapter/nokogiri_adapter"
 require "lutaml/model/json_adapter/standard_json_adapter"
 
-module TestHelper
-  def fixture(name)
-    Pathname.new(fixtures_path(name))
-  end
-
-  def fixtures_path(name)
-    File.join(__dir__, "fixtures", name)
-  end
+Dir["spec/support/**/*.rb"].each do |it|
+  require File.expand_path(it)
 end
 
 RSpec.configure do |config|
-  config.include TestHelper
+  config.include Helper
 
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"

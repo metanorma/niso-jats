@@ -3,6 +3,8 @@
 module Niso
   module Jats
     class AltTitle < Lutaml::Model::Serializable
+      include BasicText
+
       attribute :content, :string
       attribute :alt_title_type, :string
       attribute :id, :string
