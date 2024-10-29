@@ -1,0 +1,3 @@
+[submodule "spec/fixtures/niso-jats"]
+	path = spec/fixtures/niso-jats
+	url = git@github.com:ncbi/niso-jats.git
