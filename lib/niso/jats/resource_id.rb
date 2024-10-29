@@ -24,7 +24,7 @@ module Niso
         map_attribute "specific-use", to: :specific_use
         map_attribute "vocab", to: :vocab
         map_attribute "vocab-identifier", to: :vocab_identifier
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
       end
     end
   end

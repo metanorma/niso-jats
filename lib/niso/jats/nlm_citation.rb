@@ -49,7 +49,7 @@ module Niso
         map_attribute "publication-type", to: :publication_type
         map_attribute "publisher-type", to: :publisher_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "person-group", to: :person_group
         map_element "collab", to: :collab
         map_element "article-title", to: :article_title

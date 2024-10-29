@@ -27,7 +27,7 @@ module Niso
         map_attribute "style", to: :style
         map_attribute "style-detail", to: :style_detail
         map_attribute "style-type", to: :style_type
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "label", to: :label
         map_element "title", to: :title
         map_element "subtitle", to: :subtitle

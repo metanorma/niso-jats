@@ -43,7 +43,7 @@ module Niso
         map_attribute "vocab-identifier", to: :vocab_identifier
         map_attribute "vocab-term", to: :vocab_term
         map_attribute "vocab-term-identifier", to: :vocab_term_identifier
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "bold", to: :bold
         map_element "fixed-case", to: :fixed_case
         map_element "italic", to: :italic

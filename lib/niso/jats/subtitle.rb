@@ -13,13 +13,13 @@ module Niso
       attribute :break, Break, collection: true
 
       xml do
-        root "subtitle"
+        root "subtitle", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri

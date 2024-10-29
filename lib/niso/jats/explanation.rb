@@ -58,7 +58,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "pointer-to-explained", to: :pointer_to_explained
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "object-id", to: :object_id
         map_element "label", to: :label
         map_element "title", to: :title

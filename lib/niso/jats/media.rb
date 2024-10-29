@@ -38,7 +38,7 @@ module Niso
         map_attribute "orientation", to: :orientation
         map_attribute "position", to: :position
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "abstract", to: :abstract

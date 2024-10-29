@@ -37,7 +37,7 @@ module Niso
         map_attribute "vocab-identifier", to: :vocab_identifier
         map_attribute "vocab-term", to: :vocab_term
         map_attribute "vocab-term-identifier", to: :vocab_term_identifier
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri

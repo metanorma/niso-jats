@@ -113,7 +113,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "product-type", to: :product_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "inline-supplementary-material",
                     to: :inline_supplementary_material
         map_element "related-article", to: :related_article

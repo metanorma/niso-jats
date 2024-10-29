@@ -53,7 +53,7 @@ module Niso
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "email", to: :email

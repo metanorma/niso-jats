@@ -28,7 +28,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "person-group-type", to: :person_group_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "anonymous", to: :anonymous
         map_element "collab", to: :collab
         map_element "collab-alternatives", to: :collab_alternatives

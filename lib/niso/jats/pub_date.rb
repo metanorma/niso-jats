@@ -27,7 +27,7 @@ module Niso
         map_attribute "iso-8601-date", to: :iso_8601_date
         map_attribute "pub-type", to: :pub_type
         map_attribute "publication-format", to: :publication_format
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "day", to: :day
         map_element "month", to: :month
         map_element "season", to: :season

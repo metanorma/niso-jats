@@ -26,7 +26,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "funding-source", to: :funding_source
         map_element "support-source", to: :support_source
         map_element "award-id", to: :award_id

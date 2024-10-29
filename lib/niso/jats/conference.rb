@@ -23,7 +23,7 @@ module Niso
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "conf-date", to: :conf_date
         map_element "conf-name", to: :conf_name
         map_element "conf-acronym", to: :conf_acronym

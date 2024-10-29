@@ -24,7 +24,7 @@ module Niso
         map_attribute "list-type", to: :list_type
         map_attribute "prefix-word", to: :prefix_word
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "object-id", to: :object_id
         map_element "label", to: :label
         map_element "title", to: :title

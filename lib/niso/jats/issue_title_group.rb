@@ -17,7 +17,7 @@ module Niso
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "issue-title", to: :issue_title
         map_element "issue-subtitle", to: :issue_subtitle
         map_element "trans-title-group", to: :trans_title_group

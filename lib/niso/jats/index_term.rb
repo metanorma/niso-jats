@@ -28,7 +28,7 @@ module Niso
         map_attribute "vocab-identifier", to: :vocab_identifier
         map_attribute "vocab-term", to: :vocab_term
         map_attribute "vocab-term-identifier", to: :vocab_term_identifier
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "term", to: :term
         map_element "index-term", to: :index_term
         map_element "see", to: :see

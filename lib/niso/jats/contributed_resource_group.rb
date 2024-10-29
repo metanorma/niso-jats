@@ -17,7 +17,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "resource-type", to: :resource_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "award-group", to: :award_group
         map_element "support-description", to: :support_description
         map_element "resource-group", to: :resource_group

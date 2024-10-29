@@ -24,7 +24,7 @@ module Niso
         map_attribute "mime-subtype", to: :mime_subtype
         map_attribute "mimetype", to: :mimetype
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
       end

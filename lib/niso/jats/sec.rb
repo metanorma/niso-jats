@@ -55,7 +55,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "sec-type", to: :sec_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang
+        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "sec-meta", to: :sec_meta
         map_element "label", to: :label
         map_element "title", to: :title
