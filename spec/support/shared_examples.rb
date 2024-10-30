@@ -5,7 +5,7 @@ RSpec.shared_examples "a serializer" do
     serialized = described_class.from_xml(input)
     output = serialized.to_xml(declaration: true, encoding: "utf-8")
 
-    expect(equivalent_xml?(output, input)).to be_truthy
+    expect(output).to be_equivalent_to(input)
   end
 
   it "round-trips with xml-c14" do
@@ -13,6 +13,9 @@ RSpec.shared_examples "a serializer" do
 
     serialized = described_class.from_xml(input)
     output = Xml::C14n.format(serialized.to_xml)
+
+    File.write("tmp/output.xml", output)
+    File.write("tmp/input.xml", input)
 
     expect(output).to be_analogous_with(input)
   end
