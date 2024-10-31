@@ -22,7 +22,7 @@ module Niso
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_element "license-p", to: :license_p
-        map_element "license_ref", to: :license_ref, namespace: "http://www.niso.org/schemas/ali/1.0/", prefix: "ali"
+        map_element "license_ref", to: :license_ref, namespace: "http://www.niso.org/schemas/ali/1.0", prefix: "ali"
       end
     end
   end
