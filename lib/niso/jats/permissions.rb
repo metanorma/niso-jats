@@ -18,7 +18,7 @@ module Niso
         map_element "copyright-year", to: :copyright_year
         map_element "copyright-holder", to: :copyright_holder
         map_element "license", to: :license
-        map_element "free_to_read", to: :free_to_read, namespace: "http://www.niso.org/schemas/ali/1.0/", prefix: "ali"
+        map_element "free_to_read", to: :free_to_read, namespace: "http://www.niso.org/schemas/ali/1.0", prefix: "ali"
       end
     end
   end
