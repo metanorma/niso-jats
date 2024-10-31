@@ -122,9 +122,7 @@ RSpec.describe Niso::Jats::Article do
   end
 
   context "with niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml" do
-    let(:fixture) do
-      file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml")
-    end
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml") }
     it_behaves_like "a serializer"
   end
 

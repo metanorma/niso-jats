@@ -43,6 +43,8 @@ module Niso
       attribute :xref, Xref, collection: true
       attribute :attrib, Attrib, collection: true
       attribute :permissions, Permissions, collection: true
+      attribute :type, :string
+      attribute :href, :string
 
       xml do
         root "supplementary-material"
@@ -56,6 +58,8 @@ module Niso
         map_attribute "position", to: :position
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink"
         map_element "object-id", to: :object_id
         map_element "label", to: :label
         map_element "caption", to: :caption

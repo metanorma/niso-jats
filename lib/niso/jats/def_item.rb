@@ -8,6 +8,7 @@ module Niso
       attribute :lang, :string
       attribute :term, Term
       attribute :def, Def, collection: true
+      attribute :label, Label, collection: true
 
       xml do
         root "def-item"
@@ -17,6 +18,7 @@ module Niso
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_element "term", to: :term
         map_element "def", to: :def
+        map_element "label", to: :label
       end
     end
   end
