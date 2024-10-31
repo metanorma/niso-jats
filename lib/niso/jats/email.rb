@@ -9,6 +9,7 @@ module Niso
       attribute :id, :string
       attribute :specific_use, :string
       attribute :lang, :string
+      attribute :type, :string
 
       xml do
         root "email", mixed: true
@@ -19,6 +20,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
       end
     end
   end

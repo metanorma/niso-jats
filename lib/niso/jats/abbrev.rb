@@ -11,12 +11,14 @@ module Niso
       attribute :specific_use, :string
       attribute :lang, :string
       attribute :def, Def, collection: true
+      attribute :href, :string
 
       xml do
         root "abbrev"
 
         map_content to: :content
         map_attribute "alt", to: :alt
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
