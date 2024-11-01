@@ -27,6 +27,7 @@ module Niso
       attribute :kwd_group, KwdGroup, collection: true
       attribute :subj_group, SubjGroup, collection: true
       attribute :xref, Xref, collection: true
+      attribute :type, :string
 
       xml do
         root "graphic"
@@ -41,6 +42,7 @@ module Niso
         map_attribute "position", to: :position
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "abstract", to: :abstract
