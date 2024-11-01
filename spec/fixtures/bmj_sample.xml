@@ -906,16 +906,16 @@
               <given-names>P</given-names>
             </name>
           </person-group>
-          <comment><ext-link ext-link-type="url" xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="http://www.sdo.lshtm.ac.uk/continuityofcare.htm"
-            >
-            www.sdo.lshtm.ac.uk/continuityofcare.htm</ext-link> (accessed 2 Jan 2002)</comment>
           <source>Continuity of care: report of a scoping exercise for
             the national co-ordinating centre for NHS Service Delivery and
             Organisation R&#x0026;D (NCCSDO), Summer 2000</source>
           <year iso-8601-date="2001">2001</year>
           <publisher-loc>London</publisher-loc>
           <publisher-name>NCCSDO</publisher-name>
+          <comment><ext-link ext-link-type="url" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="http://www.sdo.lshtm.ac.uk/continuityofcare.htm"
+            >
+            www.sdo.lshtm.ac.uk/continuityofcare.htm</ext-link> (accessed 2 Jan 2002)</comment>
         </element-citation>
       </ref>
 
