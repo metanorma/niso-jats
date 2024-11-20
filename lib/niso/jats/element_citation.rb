@@ -100,7 +100,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "element-citation"
+        root "element-citation", mixed: true
 
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id

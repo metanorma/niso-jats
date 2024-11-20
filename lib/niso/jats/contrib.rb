@@ -30,6 +30,7 @@ module Niso
       attribute :role, Role, collection: true
       attribute :uri, Uri, collection: true
       attribute :xref, Xref, collection: true
+      attribute :type, :string
 
       xml do
         root "contrib"
@@ -42,6 +43,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
+        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_element "contrib-id", to: :contrib_id
         map_element "anonymous", to: :anonymous
         map_element "collab", to: :collab

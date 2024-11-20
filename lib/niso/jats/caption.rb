@@ -10,12 +10,14 @@ module Niso
       attribute :lang, :string
       attribute :title, Title
       attribute :p, Paragraph, collection: true
+      attribute :base, :string
 
       xml do
         root "caption"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
+        map_attribute "base", to: :base, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
         map_attribute "specific-use", to: :specific_use
         map_attribute "style", to: :style
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"

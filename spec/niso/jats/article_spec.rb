@@ -11,22 +11,360 @@ RSpec.describe Niso::Jats::Article do
     it_behaves_like "a serializer"
   end
 
-  Dir[File.join(__dir__, "../../fixtures/niso-jats/**/Smallsamples/*.xml")].each do |file|
-    version = file.match(/\/(?<version>\d+\.\d\w?\d?)\/Smallsamples/)[:version]
+  # xcontext "with niso-jats/archiving/0.4/Smallsamples/samplesmall-archive0-oasis.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/0.4/Smallsamples/samplesmall-archive0-oasis.xml") }
+  #   it_behaves_like "a serializer"
+  # end
 
-    # Skip files from old draft version
-    next if version == "0.4"
+  # xcontext "with niso-jats/archiving/0.4/Smallsamples/samplesmall-archive0.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/0.4/Smallsamples/samplesmall-archive0.xml") }
+  #   it_behaves_like "a serializer"
+  # end
 
-    # All 1.1d3 files contain a bad xmlns for ali that is missing the trailing slash
-    # xmlns:ali="http://www.niso.org/schemas/ali/1.0"
-    next if version == "1.1d3"
+  context "with niso-jats/archiving/1.0/Smallsamples/sample-archive-oasis-and-html1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/sample-archive-oasis-and-html1.xml") }
+    it_behaves_like "a serializer"
+  end
 
-    describe "Smallsamples from NISO JATS #{version}" do
-      filename = Pathname.new(file)
-      context "with #{filename.relative_path_from(File.join(__dir__, "../../fixtures"))}" do
-        let(:fixture) { File.new(file) }
-        it_behaves_like "a serializer"
-      end
-    end
+  context "with niso-jats/archiving/1.0/Smallsamples/sample-archive-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/sample-archive-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.0/Smallsamples/samplepub-oasis-and-xhtml1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/samplepub-oasis-and-xhtml1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.0/Smallsamples/samplepub-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/samplepub-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.0/Smallsamples/samplesmall-archive1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/samplesmall-archive1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.0/Smallsamples/samplesmall-base1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/samplesmall-base1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.0/Smallsamples/samplesmall-pub1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.0/Smallsamples/samplesmall-pub1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-and-html1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-and-html1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d1/Smallsamples/sample-archive-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d1/Smallsamples/samplesmall-archive1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d1/Smallsamples/samplesmall-archive1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d1/Smallsamples/samplesmall-archive1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d1/Smallsamples/samplesmall-archive1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-and-html1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/sample-archive-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1.xml" do
+    let(:fixture) { file_fixture("niso-jats/archiving/1.1d2/Smallsamples/samplesmall-archive1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml" do
+  #   let(:fixture) do
+  #     file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3-bad.xml")
+  #   end
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1-mathml3.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-and-html1.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-table1.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/sample-archive-oasis-table1.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml3-bad.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml3-bad.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml3.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1-mathml3.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/archiving/1.1d3/Smallsamples/samplesmall-archive1.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/articleauthoring/0.4/Smallsamples/samplesmall-auth0.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/articleauthoring/0.4/Smallsamples/samplesmall-auth0.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/articleauthoring/0.4/Smallsamples/samplesmall-base0.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/articleauthoring/0.4/Smallsamples/samplesmall-base0.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  context "with niso-jats/articleauthoring/1.0/Smallsamples/samplesmall-auth1.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.0/Smallsamples/samplesmall-auth1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.0/Smallsamples/samplesmall-base1.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.0/Smallsamples/samplesmall-base1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.1d1/Smallsamples/samplesmall-auth1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d1/Smallsamples/samplesmall-auth1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.1d1/Smallsamples/samplesmall-auth1.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d1/Smallsamples/samplesmall-auth1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1.xml" do
+    let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d2/Smallsamples/samplesmall-auth1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  # xcontext "with niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1-mathml3-bad.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1-mathml3-bad.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1-mathml3.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1-mathml3.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/articleauthoring/1.1d3/Smallsamples/samplesmall-auth1.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/publishing/0.4/Smallsamples/samplesmall-pub0-oasis.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/publishing/0.4/Smallsamples/samplesmall-pub0-oasis.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  # xcontext "with niso-jats/publishing/0.4/Smallsamples/samplesmall-pub0.xml" do
+  #   let(:fixture) { file_fixture("niso-jats/publishing/0.4/Smallsamples/samplesmall-pub0.xml") }
+  #   it_behaves_like "a serializer"
+  # end
+
+  context "with niso-jats/publishing/1.0/Smallsamples/samplepub-oasis-and-xhtml1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.0/Smallsamples/samplepub-oasis-and-xhtml1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.0/Smallsamples/samplepub-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.0/Smallsamples/samplepub-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.0/Smallsamples/samplesmall-base1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.0/Smallsamples/samplesmall-base1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.0/Smallsamples/samplesmall-pub1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.0/Smallsamples/samplesmall-pub1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-and-xhtml1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-and-xhtml1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d1/Smallsamples/samplepub-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d1/Smallsamples/samplesmall-pub1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d1/Smallsamples/samplesmall-pub1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d1/Smallsamples/samplesmall-pub1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d1/Smallsamples/samplesmall-pub1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-and-xhtml1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplepub-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d2/Smallsamples/samplesmall-pub1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000011.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000011.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000012.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000012.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000017.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/journal.elementa.000017.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-and-xhtml1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-table1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplepub-oasis-table1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1-mathml3-bad.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1-mathml3-bad.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1-mathml3.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  xcontext "with niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.1d3/Smallsamples/samplesmall-pub1.xml") }
+    it_behaves_like "a serializer"
+  end
+
+  context "with niso-jats/publishing/1.2d1/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml" do
+    let(:fixture) { file_fixture("niso-jats/publishing/1.2d1/Smallsamples/samplepub-oasis-and-xhtml1-mathml3.xml") }
+    it_behaves_like "a serializer"
   end
 end
