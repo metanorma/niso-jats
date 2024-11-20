@@ -22,3 +22,10 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+require "lutaml/model/xml_adapter/nokogiri_adapter"
+require "lutaml/model/json_adapter/standard_json_adapter"
+Lutaml::Model::Config.configure do |config|
+  config.xml_adapter = Lutaml::Model::XmlAdapter::NokogiriAdapter
+  config.json_adapter = Lutaml::Model::JsonAdapter::StandardJsonAdapter
+end

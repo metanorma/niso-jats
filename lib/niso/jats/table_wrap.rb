@@ -38,6 +38,7 @@ module Niso
       attribute :table_wrap_foot, TableWrapFoot, collection: true
       attribute :attrib, Attrib, collection: true
       attribute :permissions, Permissions, collection: true
+      attribute :oasis_table, Oasis::Etm::Table, collection: true
 
       xml do
         root "table-wrap"
@@ -77,6 +78,7 @@ module Niso
         map_element "table-wrap-foot", to: :table_wrap_foot
         map_element "attrib", to: :attrib
         map_element "permissions", to: :permissions
+        map_element "table", to: :oasis_table, namespace: "http://www.niso.org/standards/z39-96/ns/oasis-exchange/table", prefix: "oasis"
       end
     end
   end
