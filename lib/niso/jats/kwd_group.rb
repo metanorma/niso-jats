@@ -15,6 +15,7 @@ module Niso
       attribute :kwd, Kwd, collection: true
       attribute :compound_kwd, CompoundKwd, collection: true
       attribute :nested_kwd, NestedKwd, collection: true
+      attribute :unstructured_kwd_group, UnstructuredKwdGroup
 
       xml do
         root "kwd-group"
@@ -31,6 +32,7 @@ module Niso
         map_element "kwd", to: :kwd
         map_element "compound-kwd", to: :compound_kwd
         map_element "nested-kwd", to: :nested_kwd
+        map_element "unstructured-kwd-group", to: :unstructured_kwd_group
       end
     end
   end

@@ -62,7 +62,7 @@ module Niso
         map_element "chem-struct", to: :chem_struct
         map_element "inline-formula", to: :inline_formula
         map_element "tex-math", to: :tex_math
-        map_element "mml-math", to: :mml_math
+        map_element "mml_math", to: :mml_math
         map_element "named-content", to: :named_content
         map_element "styled-content", to: :styled_content
         map_element "sub", to: :sub

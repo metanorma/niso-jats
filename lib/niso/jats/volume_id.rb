@@ -11,6 +11,7 @@ module Niso
       attribute :pub_id_type, :string
       attribute :specific_use, :string
       attribute :lang, :string
+      attribute :href, :string
 
       xml do
         root "volume-id"
@@ -23,6 +24,7 @@ module Niso
         map_attribute "pub-id-type", to: :pub_id_type
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
       end
     end
   end

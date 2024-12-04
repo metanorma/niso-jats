@@ -91,7 +91,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "related-article"
+        root "related-article", mixed: true
 
         map_content to: :content
         map_attribute "elocation-id", to: :elocation_id

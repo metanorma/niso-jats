@@ -11,7 +11,7 @@ module Niso
       attribute :license_p, LicenseParagraph, collection: true
 
       xml do
-        root "license"
+        root "license", mixed: true
 
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id

@@ -11,6 +11,7 @@ module Niso
       attribute :specific_use, :string
       attribute :lang, :string
       attribute :def, Def, collection: true
+      attribute :href, :string
 
       xml do
         root "abbrev"
@@ -22,6 +23,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_element "def", to: :def
       end
     end

@@ -29,7 +29,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "textual-form"
+        root "textual-form", mixed: true
 
         map_content to: :content
         map_attribute "id", to: :id

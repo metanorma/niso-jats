@@ -16,7 +16,7 @@ module Niso
       attribute :suffix, Suffix, collection: true
 
       xml do
-        root "string-name"
+        root "string-name", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

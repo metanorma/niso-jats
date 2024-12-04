@@ -32,7 +32,7 @@ module Niso
         root "graphic"
 
         map_attribute "content-type", to: :content_type
-        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink"
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "mime-subtype", to: :mime_subtype

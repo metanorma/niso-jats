@@ -10,7 +10,7 @@ module Niso
       attribute :license, License, collection: true
 
       xml do
-        root "permissions"
+        root "permissions", mixed: true
 
         map_attribute "id", to: :id
         map_element "copyright-statement", to: :copyright_statement
