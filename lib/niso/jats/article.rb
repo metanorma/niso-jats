@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+require_relative "article_model"
+
 module Niso
   module Jats
     class Article < Lutaml::Model::Serializable
+      model ArticleModel
+
       attribute :article_type, :string
       attribute :dtd_version, :string
       attribute :id, :string
@@ -23,7 +27,7 @@ module Niso
         map_attribute "dtd-version", to: :dtd_version
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, render_default: true
+        map_attribute "lang", to: :lang, prefix: "xml", render_default: true
         map_element "processing-meta", to: :processing_meta
         map_element "front", to: :front
         map_element "body", to: :body
