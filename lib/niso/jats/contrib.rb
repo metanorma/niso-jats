@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+require_relative "contrib_model"
+
 module Niso
   module Jats
     class Contrib < Lutaml::Model::Serializable
+      model ContribModel
+
       attribute :contrib_type, :string
       attribute :corresp, :string
       attribute :deceased, :string

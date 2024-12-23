@@ -12,7 +12,7 @@ RSpec.shared_examples "a serializer" do
     input = Xml::C14n.format(fixture.read)
 
     serialized = described_class.from_xml(input)
-    output = Xml::C14n.format(serialized.to_xml)
+    output = Xml::C14n.format(described_class.to_xml(serialized))
 
     expect(output).to be_analogous_with(input)
   end

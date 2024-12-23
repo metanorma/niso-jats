@@ -4,7 +4,7 @@ module Niso
   module Jats
     class TitleGroup < Lutaml::Model::Serializable
       attribute :id, :string
-      attribute :article_title, ArticleTitle
+      attribute :article_title, ArticleTitle, collection: true
       attribute :subtitle, Subtitle, collection: true
       attribute :trans_title_group, TransTitleGroup, collection: true
       attribute :alt_title, AltTitle, collection: true

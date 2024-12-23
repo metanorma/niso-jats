@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.add_dependency "bigdecimal"
-  spec.add_dependency "lutaml-model"
+  spec.add_dependency "lutaml-model", "~> 0.3.29"
   spec.add_dependency "nokogiri"
   spec.add_dependency "zeitwerk", "~> 2.6.18"
   spec.metadata["rubygems_mfa_required"] = "true"
