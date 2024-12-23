@@ -1,5 +1,5 @@
 RSpec.describe Niso::Jats::ArticleModel do
-  let(:xml) { file_fixture("niso-jats/met_52_1_155.xml").read }
+  let(:xml) { file_fixture("met_52_1_155.xml").read }
   subject { Niso::Jats::Article.from_xml(xml) }
 
   it "jornal title" do
@@ -11,7 +11,7 @@ RSpec.describe Niso::Jats::ArticleModel do
   end
 
   context "title" do
-    let(:xml) { file_fixture("niso-jats/metv9i4p155.xml").read }
+    let(:xml) { file_fixture("metv9i4p155.xml").read }
 
     it do
       expect(subject.title).to eq [
