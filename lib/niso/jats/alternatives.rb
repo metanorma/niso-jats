@@ -23,7 +23,7 @@ module Niso
       attribute :mml_math, :string, collection: true
 
       xml do
-        root "alternatives"
+        root "alternatives", ordered: true
 
         map_attribute "id", to: :id
         map_element "object-id", to: :object_id

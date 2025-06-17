@@ -18,6 +18,7 @@ module Niso
       attribute :role, Role, collection: true
       attribute :uri, Uri, collection: true
       attribute :xref, Xref, collection: true
+      attribute :etal, Etal
 
       xml do
         root "contrib-group"
@@ -37,6 +38,7 @@ module Niso
         map_element "role", to: :role
         map_element "uri", to: :uri
         map_element "xref", to: :xref
+        map_element "etal", to: :etal
       end
     end
   end

@@ -28,7 +28,7 @@ module Niso
       attribute :chem_struct, ChemStruct, collection: true
       attribute :inline_formula, InlineFormula, collection: true
       attribute :tex_math, TexMath, collection: true
-      attribute :mml_math, :string, collection: true
+      attribute :mml_math, MmlMath, collection: true
       attribute :named_content, NamedContent, collection: true
       attribute :styled_content, StyledContent, collection: true
       attribute :sub, Sub, collection: true
@@ -62,7 +62,7 @@ module Niso
         map_element "chem-struct", to: :chem_struct
         map_element "inline-formula", to: :inline_formula
         map_element "tex-math", to: :tex_math
-        map_element "mml-math", to: :mml_math
+        map_element "math", to: :mml_math, namespace: "http://www.w3.org/1998/Math/MathML", prefix: "mml"
         map_element "named-content", to: :named_content
         map_element "styled-content", to: :styled_content
         map_element "sub", to: :sub

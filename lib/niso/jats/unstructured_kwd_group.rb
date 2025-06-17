@@ -11,6 +11,7 @@ module Niso
       attribute :vocab, :string
       attribute :vocab_identifier, :string
       attribute :lang, :string
+      attribute :italic, :string, collection: true
 
       xml do
         root "unstructured-kwd-group", mixed: true
@@ -23,6 +24,7 @@ module Niso
         map_attribute "vocab", to: :vocab
         map_attribute "vocab-identifier", to: :vocab_identifier
         map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_element "italic", to: :italic
       end
     end
   end

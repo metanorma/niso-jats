@@ -16,7 +16,7 @@ module Niso
       attribute :nlm_citation, NlmCitation, collection: true
 
       xml do
-        root "title"
+        root "title", mixed: true
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

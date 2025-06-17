@@ -43,7 +43,7 @@ module Niso
       attribute :sig_block, SigBlock
 
       xml do
-        root "body"
+        root "body", ordered: true
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

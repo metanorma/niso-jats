@@ -47,7 +47,7 @@ module Niso
       attribute :glossary, Glossary, collection: true
 
       xml do
-        root "glossary"
+        root "glossary", ordered: true
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
