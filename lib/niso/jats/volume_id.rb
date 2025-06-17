@@ -6,6 +6,7 @@ module Niso
       attribute :content, :string
       attribute :assigning_authority, :string
       attribute :content_type, :string
+      attribute :href, :string
       attribute :hreflang, :string
       attribute :id, :string
       attribute :pub_id_type, :string
@@ -18,6 +19,7 @@ module Niso
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type
+        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "pub-id-type", to: :pub_id_type
