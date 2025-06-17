@@ -5,8 +5,6 @@ require "niso-jats"
 require "xml-c14n"
 require "equivalent-xml"
 require "lutaml/model"
-require "lutaml/model/xml_adapter/nokogiri_adapter"
-require "lutaml/model/json_adapter/standard_json_adapter"
 
 Dir["spec/support/**/*.rb"].each do |it|
   require File.expand_path(it)
@@ -27,6 +25,5 @@ RSpec.configure do |config|
 end
 
 Lutaml::Model::Config.configure do |config|
-  config.xml_adapter = Lutaml::Model::XmlAdapter::NokogiriAdapter
-  config.json_adapter = Lutaml::Model::JsonAdapter::StandardJsonAdapter
+  config.xml_adapter_type = :nokogiri
 end
