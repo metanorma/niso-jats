@@ -7,7 +7,7 @@ module Niso
       attribute :id, :string
       attribute :orientation, :string, default: -> { "portrait" }
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :alt_text, AltText, collection: true
       attribute :long_desc, LongDesc, collection: true
       attribute :email, Email, collection: true
@@ -27,7 +27,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "orientation", to: :orientation
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "email", to: :email

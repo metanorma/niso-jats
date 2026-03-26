@@ -10,7 +10,7 @@ module Niso
       attribute :rid, :string
       attribute :specific_use, :string
       attribute :support_type, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :bold, Bold, collection: true
       attribute :fixed_case, FixedCase, collection: true
       attribute :italic, Italic, collection: true
@@ -50,7 +50,7 @@ module Niso
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
         map_attribute "support-type", to: :support_type
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "bold", to: :bold
         map_element "fixed-case", to: :fixed_case
         map_element "italic", to: :italic

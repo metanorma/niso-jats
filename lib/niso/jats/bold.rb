@@ -11,7 +11,8 @@ module Niso
       attribute :toggle, :string
 
       xml do
-        root "bold", mixed: true
+        element "bold"
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

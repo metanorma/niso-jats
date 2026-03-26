@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require "pry"
 require "niso-jats"
-require "xml-c14n"
-require "equivalent-xml"
+require "canon"
 require "lutaml/model"
 
 Dir["spec/support/**/*.rb"].each do |it|

@@ -6,7 +6,7 @@ module Niso
       attribute :content, :string
       attribute :hreflang, :string
       attribute :id, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
 
       xml do
         root "award-desc"
@@ -14,7 +14,7 @@ module Niso
         map_content to: :content
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
       end
     end
   end

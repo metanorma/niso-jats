@@ -8,7 +8,7 @@ module Niso
       attribute :id, :string
       attribute :product_type, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :inline_supplementary_material, InlineSupplementaryMaterial,
                 collection: true
       attribute :related_article, RelatedArticle, collection: true
@@ -74,7 +74,7 @@ module Niso
       attribute :month, Month, collection: true
       attribute :name, Name, collection: true
       attribute :name_alternatives, NameAlternatives, collection: true
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :page_range, PageRange, collection: true
       attribute :part_title, PartTitle, collection: true
       attribute :patent, Patent, collection: true
@@ -113,7 +113,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "product-type", to: :product_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "inline-supplementary-material",
                     to: :inline_supplementary_material
         map_element "related-article", to: :related_article
@@ -179,7 +179,7 @@ module Niso
         map_element "month", to: :month
         map_element "name", to: :name
         map_element "name-alternatives", to: :name_alternatives
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "page-range", to: :page_range
         map_element "part-title", to: :part_title
         map_element "patent", to: :patent

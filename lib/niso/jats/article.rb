@@ -7,7 +7,7 @@ module Niso
       attribute :dtd_version, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string, default: -> { "en" }
+      attribute :lang, :xml_lang, default: -> { "en" }
       attribute :processing_meta, ProcessingMeta
       attribute :front, Front
       attribute :body, Body

@@ -16,7 +16,8 @@ module Niso
       attribute :sec, Sec, collection: true
 
       xml do
-        root "back", ordered: true
+        element "back"
+        ordered
 
         map_attribute "id", to: :id
         map_element "label", to: :label

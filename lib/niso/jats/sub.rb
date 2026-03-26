@@ -11,7 +11,8 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "sub", mixed: true
+        element "sub"
+        mixed_content
 
         map_content to: :content
         map_attribute "arrange", to: :arrange

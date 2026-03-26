@@ -14,7 +14,7 @@ module Niso
       attribute :platforms, :string
       attribute :position, :string, default: -> { "float" }
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :email, Email, collection: true
       attribute :ext_link, ExtLink, collection: true
       attribute :uri, Uri, collection: true
@@ -59,7 +59,7 @@ module Niso
         map_attribute "platforms", to: :platforms
         map_attribute "position", to: :position
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri

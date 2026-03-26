@@ -6,7 +6,7 @@ module Niso
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :contrib_id, ContribId, collection: true
       attribute :name, Name, collection: true
       attribute :name_alternatives, NameAlternatives, collection: true
@@ -18,7 +18,7 @@ module Niso
         map_content to: :content
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "contrib-id", to: :contrib_id
         map_element "name", to: :name
         map_element "name-alternatives", to: :name_alternatives

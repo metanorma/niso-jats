@@ -8,7 +8,7 @@ module Niso
       attribute :id, :string
       attribute :name_style, :string, default: -> { "western" }
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :degrees, Degrees, collection: true
       attribute :given_names, GivenNames, collection: true
       attribute :prefix, Prefix, collection: true
@@ -16,14 +16,15 @@ module Niso
       attribute :suffix, Suffix, collection: true
 
       xml do
-        root "string-name", ordered: true
+        element "string-name"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "name-style", to: :name_style
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "degrees", to: :degrees
         map_element "given-names", to: :given_names
         map_element "prefix", to: :prefix

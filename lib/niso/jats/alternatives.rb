@@ -4,7 +4,7 @@ module Niso
   module Jats
     class Alternatives < Lutaml::Model::Serializable
       attribute :id, :string
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :array, Array, collection: true
       attribute :chem_struct, ChemStruct, collection: true
       attribute :code, Code, collection: true
@@ -23,10 +23,11 @@ module Niso
       attribute :mml_math, :string, collection: true
 
       xml do
-        root "alternatives", ordered: true
+        element "alternatives"
+        ordered
 
         map_attribute "id", to: :id
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "array", to: :array
         map_element "chem-struct", to: :chem_struct
         map_element "code", to: :code

@@ -12,14 +12,14 @@ module Niso
       attribute :hreflang, :string
       attribute :id, :string
       attribute :link_type, :string
-      attribute :object_id, :string
-      attribute :object_id_type, :string
+      attribute :jats_object_id, :string
+      attribute :jats_object_id_type, :string
       attribute :object_type, :string
       attribute :source_id, :string
       attribute :source_id_type, :string
       attribute :source_type, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :bold, Bold, collection: true
       attribute :fixed_case, FixedCase, collection: true
       attribute :italic, Italic, collection: true
@@ -107,14 +107,14 @@ module Niso
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "link-type", to: :link_type
-        map_attribute "object-id", to: :object_id
-        map_attribute "object-id-type", to: :object_id_type
+        map_attribute "object-id", to: :jats_object_id
+        map_attribute "object-id-type", to: :jats_object_id_type
         map_attribute "object-type", to: :object_type
         map_attribute "source-id", to: :source_id
         map_attribute "source-id-type", to: :source_id_type
         map_attribute "source-type", to: :source_type
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "bold", to: :bold
         map_element "fixed-case", to: :fixed_case
         map_element "italic", to: :italic

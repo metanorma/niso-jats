@@ -8,8 +8,8 @@ module Niso
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
-      attribute :type, :string
+      attribute :lang, :xml_lang
+      attribute :type, :xlink_type
       attribute :sub, Sub, collection: true
       attribute :sup, Sup, collection: true
 
@@ -21,8 +21,8 @@ module Niso
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
-        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
+        map_attribute "lang", to: :lang
+        map_attribute "type", to: :type
         map_element "sub", to: :sub
         map_element "sup", to: :sup
       end

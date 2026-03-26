@@ -6,7 +6,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :volume, Volume, collection: true
       attribute :volume_id, VolumeId, collection: true
       attribute :volume_series, VolumeSeries
@@ -23,7 +23,7 @@ module Niso
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "volume", to: :volume
         map_element "volume-id", to: :volume_id
         map_element "volume-series", to: :volume_series

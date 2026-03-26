@@ -11,7 +11,8 @@ module Niso
       attribute :toggle, :string, default: -> { "yes" }
 
       xml do
-        root "italic", mixed: true
+        element "italic"
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

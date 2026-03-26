@@ -5,10 +5,12 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in niso-jats.gemspec
 gemspec
 
-gem "equivalent-xml"
-gem "pry"
+gem "canon"
+gem "lutaml-model", github: "lutaml/lutaml-model", branch: "main"
+gem "nokogiri"
 gem "rake", "~> 13.0"
 gem "rspec", "~> 3.11"
-gem "rubocop", "~> 1.58"
+gem "rubocop"
+gem "rubocop-rake"
+gem "rubocop-rspec"
 gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
-gem "xml-c14n"

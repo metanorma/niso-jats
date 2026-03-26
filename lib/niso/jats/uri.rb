@@ -9,9 +9,9 @@ module Niso
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
-      attribute :type, :string
-      attribute :href, :string
+      attribute :lang, :xml_lang
+      attribute :type, :xlink_type
+      attribute :href, :xlink_href
 
       xml do
         root "uri"
@@ -22,9 +22,9 @@ module Niso
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
-        map_attribute "type", to: :type, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
-        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink", prefix: "xlink"
+        map_attribute "lang", to: :lang
+        map_attribute "type", to: :type
+        map_attribute "href", to: :href
       end
     end
   end

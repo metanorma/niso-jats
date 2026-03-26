@@ -9,7 +9,7 @@ module Niso
       attribute :id, :string
       attribute :iso_8601_date, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :day, Day, collection: true
       attribute :era, Era, collection: true
       attribute :month, Month, collection: true
@@ -25,7 +25,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "iso-8601-date", to: :iso_8601_date
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "day", to: :day
         map_element "era", to: :era
         map_element "month", to: :month

@@ -1,1 +1,3 @@
-require_relative "niso_jats"
+# frozen_string_literal: true
+
+require_relative "niso/jats"

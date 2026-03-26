@@ -9,7 +9,7 @@ module Niso
       attribute :specific_use, :string
       attribute :vocab, :string
       attribute :vocab_identifier, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :label, Label
       attribute :title, Title
       attribute :kwd, Kwd, collection: true
@@ -18,7 +18,8 @@ module Niso
       attribute :unstructured_kwd_group, UnstructuredKwdGroup, collection: true
 
       xml do
-        root "kwd-group", ordered: true
+        element "kwd-group"
+        ordered
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "id", to: :id
@@ -26,7 +27,7 @@ module Niso
         map_attribute "specific-use", to: :specific_use
         map_attribute "vocab", to: :vocab
         map_attribute "vocab-identifier", to: :vocab_identifier
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "label", to: :label
         map_element "title", to: :title
         map_element "kwd", to: :kwd
