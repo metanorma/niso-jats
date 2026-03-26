@@ -7,7 +7,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :alt_text, AltText, collection: true
       attribute :long_desc, LongDesc, collection: true
       attribute :abstract, Abstract, collection: true
@@ -27,7 +27,7 @@ module Niso
       attribute :strike, Strike, collection: true
       attribute :underline, Underline, collection: true
       attribute :ruby, Ruby, collection: true
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :inline_graphic, InlineGraphic, collection: true
       attribute :inline_media, InlineMedia, collection: true
       attribute :private_char, PrivateChar, collection: true
@@ -50,13 +50,14 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "disp-formula", mixed: true
+        element "disp-formula"
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "abstract", to: :abstract
@@ -76,7 +77,7 @@ module Niso
         map_element "strike", to: :strike
         map_element "underline", to: :underline
         map_element "ruby", to: :ruby
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "inline-graphic", to: :inline_graphic
         map_element "inline-media", to: :inline_media
         map_element "private-char", to: :private_char

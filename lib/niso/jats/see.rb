@@ -10,7 +10,7 @@ module Niso
       attribute :id, :string
       attribute :rid, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :disp_formula, DispFormula, collection: true
       attribute :disp_formula_group, DispFormulaGroup, collection: true
       attribute :array, Array, collection: true
@@ -27,7 +27,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri

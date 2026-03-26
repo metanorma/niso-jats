@@ -6,7 +6,7 @@ module Niso
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :email, Email, collection: true
       attribute :ext_link, ExtLink, collection: true
       attribute :uri, Uri, collection: true
@@ -28,7 +28,7 @@ module Niso
         map_content to: :content
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "email", to: :email
         map_element "ext-link", to: :ext_link
         map_element "uri", to: :uri

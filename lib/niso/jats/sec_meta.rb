@@ -4,7 +4,7 @@ module Niso
   module Jats
     class SecMeta < Lutaml::Model::Serializable
       attribute :id, :string
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :contrib_group, ContribGroup, collection: true
       attribute :abstract, Abstract, collection: true
       attribute :kwd_group, KwdGroup, collection: true
@@ -15,7 +15,7 @@ module Niso
         root "sec-meta"
 
         map_attribute "id", to: :id
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "contrib-group", to: :contrib_group
         map_element "abstract", to: :abstract
         map_element "kwd-group", to: :kwd_group

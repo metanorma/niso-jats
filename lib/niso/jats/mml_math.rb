@@ -8,7 +8,7 @@ module Niso
 
       xml do
         root "math"
-        namespace "http://www.w3.org/1998/Math/MathML", "mml"
+        namespace ::Niso::Jats::Namespaces::Mathml
 
         map_all to: :content
         map_attribute "name", to: :name

@@ -11,7 +11,7 @@ module Niso
       attribute :specific_use, :string
       attribute :vocab, :string
       attribute :vocab_identifier, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
 
       xml do
         root "institution-id"
@@ -24,7 +24,7 @@ module Niso
         map_attribute "specific-use", to: :specific_use
         map_attribute "vocab", to: :vocab
         map_attribute "vocab-identifier", to: :vocab_identifier
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
       end
     end
   end

@@ -6,7 +6,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :label, Label
       attribute :citation_alternatives, CitationAlternatives, collection: true
       attribute :element_citation, ElementCitation, collection: true

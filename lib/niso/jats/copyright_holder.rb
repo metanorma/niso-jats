@@ -7,7 +7,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :institution, Institution, collection: true
       attribute :institution_wrap, InstitutionWrap, collection: true
       attribute :sub, Sub, collection: true

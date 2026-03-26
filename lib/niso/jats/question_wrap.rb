@@ -7,8 +7,8 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
-      attribute :object_id, ObjectId, collection: true
+      attribute :lang, :xml_lang
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :question, Question
       attribute :answer, Answer
       attribute :answer_set, AnswerSet
@@ -21,8 +21,8 @@ module Niso
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
-        map_element "object-id", to: :object_id
+        map_attribute "lang", to: :lang
+        map_element "object-id", to: :jats_object_id
         map_element "question", to: :question
         map_element "answer", to: :answer
         map_element "answer-set", to: :answer_set

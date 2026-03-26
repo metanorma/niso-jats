@@ -8,17 +8,18 @@ module Niso
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
 
       xml do
-        root "email", mixed: true
+        element "email"
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
       end
     end
   end

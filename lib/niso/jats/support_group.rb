@@ -5,7 +5,7 @@ module Niso
     class SupportGroup < Lutaml::Model::Serializable
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :funding_group, FundingGroup, collection: true
       attribute :contributed_resource_group, ContributedResourceGroup,
                 collection: true
@@ -15,7 +15,7 @@ module Niso
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "funding-group", to: :funding_group
         map_element "contributed-resource-group",
                     to: :contributed_resource_group

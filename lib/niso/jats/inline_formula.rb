@@ -7,7 +7,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :alt_text, AltText, collection: true
       attribute :long_desc, LongDesc, collection: true
       attribute :bold, Bold, collection: true
@@ -35,13 +35,14 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "inline-formula", mixed: true
+        element "inline-formula"
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "alt-text", to: :alt_text
         map_element "long-desc", to: :long_desc
         map_element "bold", to: :bold
@@ -62,7 +63,7 @@ module Niso
         map_element "chem-struct", to: :chem_struct
         map_element "inline-formula", to: :inline_formula
         map_element "tex-math", to: :tex_math
-        map_element "math", to: :mml_math, namespace: "http://www.w3.org/1998/Math/MathML", prefix: "mml"
+        map_element "math", to: :mml_math
         map_element "named-content", to: :named_content
         map_element "styled-content", to: :styled_content
         map_element "sub", to: :sub

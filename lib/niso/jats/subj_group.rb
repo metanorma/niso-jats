@@ -9,7 +9,7 @@ module Niso
       attribute :subj_group_type, :string
       attribute :vocab, :string
       attribute :vocab_identifier, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :subject, Subject, collection: true
       attribute :compound_subject, CompoundSubject, collection: true
       attribute :subj_group, SubjGroup, collection: true
@@ -23,7 +23,7 @@ module Niso
         map_attribute "subj-group-type", to: :subj_group_type
         map_attribute "vocab", to: :vocab
         map_attribute "vocab-identifier", to: :vocab_identifier
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "subject", to: :subject
         map_element "compound-subject", to: :compound_subject
         map_element "subj-group", to: :subj_group

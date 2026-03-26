@@ -6,11 +6,11 @@ module Niso
       attribute :content, :string
       attribute :assigning_authority, :string
       attribute :ext_link_type, :string
-      attribute :href, :string
+      attribute :href, :xlink_href
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :bold, Bold, collection: true
       attribute :fixed_case, FixedCase, collection: true
       attribute :italic, Italic, collection: true
@@ -28,16 +28,17 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "ext-link", mixed: true
+        element "ext-link"
+        mixed_content
 
         map_content to: :content
-        map_attribute "href", to: :href, namespace: "http://www.w3.org/1999/xlink"
+        map_attribute "href", to: :href
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "ext-link-type", to: :ext_link_type
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "bold", to: :bold
         map_element "fixed-case", to: :fixed_case
         map_element "italic", to: :italic

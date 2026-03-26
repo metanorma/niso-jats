@@ -34,9 +34,9 @@ To parse a NISO JATS XML document:
 
 [source,ruby]
 ----
-require 'niso-jats'
+require 'niso/jats'
 
-jats = NisoJats::Document.new(File.read('jats.xml'))
+jats = Niso::Jats::Document.new(File.read('jats.xml'))
 puts jats.title
 puts jats.abstract
 puts jats.sections
@@ -46,14 +46,14 @@ To generate a NISO JATS XML document:
 
 [source,ruby]
 ----
-require 'niso-jats'
+require 'niso/jats'
 
-jats = NisoJats::Document.new
+jats = Niso::Jats::Document.new
 jats.title = 'An Article Title'
 jats.abstract = 'An Article Abstract'
 jats.sections = [
-  NisoJats::Section.new('Section 1', 'This is the first section'),
-  NisoJats::Section.new('Section 2', 'This is the second section')
+  Niso::Jats::Section.new('Section 1', 'This is the first section'),
+  Niso::Jats::Section.new('Section 2', 'This is the second section')
 ]
 
 puts jats.to_xml

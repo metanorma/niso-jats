@@ -4,7 +4,7 @@ module Niso
   module Jats
     class BlockAlternatives < Lutaml::Model::Serializable
       attribute :id, :string
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :boxed_text, BoxedText, collection: true
       attribute :fig, Fig, collection: true
       attribute :fig_group, FigGroup, collection: true
@@ -15,7 +15,7 @@ module Niso
         root "block-alternatives"
 
         map_attribute "id", to: :id
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "boxed-text", to: :boxed_text
         map_element "fig", to: :fig
         map_element "fig-group", to: :fig_group

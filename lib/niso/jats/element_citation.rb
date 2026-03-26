@@ -10,7 +10,7 @@ module Niso
       attribute :publisher_type, :string
       attribute :specific_use, :string
       attribute :use_type, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :bold, Bold, collection: true
       attribute :fixed_case, FixedCase, collection: true
       attribute :italic, Italic, collection: true
@@ -71,7 +71,7 @@ module Niso
       attribute :month, Month, collection: true
       attribute :name, Name, collection: true
       attribute :name_alternatives, NameAlternatives, collection: true
-      attribute :object_id, ObjectId, collection: true
+      attribute :jats_object_id, ObjectId, collection: true
       attribute :page_range, PageRange, collection: true
       attribute :part_title, PartTitle, collection: true
       attribute :patent, Patent, collection: true
@@ -109,7 +109,7 @@ module Niso
         map_attribute "publisher-type", to: :publisher_type
         map_attribute "specific-use", to: :specific_use
         map_attribute "use-type", to: :use_type
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "bold", to: :bold
         map_element "fixed-case", to: :fixed_case
         map_element "italic", to: :italic
@@ -168,7 +168,7 @@ module Niso
         map_element "issue-title", to: :issue_title
         map_element "name", to: :name
         map_element "name-alternatives", to: :name_alternatives
-        map_element "object-id", to: :object_id
+        map_element "object-id", to: :jats_object_id
         map_element "page-range", to: :page_range
         map_element "part-title", to: :part_title
         map_element "patent", to: :patent

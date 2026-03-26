@@ -32,7 +32,8 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "contrib", ordered: true
+        element "contrib"
+        ordered
 
         map_attribute "contrib-type", to: :contrib_type
         map_attribute "corresp", to: :corresp

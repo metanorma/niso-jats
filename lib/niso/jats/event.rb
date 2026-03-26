@@ -6,7 +6,7 @@ module Niso
       attribute :event_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :event_desc, EventDesc
       attribute :article_id, ArticleId, collection: true
       attribute :article_version, ArticleVersion
@@ -27,7 +27,7 @@ module Niso
         map_attribute "event-type", to: :event_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "event-desc", to: :event_desc
         map_element "article-id", to: :article_id
         map_element "article-version", to: :article_version

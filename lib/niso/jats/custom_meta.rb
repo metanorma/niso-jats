@@ -11,7 +11,7 @@ module Niso
       attribute :vocab_identifier, :string
       attribute :vocab_term, :string
       attribute :vocab_term_identifier, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :meta_name, MetaName
       attribute :meta_value, MetaValue
 
@@ -26,7 +26,7 @@ module Niso
         map_attribute "vocab-identifier", to: :vocab_identifier
         map_attribute "vocab-term", to: :vocab_term
         map_attribute "vocab-term-identifier", to: :vocab_term_identifier
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "meta-name", to: :meta_name
         map_element "meta-value", to: :meta_value
       end

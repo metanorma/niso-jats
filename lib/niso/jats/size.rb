@@ -7,7 +7,7 @@ module Niso
       attribute :id, :string
       attribute :specific_use, :string
       attribute :units, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
 
       xml do
         root "size"
@@ -16,7 +16,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
         map_attribute "units", to: :units
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
       end
     end
   end

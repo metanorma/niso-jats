@@ -6,7 +6,7 @@ module Niso
       attribute :content, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :addr_line, AddrLine, collection: true
       attribute :city, City, collection: true
       attribute :country, Country, collection: true
@@ -26,7 +26,7 @@ module Niso
         map_content to: :content
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "addr-line", to: :addr_line
         map_element "city", to: :city
         map_element "country", to: :country

@@ -6,7 +6,7 @@ module Niso
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
-      attribute :lang, :string
+      attribute :lang, :xml_lang
       attribute :trans_title, TransTitle
       attribute :trans_subtitle, TransSubtitle, collection: true
 
@@ -16,7 +16,7 @@ module Niso
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
-        map_attribute "lang", to: :lang, namespace: "http://www.w3.org/XML/1998/namespace", prefix: "xml"
+        map_attribute "lang", to: :lang
         map_element "trans-title", to: :trans_title
         map_element "trans-subtitle", to: :trans_subtitle
       end
