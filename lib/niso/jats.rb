@@ -314,6 +314,5 @@ module Niso
     autoload :X, "#{__dir__}/jats/x"
     autoload :Xref, "#{__dir__}/jats/xref"
     autoload :Year, "#{__dir__}/jats/year"
-
   end
 end
