@@ -11,7 +11,7 @@ module Niso
       attribute :institution_wrap, InstitutionWrap, collection: true
 
       xml do
-        root "publisher-name"
+        element "publisher-name"
 
         map_content to: :content
         map_attribute "id", to: :id

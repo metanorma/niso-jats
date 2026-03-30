@@ -12,7 +12,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "year"
+        element "year"
 
         map_content to: :content
         map_attribute "calendar", to: :calendar

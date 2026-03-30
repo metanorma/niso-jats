@@ -8,7 +8,7 @@ module Niso
       attribute :string_name, StringName, collection: true
 
       xml do
-        root "name-alternatives"
+        element "name-alternatives"
 
         map_attribute "id", to: :id
         map_element "name", to: :name

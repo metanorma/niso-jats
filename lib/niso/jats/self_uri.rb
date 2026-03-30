@@ -12,7 +12,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "self-uri"
+        element "self-uri"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

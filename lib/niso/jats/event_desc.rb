@@ -23,7 +23,7 @@ module Niso
       attribute :pub_date_not_available, PubDateNotAvailable, collection: true
 
       xml do
-        root "event-desc"
+        element "event-desc"
 
         map_content to: :content
         map_attribute "id", to: :id

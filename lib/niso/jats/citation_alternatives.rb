@@ -10,7 +10,7 @@ module Niso
       attribute :nlm_citation, NlmCitation, collection: true
 
       xml do
-        root "citation-alternatives"
+        element "citation-alternatives"
 
         map_attribute "id", to: :id
         map_element "object-id", to: :jats_object_id

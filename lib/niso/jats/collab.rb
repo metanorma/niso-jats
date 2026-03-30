@@ -60,7 +60,7 @@ module Niso
       attribute :fn, Fn, collection: true
 
       xml do
-        root "collab"
+        element "collab"
 
         map_content to: :content
         map_attribute "collab-type", to: :collab_type

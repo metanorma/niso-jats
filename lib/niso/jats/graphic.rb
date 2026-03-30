@@ -29,7 +29,7 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "graphic"
+        element "graphic"
 
         map_attribute "content-type", to: :content_type
         map_attribute "href", to: :href

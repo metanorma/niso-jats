@@ -31,7 +31,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "data-title"
+        element "data-title"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

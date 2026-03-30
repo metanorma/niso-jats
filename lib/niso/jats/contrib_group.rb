@@ -21,7 +21,7 @@ module Niso
       attribute :etal, Etal
 
       xml do
-        root "contrib-group"
+        element "contrib-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

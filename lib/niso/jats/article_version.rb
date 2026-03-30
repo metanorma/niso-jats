@@ -18,7 +18,7 @@ module Niso
       attribute :vocab_term_identifier, :string
 
       xml do
-        root "article-version"
+        element "article-version"
 
         map_content to: :content
         map_attribute "article-version-type", to: :article_version_type

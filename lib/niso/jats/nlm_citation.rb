@@ -41,7 +41,7 @@ module Niso
       attribute :annotation, Annotation
 
       xml do
-        root "nlm-citation"
+        element "nlm-citation"
 
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id

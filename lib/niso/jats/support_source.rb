@@ -41,7 +41,7 @@ module Niso
       attribute :institution_wrap, InstitutionWrap, collection: true
 
       xml do
-        root "support-source"
+        element "support-source"
 
         map_content to: :content
         map_attribute "country", to: :country

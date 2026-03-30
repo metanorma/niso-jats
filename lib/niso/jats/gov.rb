@@ -25,7 +25,7 @@ module Niso
       attribute :styled_content, StyledContent, collection: true
 
       xml do
-        root "gov"
+        element "gov"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

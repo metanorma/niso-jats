@@ -9,7 +9,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "etal"
+        element "etal"
 
         map_content to: :content
         map_attribute "id", to: :id

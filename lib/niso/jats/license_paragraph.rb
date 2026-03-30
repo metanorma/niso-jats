@@ -7,7 +7,7 @@ module Niso
       attribute :price, Price
 
       xml do
-        root "license-p"
+        element "license-p"
 
         map_element "price", to: :price
         map_element "p", to: :p

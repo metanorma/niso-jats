@@ -106,7 +106,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "product"
+        element "product"
 
         map_content to: :content
         map_attribute "hreflang", to: :hreflang

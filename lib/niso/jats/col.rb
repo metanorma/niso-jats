@@ -14,7 +14,7 @@ module Niso
       attribute :width, :string
 
       xml do
-        root "col"
+        element "col"
 
         map_attribute "align", to: :align
         map_attribute "char", to: :char

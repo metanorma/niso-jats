@@ -14,7 +14,7 @@ module Niso
       attribute :custom_meta_group, CustomMetaGroup, collection: true
 
       xml do
-        root "processing-meta"
+        element "processing-meta"
 
         map_attribute "base-tagset", to: :base_tagset
         map_attribute "id", to: :id

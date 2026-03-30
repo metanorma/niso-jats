@@ -11,7 +11,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "access-date"
+        element "access-date"
 
         map_content to: :content
         map_attribute "calendar", to: :calendar

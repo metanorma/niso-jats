@@ -15,7 +15,7 @@ module Niso
       attribute :explanation, Explanation, collection: true
 
       xml do
-        root "question-wrap"
+        element "question-wrap"
 
         map_attribute "audience", to: :audience
         map_attribute "content-type", to: :content_type

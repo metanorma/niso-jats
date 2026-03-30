@@ -47,7 +47,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "sans-serif"
+        element "sans-serif"
 
         map_content to: :content
         map_attribute "id", to: :id

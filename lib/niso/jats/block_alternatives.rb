@@ -12,7 +12,7 @@ module Niso
       attribute :table_wrap_group, TableWrapGroup, collection: true
 
       xml do
-        root "block-alternatives"
+        element "block-alternatives"
 
         map_attribute "id", to: :id
         map_element "object-id", to: :jats_object_id

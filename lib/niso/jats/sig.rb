@@ -32,7 +32,7 @@ module Niso
       attribute :media, Media, collection: true
 
       xml do
-        root "sig"
+        element "sig"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

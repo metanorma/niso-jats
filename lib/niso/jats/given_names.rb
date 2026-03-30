@@ -8,7 +8,7 @@ module Niso
       attribute :initials, :string
 
       xml do
-        root "given-names"
+        element "given-names"
 
         map_content to: :content
         map_attribute "id", to: :id

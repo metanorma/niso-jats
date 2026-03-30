@@ -11,7 +11,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "fixed-case"
+        element "fixed-case"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

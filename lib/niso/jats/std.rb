@@ -34,7 +34,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "std"
+        element "std"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

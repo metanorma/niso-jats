@@ -18,7 +18,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "statement"
+        element "statement"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

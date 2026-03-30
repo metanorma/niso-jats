@@ -20,7 +20,7 @@ module Niso
       attribute :preformat, Preformat, collection: true
 
       xml do
-        root "see"
+        element "see"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

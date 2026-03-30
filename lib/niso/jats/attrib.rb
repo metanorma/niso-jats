@@ -11,7 +11,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "attrib"
+        element "attrib"
 
         map_content to: :content
         map_attribute "id", to: :id

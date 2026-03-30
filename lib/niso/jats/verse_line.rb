@@ -43,7 +43,7 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "verse-line"
+        element "verse-line"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

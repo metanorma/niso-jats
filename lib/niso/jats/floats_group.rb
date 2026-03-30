@@ -19,7 +19,7 @@ module Niso
       attribute :table_wrap_group, TableWrapGroup, collection: true
 
       xml do
-        root "floats-group"
+        element "floats-group"
 
         map_attribute "id", to: :id
         map_element "alternatives", to: :alternatives

@@ -14,7 +14,7 @@ module Niso
       attribute :vocab_term_identifier, :string
 
       xml do
-        root "restricted-by"
+        element "restricted-by"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

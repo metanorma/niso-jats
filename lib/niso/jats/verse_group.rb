@@ -19,7 +19,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "verse-group"
+        element "verse-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

@@ -8,7 +8,7 @@ module Niso
       attribute :institution_id, InstitutionId, collection: true
 
       xml do
-        root "institution-wrap"
+        element "institution-wrap"
 
         map_attribute "id", to: :id
         map_element "institution", to: :institution

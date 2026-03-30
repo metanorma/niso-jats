@@ -11,7 +11,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "milestone-start"
+        element "milestone-start"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

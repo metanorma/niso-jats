@@ -15,7 +15,7 @@ module Niso
       attribute :nested_kwd, NestedKwd, collection: true
 
       xml do
-        root "nested-kwd"
+        element "nested-kwd"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type

@@ -18,7 +18,7 @@ module Niso
       attribute :era, Era
 
       xml do
-        root "pub-date"
+        element "pub-date"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "calendar", to: :calendar

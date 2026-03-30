@@ -14,7 +14,7 @@ module Niso
       attribute :href, :xlink_href
 
       xml do
-        root "uri"
+        element "uri"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

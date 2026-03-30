@@ -10,7 +10,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "issue-part"
+        element "issue-part"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

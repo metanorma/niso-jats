@@ -29,7 +29,7 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "on-behalf-of"
+        element "on-behalf-of"
 
         map_content to: :content
         map_attribute "id", to: :id

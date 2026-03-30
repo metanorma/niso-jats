@@ -9,7 +9,7 @@ module Niso
       attribute :publisher_loc, PublisherLoc, collection: true
 
       xml do
-        root "publisher"
+        element "publisher"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

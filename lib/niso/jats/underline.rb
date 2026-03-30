@@ -12,7 +12,7 @@ module Niso
       attribute :underline_style, :string
 
       xml do
-        root "underline"
+        element "underline"
 
         map_content to: :content
         map_attribute "id", to: :id

@@ -19,7 +19,7 @@ module Niso
       attribute :state, State, collection: true
 
       xml do
-        root "conf-loc"
+        element "conf-loc"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

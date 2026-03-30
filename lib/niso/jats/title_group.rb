@@ -11,7 +11,7 @@ module Niso
       attribute :fn_group, FnGroup
 
       xml do
-        root "title-group"
+        element "title-group"
 
         map_attribute "id", to: :id
         map_element "article-title", to: :article_title

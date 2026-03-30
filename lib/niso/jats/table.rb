@@ -22,7 +22,7 @@ module Niso
       attribute :tr, Tr, collection: true
 
       xml do
-        root "table"
+        element "table"
 
         map_attribute "border", to: :border
         map_attribute "cellpadding", to: :cellpadding

@@ -7,7 +7,7 @@ module Niso
       attribute :aff, Aff, collection: true
 
       xml do
-        root "aff-alternatives"
+        element "aff-alternatives"
 
         map_attribute "id", to: :id
         map_element "aff", to: :aff

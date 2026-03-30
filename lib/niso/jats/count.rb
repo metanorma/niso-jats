@@ -8,7 +8,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "count"
+        element "count"
 
         map_attribute "count", to: :count
         map_attribute "count-type", to: :count_type

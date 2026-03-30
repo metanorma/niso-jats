@@ -53,7 +53,7 @@ module Niso
       attribute :explanation, Explanation, collection: true
 
       xml do
-        root "option"
+        element "option"
 
         map_attribute "content-type", to: :content_type
         map_attribute "correct", to: :correct

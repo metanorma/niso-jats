@@ -13,7 +13,7 @@ module Niso
       attribute :word_count, WordCount
 
       xml do
-        root "counts"
+        element "counts"
 
         map_attribute "id", to: :id
         map_element "count", to: :count

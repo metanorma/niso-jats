@@ -9,7 +9,7 @@ module Niso
       attribute :p, Paragraph, collection: true
 
       xml do
-        root "open-access"
+        element "open-access"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

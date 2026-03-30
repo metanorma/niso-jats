@@ -7,7 +7,7 @@ module Niso
       attribute :name, :string
 
       xml do
-        root "math"
+        element "math"
         namespace ::Niso::Jats::Namespaces::Mathml
 
         map_all to: :content

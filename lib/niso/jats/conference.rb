@@ -17,7 +17,7 @@ module Niso
       attribute :conf_theme, ConfTheme
 
       xml do
-        root "conference"
+        element "conference"
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

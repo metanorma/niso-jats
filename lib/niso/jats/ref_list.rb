@@ -48,7 +48,7 @@ module Niso
       attribute :ref_list, RefList, collection: true
 
       xml do
-        root "ref-list"
+        element "ref-list"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

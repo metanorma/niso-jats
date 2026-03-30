@@ -12,7 +12,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "issn"
+        element "issn"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

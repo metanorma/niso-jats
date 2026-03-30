@@ -7,7 +7,7 @@ module Niso
       attribute :event, Event, collection: true
 
       xml do
-        root "pub-history"
+        element "pub-history"
 
         map_attribute "id", to: :id
         map_element "event", to: :event

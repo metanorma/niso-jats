@@ -15,7 +15,7 @@ module Niso
       attribute :col, Col, collection: true
 
       xml do
-        root "colgroup"
+        element "colgroup"
 
         map_attribute "align", to: :align
         map_attribute "char", to: :char

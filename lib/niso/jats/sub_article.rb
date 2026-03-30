@@ -17,7 +17,7 @@ module Niso
       attribute :response, Response, collection: true
 
       xml do
-        root "sub-article"
+        element "sub-article"
 
         map_attribute "article-type", to: :article_type
         map_attribute "id", to: :id

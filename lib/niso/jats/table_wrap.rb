@@ -40,7 +40,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "table-wrap"
+        element "table-wrap"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

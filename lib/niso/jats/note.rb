@@ -12,7 +12,7 @@ module Niso
       attribute :product, Product, collection: true
 
       xml do
-        root "note"
+        element "note"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

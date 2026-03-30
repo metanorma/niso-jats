@@ -8,7 +8,7 @@ module Niso
       attribute :resource_id, ResourceId, collection: true
 
       xml do
-        root "resource-wrap"
+        element "resource-wrap"
 
         map_attribute "id", to: :id
         map_element "resource-name", to: :resource_name

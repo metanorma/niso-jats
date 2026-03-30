@@ -10,7 +10,7 @@ module Niso
       attribute :p, Paragraph, collection: true
 
       xml do
-        root "support-description"
+        element "support-description"
 
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid

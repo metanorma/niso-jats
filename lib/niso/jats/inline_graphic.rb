@@ -15,7 +15,7 @@ module Niso
       attribute :long_desc, LongDesc, collection: true
 
       xml do
-        root "inline-graphic"
+        element "inline-graphic"
 
         map_attribute "baseline-shift", to: :baseline_shift
         map_attribute "content-type", to: :content_type

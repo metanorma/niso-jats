@@ -10,7 +10,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "size"
+        element "size"
 
         map_content to: :content
         map_attribute "id", to: :id

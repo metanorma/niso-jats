@@ -12,7 +12,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "pub-id"
+        element "pub-id"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

@@ -10,7 +10,7 @@ module Niso
       attribute :custom_meta, CustomMeta, collection: true
 
       xml do
-        root "custom-meta-group"
+        element "custom-meta-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

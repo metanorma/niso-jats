@@ -15,7 +15,7 @@ module Niso
       attribute :note, Note, collection: true
 
       xml do
-        root "ref"
+        element "ref"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

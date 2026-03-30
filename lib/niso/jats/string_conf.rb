@@ -44,7 +44,7 @@ module Niso
       attribute :string_conf, StringConf, collection: true
 
       xml do
-        root "string-conf"
+        element "string-conf"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

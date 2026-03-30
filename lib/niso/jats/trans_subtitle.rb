@@ -12,7 +12,7 @@ module Niso
       attribute :break, Break, collection: true
 
       xml do
-        root "trans-subtitle"
+        element "trans-subtitle"
 
         map_content to: :content
         map_attribute "id", to: :id

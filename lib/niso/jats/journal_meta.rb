@@ -17,7 +17,7 @@ module Niso
       attribute :self_uri, SelfUri, collection: true
 
       xml do
-        root "journal-meta"
+        element "journal-meta"
 
         map_attribute "id", to: :id
         map_element "journal-id", to: :journal_id

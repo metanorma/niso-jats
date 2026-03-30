@@ -51,7 +51,7 @@ module Niso
       attribute :permissions, Permissions
 
       xml do
-        root "app"
+        element "app"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

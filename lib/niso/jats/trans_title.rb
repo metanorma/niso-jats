@@ -13,7 +13,7 @@ module Niso
       attribute :break, Break, collection: true
 
       xml do
-        root "trans-title"
+        element "trans-title"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

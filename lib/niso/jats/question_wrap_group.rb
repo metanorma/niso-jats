@@ -17,7 +17,7 @@ module Niso
       attribute :question_wrap, QuestionWrap, collection: true
 
       xml do
-        root "question-wrap-group"
+        element "question-wrap-group"
 
         map_attribute "audience", to: :audience
         map_attribute "content-type", to: :content_type

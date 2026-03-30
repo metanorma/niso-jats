@@ -49,7 +49,7 @@ module Niso
       attribute :sec, Sec, collection: true
 
       xml do
-        root "question-preamble"
+        element "question-preamble"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

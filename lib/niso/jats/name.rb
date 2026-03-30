@@ -14,7 +14,7 @@ module Niso
       attribute :suffix, Suffix
 
       xml do
-        root "name"
+        element "name"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

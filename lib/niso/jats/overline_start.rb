@@ -7,7 +7,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "overline-start"
+        element "overline-start"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

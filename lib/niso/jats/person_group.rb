@@ -21,7 +21,7 @@ module Niso
       attribute :role, Role, collection: true
 
       xml do
-        root "person-group"
+        element "person-group"
 
         map_content to: :content
         map_attribute "custom-type", to: :custom_type

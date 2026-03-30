@@ -8,7 +8,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "underline-end"
+        element "underline-end"
 
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid

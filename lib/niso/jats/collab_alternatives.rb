@@ -7,7 +7,7 @@ module Niso
       attribute :collab, Collab, collection: true
 
       xml do
-        root "collab-alternatives"
+        element "collab-alternatives"
 
         map_attribute "id", to: :id
         map_element "collab", to: :collab

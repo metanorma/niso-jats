@@ -40,7 +40,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "trans-source"
+        element "trans-source"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

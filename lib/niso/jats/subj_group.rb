@@ -15,7 +15,7 @@ module Niso
       attribute :subj_group, SubjGroup, collection: true
 
       xml do
-        root "subj-group"
+        element "subj-group"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "id", to: :id

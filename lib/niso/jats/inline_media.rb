@@ -37,7 +37,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "inline-media"
+        element "inline-media"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

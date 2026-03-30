@@ -12,7 +12,7 @@ module Niso
       attribute :permissions, Permissions
 
       xml do
-        root "sec-meta"
+        element "sec-meta"
 
         map_attribute "id", to: :id
         map_element "object-id", to: :jats_object_id

@@ -38,7 +38,7 @@ module Niso
       attribute :title, Title, collection: true
 
       xml do
-        root "supplement"
+        element "supplement"
 
         map_content to: :content
         map_attribute "id", to: :id

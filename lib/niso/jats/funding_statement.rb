@@ -28,7 +28,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "funding-statement"
+        element "funding-statement"
 
         map_content to: :content
         map_attribute "id", to: :id
