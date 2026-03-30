@@ -9,7 +9,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "fax"
+        element "fax"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

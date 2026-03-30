@@ -11,7 +11,7 @@ module Niso
       attribute :toggle, :string
 
       xml do
-        root "monospace"
+        element "monospace"
 
         map_content to: :content
         map_attribute "id", to: :id

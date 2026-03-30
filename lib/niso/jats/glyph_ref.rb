@@ -7,7 +7,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "glyph-ref"
+        element "glyph-ref"
 
         map_attribute "glyph-data", to: :glyph_data
         map_attribute "id", to: :id

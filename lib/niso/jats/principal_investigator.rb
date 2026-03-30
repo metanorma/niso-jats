@@ -13,7 +13,7 @@ module Niso
       attribute :string_name, StringName, collection: true
 
       xml do
-        root "principal-investigator"
+        element "principal-investigator"
 
         map_content to: :content
         map_attribute "id", to: :id

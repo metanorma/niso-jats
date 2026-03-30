@@ -28,7 +28,7 @@ module Niso
       attribute :media, Media, collection: true
 
       xml do
-        root "fig-group"
+        element "fig-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

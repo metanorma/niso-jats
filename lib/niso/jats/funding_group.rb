@@ -11,7 +11,7 @@ module Niso
       attribute :open_access, OpenAccess, collection: true
 
       xml do
-        root "funding-group"
+        element "funding-group"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

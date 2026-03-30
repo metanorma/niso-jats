@@ -14,7 +14,7 @@ module Niso
       attribute :def, Def, collection: true
 
       xml do
-        root "abbrev"
+        element "abbrev"
 
         map_content to: :content
         map_attribute "alt", to: :alt

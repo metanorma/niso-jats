@@ -9,7 +9,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "award-desc"
+        element "award-desc"
 
         map_content to: :content
         map_attribute "hreflang", to: :hreflang

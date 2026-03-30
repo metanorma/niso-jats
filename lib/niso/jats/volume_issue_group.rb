@@ -18,7 +18,7 @@ module Niso
       attribute :issue_part, IssuePart
 
       xml do
-        root "volume-issue-group"
+        element "volume-issue-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

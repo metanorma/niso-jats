@@ -12,7 +12,7 @@ module Niso
       attribute :institution_wrap, InstitutionWrap, collection: true
 
       xml do
-        root "conf-sponsor"
+        element "conf-sponsor"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

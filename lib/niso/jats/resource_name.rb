@@ -23,7 +23,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "resource-name"
+        element "resource-name"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

@@ -11,7 +11,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "article-id"
+        element "article-id"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

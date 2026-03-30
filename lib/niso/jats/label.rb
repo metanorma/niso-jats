@@ -28,7 +28,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "label"
+        element "label"
 
         map_content to: :content
         map_attribute "alt", to: :alt

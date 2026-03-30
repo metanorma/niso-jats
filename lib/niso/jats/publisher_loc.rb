@@ -21,7 +21,7 @@ module Niso
       attribute :uri, Uri, collection: true
 
       xml do
-        root "publisher-loc"
+        element "publisher-loc"
 
         map_content to: :content
         map_attribute "id", to: :id

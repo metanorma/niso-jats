@@ -7,7 +7,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "meta-name"
+        element "meta-name"
 
         map_content to: :content
         map_attribute "id", to: :id

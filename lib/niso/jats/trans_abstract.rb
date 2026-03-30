@@ -14,7 +14,7 @@ module Niso
       attribute :sec, Sec, collection: true
 
       xml do
-        root "trans-abstract"
+        element "trans-abstract"
 
         map_attribute "abstract-type", to: :abstract_type
         map_attribute "id", to: :id

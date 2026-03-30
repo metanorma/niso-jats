@@ -12,7 +12,7 @@ module Niso
       attribute :resource_group, ResourceGroup, collection: true
 
       xml do
-        root "contributed-resource-group"
+        element "contributed-resource-group"
 
         map_attribute "id", to: :id
         map_attribute "resource-type", to: :resource_type

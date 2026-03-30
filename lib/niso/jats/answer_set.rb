@@ -17,7 +17,7 @@ module Niso
       attribute :explanation, Explanation, collection: true
 
       xml do
-        root "answer-set"
+        element "answer-set"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

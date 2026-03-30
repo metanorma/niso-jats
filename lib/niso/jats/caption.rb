@@ -13,7 +13,7 @@ module Niso
       attribute :p, Paragraph, collection: true
 
       xml do
-        root "caption"
+        element "caption"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

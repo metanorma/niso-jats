@@ -96,7 +96,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "related-object"
+        element "related-object"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

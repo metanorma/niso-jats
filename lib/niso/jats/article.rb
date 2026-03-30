@@ -17,7 +17,7 @@ module Niso
       attribute :response, Response, collection: true
 
       xml do
-        root "article"
+        element "article"
 
         map_attribute "article-type", to: :article_type
         map_attribute "dtd-version", to: :dtd_version

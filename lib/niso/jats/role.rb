@@ -31,7 +31,7 @@ module Niso
       attribute :styled_content, StyledContent, collection: true
 
       xml do
-        root "role"
+        element "role"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

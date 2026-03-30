@@ -20,7 +20,7 @@ module Niso
       attribute :underline, Underline, collection: true
 
       xml do
-        root "rb"
+        element "rb"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

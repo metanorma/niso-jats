@@ -11,7 +11,7 @@ module Niso
       attribute :toggle, :string, default: -> { "no" }
 
       xml do
-        root "roman"
+        element "roman"
 
         map_content to: :content
         map_attribute "id", to: :id

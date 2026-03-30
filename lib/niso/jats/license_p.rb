@@ -83,7 +83,7 @@ module Niso
       attribute :price, Price, collection: true
 
       xml do
-        root "license-p"
+        element "license-p"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

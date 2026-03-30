@@ -39,7 +39,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "preformat"
+        element "preformat"
 
         map_content to: :content
         map_attribute "id", to: :id

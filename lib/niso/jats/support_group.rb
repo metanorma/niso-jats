@@ -11,7 +11,7 @@ module Niso
                 collection: true
 
       xml do
-        root "support-group"
+        element "support-group"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

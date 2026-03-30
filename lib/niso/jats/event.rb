@@ -22,7 +22,7 @@ module Niso
       attribute :self_uri, SelfUri, collection: true
 
       xml do
-        root "event"
+        element "event"
 
         map_attribute "event-type", to: :event_type
         map_attribute "id", to: :id

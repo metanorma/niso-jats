@@ -18,7 +18,7 @@ module Niso
       attribute :ref_list, RefList, collection: true
 
       xml do
-        root "ack"
+        element "ack"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

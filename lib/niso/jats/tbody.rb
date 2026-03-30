@@ -13,7 +13,7 @@ module Niso
       attribute :tr, Tr, collection: true
 
       xml do
-        root "tbody"
+        element "tbody"
 
         map_attribute "align", to: :align
         map_attribute "char", to: :char

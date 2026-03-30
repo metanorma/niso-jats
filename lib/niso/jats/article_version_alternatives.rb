@@ -7,7 +7,7 @@ module Niso
       attribute :article_version, ArticleVersion, collection: true
 
       xml do
-        root "article-version-alternatives"
+        element "article-version-alternatives"
 
         map_attribute "id", to: :id
         map_element "article-version", to: :article_version

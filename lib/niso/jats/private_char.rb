@@ -12,7 +12,7 @@ module Niso
       attribute :inline_graphic, InlineGraphic, collection: true
 
       xml do
-        root "private-char"
+        element "private-char"
 
         map_attribute "description", to: :description
         map_attribute "id", to: :id

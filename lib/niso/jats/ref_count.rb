@@ -7,7 +7,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "ref-count"
+        element "ref-count"
 
         map_attribute "count", to: :count
         map_attribute "id", to: :id

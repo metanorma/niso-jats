@@ -16,7 +16,7 @@ module Niso
       attribute :era, Era
 
       xml do
-        root "date"
+        element "date"
 
         map_attribute "calendar", to: :calendar
         map_attribute "date-type", to: :date_type

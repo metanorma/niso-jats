@@ -14,7 +14,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "copyright-holder"
+        element "copyright-holder"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

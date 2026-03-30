@@ -15,7 +15,7 @@ module Niso
       attribute :floats_group, FloatsGroup
 
       xml do
-        root "response"
+        element "response"
 
         map_attribute "id", to: :id
         map_attribute "response-type", to: :response_type

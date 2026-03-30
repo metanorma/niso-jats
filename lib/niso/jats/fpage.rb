@@ -11,7 +11,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "fpage"
+        element "fpage"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

@@ -14,7 +14,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "resource-id"
+        element "resource-id"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

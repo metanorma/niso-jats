@@ -42,7 +42,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "fig"
+        element "fig"
 
         map_attribute "fig-type", to: :fig_type
         map_attribute "id", to: :id

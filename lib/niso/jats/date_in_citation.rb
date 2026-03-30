@@ -17,7 +17,7 @@ module Niso
       attribute :year, Year, collection: true
 
       xml do
-        root "date-in-citation"
+        element "date-in-citation"
 
         map_content to: :content
         map_attribute "calendar", to: :calendar

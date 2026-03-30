@@ -50,7 +50,7 @@ module Niso
       attribute :ref_list, RefList, collection: true
 
       xml do
-        root "notes"
+        element "notes"
 
         map_attribute "id", to: :id
         map_attribute "notes-type", to: :notes_type

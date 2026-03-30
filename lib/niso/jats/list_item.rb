@@ -13,7 +13,7 @@ module Niso
       attribute :list, List, collection: true
 
       xml do
-        root "list-item"
+        element "list-item"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

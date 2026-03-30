@@ -7,7 +7,7 @@ module Niso
       attribute :date, Date, collection: true
 
       xml do
-        root "history"
+        element "history"
 
         map_attribute "id", to: :id
         map_element "date", to: :date

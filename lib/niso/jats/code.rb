@@ -46,7 +46,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "code"
+        element "code"
 
         map_content to: :content
         map_attribute "code-type", to: :code_type

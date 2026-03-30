@@ -16,7 +16,7 @@ module Niso
       attribute :list_item, ListItem, collection: true
 
       xml do
-        root "list"
+        element "list"
 
         map_attribute "continued-from", to: :continued_from
         map_attribute "id", to: :id

@@ -40,7 +40,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "award-id"
+        element "award-id"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

@@ -11,7 +11,7 @@ module Niso
       attribute :abbrev_journal_title, AbbrevJournalTitle, collection: true
 
       xml do
-        root "journal-title-group"
+        element "journal-title-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

@@ -18,7 +18,7 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "speaker"
+        element "speaker"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

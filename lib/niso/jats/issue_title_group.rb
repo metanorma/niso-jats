@@ -12,7 +12,7 @@ module Niso
       attribute :trans_title_group, TransTitleGroup, collection: true
 
       xml do
-        root "issue-title-group"
+        element "issue-title-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

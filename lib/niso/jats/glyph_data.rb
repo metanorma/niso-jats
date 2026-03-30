@@ -13,7 +13,7 @@ module Niso
       attribute :y_size, :string
 
       xml do
-        root "glyph-data"
+        element "glyph-data"
 
         map_content to: :content
         map_attribute "fontchar", to: :fontchar

@@ -18,7 +18,7 @@ module Niso
       attribute :def_list, DefList, collection: true
 
       xml do
-        root "def-list"
+        element "def-list"
 
         map_attribute "continued-from", to: :continued_from
         map_attribute "id", to: :id

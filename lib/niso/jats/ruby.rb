@@ -10,7 +10,7 @@ module Niso
       attribute :rt, Rt
 
       xml do
-        root "ruby"
+        element "ruby"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

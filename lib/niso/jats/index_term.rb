@@ -18,7 +18,7 @@ module Niso
       attribute :see_also, SeeAlso, collection: true
 
       xml do
-        root "index-term"
+        element "index-term"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

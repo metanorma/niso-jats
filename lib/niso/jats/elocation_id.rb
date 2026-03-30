@@ -10,7 +10,7 @@ module Niso
       attribute :specific_use, :string
 
       xml do
-        root "elocation-id"
+        element "elocation-id"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

@@ -10,7 +10,7 @@ module Niso
       attribute :resource_wrap, ResourceWrap, collection: true
 
       xml do
-        root "resource-group"
+        element "resource-group"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

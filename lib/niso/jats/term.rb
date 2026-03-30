@@ -25,7 +25,7 @@ module Niso
       attribute :preformat, Preformat, collection: true
 
       xml do
-        root "term"
+        element "term"
 
         map_content to: :content
         map_attribute "id", to: :id

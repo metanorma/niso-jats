@@ -6,7 +6,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "break"
+        element "break"
 
         map_attribute "id", to: :id
       end

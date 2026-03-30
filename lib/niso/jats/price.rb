@@ -22,7 +22,7 @@ module Niso
       attribute :ruby, Ruby, collection: true
 
       xml do
-        root "price"
+        element "price"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

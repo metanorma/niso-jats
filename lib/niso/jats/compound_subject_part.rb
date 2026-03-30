@@ -29,7 +29,7 @@ module Niso
       attribute :sup, Sup, collection: true
 
       xml do
-        root "compound-subject-part"
+        element "compound-subject-part"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

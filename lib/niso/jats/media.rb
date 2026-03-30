@@ -28,7 +28,7 @@ module Niso
       attribute :xref, Xref, collection: true
 
       xml do
-        root "media"
+        element "media"
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

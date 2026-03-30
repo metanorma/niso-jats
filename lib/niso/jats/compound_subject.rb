@@ -13,7 +13,7 @@ module Niso
       attribute :compound_subject_part, CompoundSubjectPart, collection: true
 
       xml do
-        root "compound-subject"
+        element "compound-subject"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type

@@ -9,7 +9,7 @@ module Niso
       attribute :id, :string
 
       xml do
-        root "term-head"
+        element "term-head"
 
         map_content to: :content
         map_attribute "id", to: :id

@@ -15,7 +15,7 @@ module Niso
       attribute :string_name, StringName, collection: true
 
       xml do
-        root "principal-award-recipient"
+        element "principal-award-recipient"
 
         map_content to: :content
         map_attribute "id", to: :id

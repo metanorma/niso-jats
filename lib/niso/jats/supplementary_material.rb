@@ -45,7 +45,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "supplementary-material"
+        element "supplementary-material"
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

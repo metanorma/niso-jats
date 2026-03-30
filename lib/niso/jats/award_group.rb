@@ -19,7 +19,7 @@ module Niso
       attribute :principal_investigator, PrincipalInvestigator, collection: true
 
       xml do
-        root "award-group"
+        element "award-group"
 
         map_attribute "award-type", to: :award_type
         map_attribute "hreflang", to: :hreflang

@@ -9,7 +9,7 @@ module Niso
       attribute :series_text, SeriesText, collection: true
 
       xml do
-        root "article-categories"
+        element "article-categories"
 
         map_attribute "id", to: :id
         map_element "subj-group", to: :subj_group

@@ -22,7 +22,7 @@ module Niso
       attribute :disp_formula_group, DispFormulaGroup, collection: true
 
       xml do
-        root "disp-formula-group"
+        element "disp-formula-group"
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

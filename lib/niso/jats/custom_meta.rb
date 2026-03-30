@@ -16,7 +16,7 @@ module Niso
       attribute :meta_value, MetaValue
 
       xml do
-        root "custom-meta"
+        element "custom-meta"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "hreflang", to: :hreflang

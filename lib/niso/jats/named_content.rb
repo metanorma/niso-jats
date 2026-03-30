@@ -83,7 +83,7 @@ module Niso
       attribute :verse_group, VerseGroup, collection: true
 
       xml do
-        root "named-content"
+        element "named-content"
 
         map_content to: :content
         map_attribute "alt", to: :alt

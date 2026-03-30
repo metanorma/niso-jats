@@ -12,7 +12,7 @@ module Niso
       attribute :permissions, Permissions, collection: true
 
       xml do
-        root "table-wrap-foot"
+        element "table-wrap-foot"
 
         map_attribute "id", to: :id
         map_element "title", to: :title

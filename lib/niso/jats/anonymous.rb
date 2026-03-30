@@ -8,7 +8,7 @@ module Niso
       attribute :lang, :xml_lang
 
       xml do
-        root "anonymous"
+        element "anonymous"
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

@@ -13,7 +13,7 @@ module Niso
       attribute :compound_kwd_part, CompoundKwdPart, collection: true
 
       xml do
-        root "compound-kwd"
+        element "compound-kwd"
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type

@@ -52,7 +52,7 @@ module Niso
       attribute :custom_meta_group, CustomMetaGroup
 
       xml do
-        root "article-meta"
+        element "article-meta"
 
         map_attribute "id", to: :id
         map_element "article-id", to: :article_id

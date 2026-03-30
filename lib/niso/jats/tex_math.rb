@@ -11,7 +11,7 @@ module Niso
       attribute :version, :string
 
       xml do
-        root "tex-math"
+        element "tex-math"
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

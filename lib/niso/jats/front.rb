@@ -9,7 +9,7 @@ module Niso
       attribute :notes, Notes
 
       xml do
-        root "front"
+        element "front"
 
         map_attribute "id", to: :id
         map_element "journal-meta", to: :journal_meta

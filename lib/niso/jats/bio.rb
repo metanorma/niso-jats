@@ -52,7 +52,7 @@ module Niso
       attribute :ref_list, RefList, collection: true
 
       xml do
-        root "bio"
+        element "bio"
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

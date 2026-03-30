@@ -14,7 +14,7 @@ module Niso
       attribute :vocab_term_identifier, :string
 
       xml do
-        root "extended-by"
+        element "extended-by"
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority
