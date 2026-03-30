@@ -23,7 +23,7 @@ RSpec.describe Niso::Jats::Article do
 
     describe "Smallsamples from NISO JATS #{version}" do
       filename = Pathname.new(file)
-      context "with #{filename.relative_path_from(File.join(__dir__, "../../fixtures"))}" do
+      context "with #{filename.relative_path_from(File.join(__dir__, '../../fixtures'))}" do
         let(:fixture) { File.new(file) }
         it_behaves_like "a serializer"
       end
