@@ -30,33 +30,56 @@ $ gem install niso-jats
 
 == Usage
 
-To parse a NISO JATS XML document:
+=== Parsing a NISO JATS XML document
 
 [source,ruby]
 ----
 require 'niso/jats'
 
-jats = Niso::Jats::Document.new(File.read('jats.xml'))
-puts jats.title
-puts jats.abstract
-puts jats.sections
+article = Niso::Jats::Article.from_xml(File.read('article.xml'))
 ----
 
-To generate a NISO JATS XML document:
+=== Extracting bibliographic data
+
+The `Article` class provides convenience methods for common lookups:
 
 [source,ruby]
 ----
-require 'niso/jats'
+article.journal_title   # => "Metrologia"
+article.doi             # => "10.1088/0026-1394/52/1/155"
 
-jats = Niso::Jats::Document.new
-jats.title = 'An Article Title'
-jats.abstract = 'An Article Abstract'
-jats.sections = [
-  Niso::Jats::Section.new('Section 1', 'This is the first section'),
-  Niso::Jats::Section.new('Section 2', 'This is the second section')
-]
+article.contributors
+# => [#<Niso::Jats::Contrib>, #<Niso::Jats::Contrib>, ...]
 
-puts jats.to_xml
+article.affiliation("aff1")
+# => [#<Niso::Jats::Aff>]
+
+article.pub_dates
+# => ["2015-02-01", "2015-01-30"]
+
+article.locality
+# => [["volume", "52"], ["issue", "1"], ["page", "155", "162"]]
+
+article.doi_links
+# => [{ content: "https://doi.org/10.1088/0026-1394/52/1/155", type: "src" },
+#     { content: "https://doi.org/10.1088/0026-1394/52/1/155", type: "doi" }]
+----
+
+=== Working with contributors
+
+The `Contrib` class provides filtering on cross-references:
+
+[source,ruby]
+----
+contrib = article.contributors.first
+contrib.aff_xrefs   # => [#<Niso::Jats::Xref ref_type="aff" rid="aff1">]
+----
+
+=== Generating a NISO JATS XML document
+
+[source,ruby]
+----
+puts article.to_xml(declaration: true, encoding: "utf-8")
 ----
 
 
