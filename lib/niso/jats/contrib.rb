@@ -63,6 +63,13 @@ module Niso
         map_element "uri", to: :uri
         map_element "xref", to: :xref
       end
+
+      # Returns cross-references to affiliations (ref-type "aff").
+      #
+      # @return [Array<Xref>] affiliation cross-references
+      def aff_xrefs
+        xref.select { |x| x.ref_type == "aff" }
+      end
     end
   end
 end
