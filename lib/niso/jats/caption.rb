@@ -8,7 +8,7 @@ module Niso
       attribute :specific_use, :string
       attribute :style, :string
       attribute :lang, :xml_lang
-      attribute :base, :string
+      attribute :base, :xml_base
       attribute :title, Title
       attribute :p, Paragraph, collection: true
 

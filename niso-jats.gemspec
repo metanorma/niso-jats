@@ -33,5 +33,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "bigdecimal"
   spec.add_dependency "lutaml-model", "~> 0.8.0"
+  spec.add_dependency "oasis-etm"
   spec.metadata["rubygems_mfa_required"] = "true"
 end

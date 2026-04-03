@@ -34,6 +34,7 @@ module Niso
       attribute :media, Media, collection: true
       attribute :preformat, Preformat, collection: true
       attribute :table, Table, collection: true
+      attribute :oasis_table, OasisTable, collection: true
       attribute :xref, Xref, collection: true
       attribute :table_wrap_foot, TableWrapFoot, collection: true
       attribute :attrib, Attrib, collection: true
@@ -73,10 +74,21 @@ module Niso
         map_element "media", to: :media
         map_element "preformat", to: :preformat
         map_element "table", to: :table
+        map_element "table", to: :oasis_table
         map_element "xref", to: :xref
         map_element "table-wrap-foot", to: :table_wrap_foot
         map_element "attrib", to: :attrib
         map_element "permissions", to: :permissions
+      end
+
+      # Override to_xml to skip empty oasis_table elements
+      def to_xml(options = {})
+        # Temporarily remove empty oasis_tables before serialization
+        original_oasis = @oasis_table
+        @oasis_table = @oasis_table.reject { |ot| ot.tgroups.nil? || ot.tgroups.empty? } if @oasis_table
+        result = super
+        @oasis_table = original_oasis
+        result
       end
     end
   end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "lutaml/model"
+
 module Niso
   module Jats
     class Error < StandardError; end
@@ -187,6 +189,7 @@ module Niso
     autoload :OnBehalfOf, "#{__dir__}/jats/on_behalf_of"
     autoload :OpenAccess, "#{__dir__}/jats/open_access"
     autoload :Option, "#{__dir__}/jats/option"
+    autoload :OasisTable, "#{__dir__}/jats/oasis_table"
     autoload :Overline, "#{__dir__}/jats/overline"
     autoload :OverlineEnd, "#{__dir__}/jats/overline_end"
     autoload :OverlineStart, "#{__dir__}/jats/overline_start"
@@ -316,3 +319,8 @@ module Niso
     autoload :Year, "#{__dir__}/jats/year"
   end
 end
+
+# Only require namespaces here; oasis_table.rb is autoloaded via :OasisTable above,
+# which ensures it loads after all JATS element constants (Bold, Italic, etc.)
+# are registered as autoloads.
+require "niso/jats/namespaces"
