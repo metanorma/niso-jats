@@ -22,6 +22,7 @@ module Niso
 
       xml do
         element "person-group"
+        mixed_content
 
         map_content to: :content
         map_attribute "custom-type", to: :custom_type

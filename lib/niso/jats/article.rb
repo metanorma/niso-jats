@@ -18,6 +18,11 @@ module Niso
 
       xml do
         element "article"
+        namespace_scope [
+          ::Niso::Jats::Namespaces::Mathml,
+          ::Niso::Jats::Namespaces::Oasis,
+          ::Niso::Jats::Namespaces::Xlink,
+        ]
 
         map_attribute "article-type", to: :article_type
         map_attribute "dtd-version", to: :dtd_version
