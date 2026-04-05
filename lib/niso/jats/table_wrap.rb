@@ -85,7 +85,11 @@ module Niso
       def to_xml(options = {})
         # Temporarily remove empty oasis_tables before serialization
         original_oasis = @oasis_table
-        @oasis_table = @oasis_table.reject { |ot| ot.tgroups.nil? || ot.tgroups.empty? } if @oasis_table
+        if @oasis_table
+          @oasis_table = @oasis_table.reject do |ot|
+            ot.tgroups.nil? || ot.tgroups.empty?
+          end
+        end
         result = super
         @oasis_table = original_oasis
         result

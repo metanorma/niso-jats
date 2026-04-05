@@ -31,7 +31,8 @@ module Niso
     autoload :ArticleMeta, "#{__dir__}/jats/article_meta"
     autoload :ArticleTitle, "#{__dir__}/jats/article_title"
     autoload :ArticleVersion, "#{__dir__}/jats/article_version"
-    autoload :ArticleVersionAlternatives, "#{__dir__}/jats/article_version_alternatives"
+    autoload :ArticleVersionAlternatives,
+             "#{__dir__}/jats/article_version_alternatives"
     autoload :Attrib, "#{__dir__}/jats/attrib"
     autoload :AuthorComment, "#{__dir__}/jats/author_comment"
     autoload :AuthorNotes, "#{__dir__}/jats/author_notes"
@@ -74,7 +75,8 @@ module Niso
     autoload :Contrib, "#{__dir__}/jats/contrib"
     autoload :ContribGroup, "#{__dir__}/jats/contrib_group"
     autoload :ContribId, "#{__dir__}/jats/contrib_id"
-    autoload :ContributedResourceGroup, "#{__dir__}/jats/contributed_resource_group"
+    autoload :ContributedResourceGroup,
+             "#{__dir__}/jats/contributed_resource_group"
     autoload :CopyrightHolder, "#{__dir__}/jats/copyright_holder"
     autoload :CopyrightStatement, "#{__dir__}/jats/copyright_statement"
     autoload :CopyrightYear, "#{__dir__}/jats/copyright_year"
@@ -137,7 +139,8 @@ module Niso
     autoload :InlineFormula, "#{__dir__}/jats/inline_formula"
     autoload :InlineGraphic, "#{__dir__}/jats/inline_graphic"
     autoload :InlineMedia, "#{__dir__}/jats/inline_media"
-    autoload :InlineSupplementaryMaterial, "#{__dir__}/jats/inline_supplementary_material"
+    autoload :InlineSupplementaryMaterial,
+             "#{__dir__}/jats/inline_supplementary_material"
     autoload :Institution, "#{__dir__}/jats/institution"
     autoload :InstitutionId, "#{__dir__}/jats/institution_id"
     autoload :InstitutionWrap, "#{__dir__}/jats/institution_wrap"
@@ -205,7 +208,8 @@ module Niso
     autoload :Prefix, "#{__dir__}/jats/prefix"
     autoload :Preformat, "#{__dir__}/jats/preformat"
     autoload :Price, "#{__dir__}/jats/price"
-    autoload :PrincipalAwardRecipient, "#{__dir__}/jats/principal_award_recipient"
+    autoload :PrincipalAwardRecipient,
+             "#{__dir__}/jats/principal_award_recipient"
     autoload :PrincipalInvestigator, "#{__dir__}/jats/principal_investigator"
     autoload :PrivateChar, "#{__dir__}/jats/private_char"
     autoload :ProcessingMeta, "#{__dir__}/jats/processing_meta"
