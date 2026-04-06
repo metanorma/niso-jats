@@ -1,0 +1,20 @@
+= Metrologia data from IOP JATS 1.3
+
+== Purpose
+
+IOP provides JATS XML for all journals it publishes, including the BIPM
+Metrologia.
+
+This directory contains sample JATS 1.3 XML files from the private
+https://github.com/relaton/rawdata-bipm[rawdata-bipm] repository that is used to
+generate Metrologia data in Relaton. These files are obtained directly from the
+private IOP API.
+
+IOP has officially changed from JATS 1.1 to JATS 1.3 in 2024-06.
+
+These files are used for round-tripping tests.
+
+== License
+
+These XML files provide metadata of Metrologia of which the copyright is owned
+by the BIPM.

@@ -11,6 +11,7 @@ module Niso
       attribute :id, :string
       attribute :rid, :string
       attribute :specific_use, :string
+      attribute :type, :xlink_type
       attribute :contrib_id, ContribId, collection: true
       attribute :anonymous, Anonymous, collection: true
       attribute :collab, Collab, collection: true
@@ -43,6 +44,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "rid", to: :rid
         map_attribute "specific-use", to: :specific_use
+        map_attribute "type", to: :type
         map_element "contrib-id", to: :contrib_id
         map_element "anonymous", to: :anonymous
         map_element "collab", to: :collab

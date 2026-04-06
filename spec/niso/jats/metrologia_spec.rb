@@ -2,7 +2,9 @@
 
 RSpec.describe Niso::Jats::Article do
   describe "Metrologia JATS v1.1 parsing (met_52_1_155.xml)" do
-    subject { described_class.from_xml(file_fixture("met_52_1_155.xml").read) }
+    subject do
+      described_class.from_xml(file_fixture("metrologia/met_52_1_155.xml").read)
+    end
 
     it "extracts the journal title" do
       expect(subject.journal_title).to eq("Metrologia")
@@ -58,7 +60,9 @@ RSpec.describe Niso::Jats::Article do
   end
 
   describe "Metrologia JATS v1.1 parsing (metv9i4p155.xml)" do
-    subject { described_class.from_xml(file_fixture("metv9i4p155.xml").read) }
+    subject do
+      described_class.from_xml(file_fixture("metrologia/metv9i4p155.xml").read)
+    end
 
     it "extracts the DOI" do
       expect(subject.doi).to eq("10.1088/0026-1394/9/4/003")
