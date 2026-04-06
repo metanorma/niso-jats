@@ -13,6 +13,24 @@ RSpec.describe Niso::Jats::Article do
     it_behaves_like "a serializer"
   end
 
+  context "with met_52_1_155.xml (BIPM)" do
+    let(:fixture) { file_fixture("metrologia/met_52_1_155.xml") }
+
+    it_behaves_like "a serializer"
+  end
+
+  context "with met12_2_S17.xml (BIPM)" do
+    let(:fixture) { file_fixture("metrologia/met12_2_S17.xml") }
+
+    it_behaves_like "a serializer"
+  end
+
+  context "with met12_3_273.xml (BIPM)" do
+    let(:fixture) { file_fixture("metrologia/met12_3_273.xml") }
+
+    it_behaves_like "a serializer"
+  end
+
   Dir[File.join(__dir__,
                 "../../fixtures/niso-jats/**/Smallsamples/*.xml")].each do |file|
     version = file.match(/\/(?<version>\d+\.\d\w?\d?)\/Smallsamples/)[:version]

@@ -8,6 +8,7 @@ module Niso
       attribute :hreflang, :string
       attribute :id, :string
       attribute :specific_use, :string
+      attribute :type, :xlink_type
       attribute :lang, :xml_lang
 
       xml do
@@ -20,6 +21,7 @@ module Niso
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use
         map_attribute "lang", to: :lang
+        map_attribute "type", to: :type
       end
     end
   end

@@ -1,8 +1,15 @@
 = NISO JATS Ruby library
 
-The `niso-jats` library is a parser and generator for NISO JATS XML documents.
+The `niso-jats` library is a parser and generator for
+https://jats.nlm.nih.gov/[NISO JATS XML] documents.
 
-It is intended to be used to parse and generate NISO JATS XML v1.2 documents.
+== Supported versions
+
+This library targets NISO JATS XML v1.2 (and v1.3) documents. It models
+the full Journal Publishing Tag Set element vocabulary. The model layer is
+version-agnostic: a single unified set of Ruby classes covers all JATS
+versions from 1.0 through 1.3.
+
 
 == Installation
 
@@ -45,8 +52,9 @@ The `Article` class provides convenience methods for common lookups:
 
 [source,ruby]
 ----
-article.journal_title   # => "Metrologia"
-article.doi             # => "10.1088/0026-1394/52/1/155"
+article.dtd_version   # => "1.1"
+article.journal_title # => "Metrologia"
+article.doi           # => "10.1088/0026-1394/52/1/155"
 
 article.contributors
 # => [#<Niso::Jats::Contrib>, #<Niso::Jats::Contrib>, ...]
@@ -72,7 +80,36 @@ The `Contrib` class provides filtering on cross-references:
 [source,ruby]
 ----
 contrib = article.contributors.first
-contrib.aff_xrefs   # => [#<Niso::Jats::Xref ref_type="aff" rid="aff1">]
+contrib.contrib_type  # => "author"
+contrib.aff_xrefs    # => [#<Niso::Jats::Xref ref_type="aff" rid="aff1">]
+----
+
+=== Accessing nested elements
+
+You can navigate the full JATS element tree:
+
+[source,ruby]
+----
+# Journal metadata
+article.front.journal_meta.journal_title_group.journal_title.content
+# => "Metrologia"
+
+# Article metadata
+article.front.article_meta.title_group.article_title.content
+# => "News from the BIPM laboratories: 2014"
+
+# Permissions (copyright, license)
+perms = article.front.article_meta.permissions
+perms.copyright_statement.content # => "© 2015 BIPM & IOP Publishing Ltd"
+perms.license.license_type        # => "iop-standard"
+
+# History dates
+article.front.article_meta.history.date.each do |date|
+  puts "#{date.date_type}: #{date.year}-#{date.month}-#{date.day}"
+end
+# => received: 2014-12-22
+#    revised: 2014-12-22
+#    accepted: 2014-12-22
 ----
 
 === Generating a NISO JATS XML document
@@ -82,15 +119,84 @@ contrib.aff_xrefs   # => [#<Niso::Jats::Xref ref_type="aff" rid="aff1">]
 puts article.to_xml(declaration: true, encoding: "utf-8")
 ----
 
+=== Working with inline text and mixed content
+
+Elements that contain both text and child elements (mixed content) are
+supported via the `mixed_content` feature. For example, affiliations
+often contain inline text with embedded `<institution>` or `<country>`
+elements:
+
+[source,ruby]
+----
+aff = article.front.article_meta.contrib_group.first.aff.first
+aff.content
+# => "\n1\nBureau International des Poids et Mesures (BIPM), Pavillon de Breteuil, 92312 CEDEX, Sèvres, France\n"
+----
+
+
+== Test fixtures
+
+Round-trip tests parse XML fixtures, serialize them back, and verify
+semantic equivalence using the `canon` gem.
+
+=== Source fixtures
+
+`spec/fixtures/niso-jats/`::
+  A git submodule of the official NCBI NISO JATS repository
+  (`github.com/ncbi/niso-jats`). Contains official DTD distributions and
+  sample XML documents (`Smallsamples/`) across all JATS tags
+  (archiving, article authoring, publishing) and versions 0.4 through
+  1.2d1. Versions 0.4 and 1.1d3 are skipped in tests.
+
+`spec/fixtures/metrologia/`::
+  Real-world Metrologia journal articles (IOP Publishing) obtained from
+  the `github.com/relaton/rawdata-bipm` repository. These exercise
+  JATS patterns not covered by the NISO samples: `<collab>` for team
+  authors, `<email>` inside `<contrib>`, mixed-content `<aff>` with
+  inline `<institution>` and `<country>`, `<author-notes>`,
+  `<custom-meta-group>`, `<elocation-id>`, and IOP-specific license
+  attributes.
+
+`spec/fixtures/bmj_sample.xml`::
+  BMJ journal article (JATS 1.3) exercising `<processing-meta>`,
+  `<article-version>`, CRediT `<role>` elements, and
+  `<institution-wrap>` with ISNI/DOI identifiers.
+
+`spec/fixtures/pnas_sample.xml`::
+  PNAS journal article (JATS 1.3) exercising `<processing-meta>`,
+  `<article-version>`, CRediT roles, `<contrib contrib-type="software">`,
+  and `<prefix>` name parts.
+
+`spec/fixtures/element_citation.xml`::
+  Small fragment for testing `<element-citation>` with xlink attributes.
+
+=== How the tests work
+
+The shared example `"a serializer"` in `spec/support/shared_examples.rb`
+performs the round-trip:
+
+1. Parse the fixture with `Article.from_xml(input)`
+2. Serialize back with `to_xml(declaration: true, encoding: "utf-8")`
+3. Strip spurious empty `<oasis:table/>` elements (known OASIS table
+   workaround)
+4. Compare input and output for semantic equivalence using
+   `be_xml_equivalent_to` from the `canon` gem (with C14N preprocessing)
+
+OASIS table fixtures (paths containing `"oasis"`) use a weaker assertion:
+the output must be re-parseable without error, but is not compared
+element-by-element, because the duplicate `<table>` mapping in
+`TableWrap` causes duplicated entry elements.
+
 
 == Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/metanorma/niso-jats.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/metanorma/niso-jats.
 
 
 == Copyright and license
 
-The gem is available as open source under the terms of the BSD 2-clause license.
+The gem is available as open source under the terms of the
+https://opensource.org/licenses/MIT[MIT License].
 
 All rights reserved. Ribose
-
