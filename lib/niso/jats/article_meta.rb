@@ -53,6 +53,7 @@ module Niso
 
       xml do
         element "article-meta"
+        ordered
 
         map_attribute "id", to: :id
         map_element "article-id", to: :article_id

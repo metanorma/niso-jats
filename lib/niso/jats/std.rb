@@ -35,6 +35,7 @@ module Niso
 
       xml do
         element "std"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

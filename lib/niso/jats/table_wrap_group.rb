@@ -25,6 +25,7 @@ module Niso
 
       xml do
         element "table-wrap-group"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

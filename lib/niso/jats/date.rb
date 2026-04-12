@@ -17,6 +17,7 @@ module Niso
 
       xml do
         element "date"
+        ordered
 
         map_attribute "calendar", to: :calendar
         map_attribute "date-type", to: :date_type

@@ -24,6 +24,7 @@ module Niso
 
       xml do
         element "resource-name"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

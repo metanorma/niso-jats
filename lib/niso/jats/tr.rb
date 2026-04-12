@@ -15,6 +15,7 @@ module Niso
 
       xml do
         element "tr"
+        ordered
 
         map_attribute "align", to: :align
         map_attribute "char", to: :char

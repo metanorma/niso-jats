@@ -23,6 +23,7 @@ module Niso
 
       xml do
         element "table"
+        ordered
 
         map_attribute "border", to: :border
         map_attribute "cellpadding", to: :cellpadding

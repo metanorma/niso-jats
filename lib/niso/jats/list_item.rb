@@ -14,6 +14,7 @@ module Niso
 
       xml do
         element "list-item"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

@@ -32,6 +32,7 @@ module Niso
 
       xml do
         element "chem-struct-wrap"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

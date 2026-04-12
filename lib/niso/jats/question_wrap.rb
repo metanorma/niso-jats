@@ -16,6 +16,7 @@ module Niso
 
       xml do
         element "question-wrap"
+        ordered
 
         map_attribute "audience", to: :audience
         map_attribute "content-type", to: :content_type

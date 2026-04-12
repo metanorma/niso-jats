@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "custom-meta"
+        ordered
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "hreflang", to: :hreflang

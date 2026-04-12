@@ -13,6 +13,7 @@ module Niso
 
       xml do
         element "conf-sponsor"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

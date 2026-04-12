@@ -20,6 +20,7 @@ module Niso
 
       xml do
         element "conf-loc"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

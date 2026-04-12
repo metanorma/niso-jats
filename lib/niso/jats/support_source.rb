@@ -42,6 +42,7 @@ module Niso
 
       xml do
         element "support-source"
+        ordered
 
         map_content to: :content
         map_attribute "country", to: :country

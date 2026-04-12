@@ -54,6 +54,7 @@ module Niso
 
       xml do
         element "option"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "correct", to: :correct

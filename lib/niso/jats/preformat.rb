@@ -40,6 +40,7 @@ module Niso
 
       xml do
         element "preformat"
+        ordered
 
         map_content to: :content
         map_attribute "id", to: :id

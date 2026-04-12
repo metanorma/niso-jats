@@ -16,6 +16,7 @@ module Niso
 
       xml do
         element "nested-kwd"
+        ordered
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type

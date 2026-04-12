@@ -23,6 +23,7 @@ module Niso
 
       xml do
         element "event"
+        ordered
 
         map_attribute "event-type", to: :event_type
         map_attribute "id", to: :id

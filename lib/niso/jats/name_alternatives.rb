@@ -9,6 +9,7 @@ module Niso
 
       xml do
         element "name-alternatives"
+        ordered
 
         map_attribute "id", to: :id
         map_element "name", to: :name

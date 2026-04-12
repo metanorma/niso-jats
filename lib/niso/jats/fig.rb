@@ -43,6 +43,7 @@ module Niso
 
       xml do
         element "fig"
+        ordered
 
         map_attribute "fig-type", to: :fig_type
         map_attribute "id", to: :id

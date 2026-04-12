@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "date-in-citation"
+        ordered
 
         map_content to: :content
         map_attribute "calendar", to: :calendar

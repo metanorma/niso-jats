@@ -10,6 +10,7 @@ module Niso
 
       xml do
         element "article-categories"
+        ordered
 
         map_attribute "id", to: :id
         map_element "subj-group", to: :subj_group

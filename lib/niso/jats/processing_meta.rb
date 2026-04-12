@@ -15,6 +15,7 @@ module Niso
 
       xml do
         element "processing-meta"
+        ordered
 
         map_attribute "base-tagset", to: :base_tagset
         map_attribute "id", to: :id

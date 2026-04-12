@@ -61,6 +61,7 @@ module Niso
 
       xml do
         element "collab"
+        ordered
 
         map_content to: :content
         map_attribute "collab-type", to: :collab_type

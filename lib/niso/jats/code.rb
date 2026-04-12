@@ -47,6 +47,7 @@ module Niso
 
       xml do
         element "code"
+        ordered
 
         map_content to: :content
         map_attribute "code-type", to: :code_type

@@ -20,6 +20,7 @@ module Niso
 
       xml do
         element "floats-group"
+        ordered
 
         map_attribute "id", to: :id
         map_element "alternatives", to: :alternatives

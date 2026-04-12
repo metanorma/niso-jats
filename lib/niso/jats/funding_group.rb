@@ -12,6 +12,7 @@ module Niso
 
       xml do
         element "funding-group"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

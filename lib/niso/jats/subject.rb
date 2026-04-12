@@ -35,6 +35,7 @@ module Niso
 
       xml do
         element "subject"
+        ordered
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

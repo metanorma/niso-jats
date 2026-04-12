@@ -11,6 +11,7 @@ module Niso
 
       xml do
         element "resource-group"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

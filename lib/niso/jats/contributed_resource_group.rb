@@ -13,6 +13,7 @@ module Niso
 
       xml do
         element "contributed-resource-group"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "resource-type", to: :resource_type

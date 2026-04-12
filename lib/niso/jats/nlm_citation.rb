@@ -42,6 +42,7 @@ module Niso
 
       xml do
         element "nlm-citation"
+        ordered
 
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id

@@ -29,6 +29,7 @@ module Niso
 
       xml do
         element "kwd"
+        ordered
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

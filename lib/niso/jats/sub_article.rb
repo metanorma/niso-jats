@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "sub-article"
+        ordered
 
         map_attribute "article-type", to: :article_type
         map_attribute "id", to: :id

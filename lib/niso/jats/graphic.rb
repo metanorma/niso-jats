@@ -30,6 +30,7 @@ module Niso
 
       xml do
         element "graphic"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "href", to: :href

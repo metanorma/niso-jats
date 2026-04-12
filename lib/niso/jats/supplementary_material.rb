@@ -46,6 +46,7 @@ module Niso
 
       xml do
         element "supplementary-material"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

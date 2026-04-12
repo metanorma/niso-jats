@@ -13,6 +13,7 @@ module Niso
 
       xml do
         element "table-wrap-foot"
+        ordered
 
         map_attribute "id", to: :id
         map_element "title", to: :title

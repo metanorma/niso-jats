@@ -22,6 +22,7 @@ module Niso
 
       xml do
         element "publisher-loc"
+        ordered
 
         map_content to: :content
         map_attribute "id", to: :id
