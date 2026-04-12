@@ -11,6 +11,7 @@ module Niso
 
       xml do
         element "permissions"
+        ordered
 
         map_attribute "id", to: :id
         map_element "copyright-statement", to: :copyright_statement

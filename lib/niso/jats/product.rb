@@ -107,6 +107,7 @@ module Niso
 
       xml do
         element "product"
+        ordered
 
         map_content to: :content
         map_attribute "hreflang", to: :hreflang

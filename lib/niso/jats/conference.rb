@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "conference"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

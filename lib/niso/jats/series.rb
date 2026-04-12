@@ -26,6 +26,7 @@ module Niso
 
       xml do
         element "series"
+        ordered
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

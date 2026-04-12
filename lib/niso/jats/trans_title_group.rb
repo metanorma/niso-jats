@@ -12,6 +12,7 @@ module Niso
 
       xml do
         element "trans-title-group"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

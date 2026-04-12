@@ -52,6 +52,7 @@ module Niso
 
       xml do
         element "app"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

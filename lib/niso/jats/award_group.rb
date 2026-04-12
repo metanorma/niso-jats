@@ -20,6 +20,7 @@ module Niso
 
       xml do
         element "award-group"
+        ordered
 
         map_attribute "award-type", to: :award_type
         map_attribute "hreflang", to: :hreflang

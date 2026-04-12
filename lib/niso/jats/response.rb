@@ -16,6 +16,7 @@ module Niso
 
       xml do
         element "response"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "response-type", to: :response_type

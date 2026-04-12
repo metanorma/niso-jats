@@ -81,6 +81,7 @@ module Niso
 
       xml do
         element "styled-content"
+        ordered
 
         map_content to: :content
         map_attribute "alt", to: :alt

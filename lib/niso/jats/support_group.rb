@@ -12,6 +12,7 @@ module Niso
 
       xml do
         element "support-group"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

@@ -53,6 +53,7 @@ module Niso
 
       xml do
         element "bio"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

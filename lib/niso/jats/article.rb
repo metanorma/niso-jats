@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "article"
+        ordered
         namespace_scope [
           ::Niso::Jats::Namespaces::Mathml,
           ::Niso::Jats::Namespaces::Oasis,

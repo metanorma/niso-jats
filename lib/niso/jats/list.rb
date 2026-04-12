@@ -17,6 +17,7 @@ module Niso
 
       xml do
         element "list"
+        ordered
 
         map_attribute "continued-from", to: :continued_from
         map_attribute "id", to: :id

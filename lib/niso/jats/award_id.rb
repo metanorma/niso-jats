@@ -41,6 +41,7 @@ module Niso
 
       xml do
         element "award-id"
+        ordered
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

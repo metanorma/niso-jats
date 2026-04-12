@@ -14,6 +14,7 @@ module Niso
 
       xml do
         element "principal-investigator"
+        ordered
 
         map_content to: :content
         map_attribute "id", to: :id

@@ -16,6 +16,7 @@ module Niso
 
       xml do
         element "inline-graphic"
+        ordered
 
         map_attribute "baseline-shift", to: :baseline_shift
         map_attribute "content-type", to: :content_type

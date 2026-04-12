@@ -9,6 +9,7 @@ module Niso
 
       xml do
         element "institution-wrap"
+        ordered
 
         map_attribute "id", to: :id
         map_element "institution", to: :institution

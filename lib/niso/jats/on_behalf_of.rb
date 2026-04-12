@@ -30,6 +30,7 @@ module Niso
 
       xml do
         element "on-behalf-of"
+        ordered
 
         map_content to: :content
         map_attribute "id", to: :id

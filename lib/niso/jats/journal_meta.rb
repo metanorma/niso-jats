@@ -18,6 +18,7 @@ module Niso
 
       xml do
         element "journal-meta"
+        ordered
 
         map_attribute "id", to: :id
         map_element "journal-id", to: :journal_id

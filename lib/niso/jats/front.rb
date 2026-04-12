@@ -10,6 +10,7 @@ module Niso
 
       xml do
         element "front"
+        ordered
 
         map_attribute "id", to: :id
         map_element "journal-meta", to: :journal_meta

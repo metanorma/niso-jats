@@ -9,6 +9,7 @@ module Niso
 
       xml do
         element "resource-wrap"
+        ordered
 
         map_attribute "id", to: :id
         map_element "resource-name", to: :resource_name

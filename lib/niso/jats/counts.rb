@@ -14,6 +14,7 @@ module Niso
 
       xml do
         element "counts"
+        ordered
 
         map_attribute "id", to: :id
         map_element "count", to: :count

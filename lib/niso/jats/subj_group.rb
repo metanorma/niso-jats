@@ -16,6 +16,7 @@ module Niso
 
       xml do
         element "subj-group"
+        ordered
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "id", to: :id

@@ -12,6 +12,7 @@ module Niso
 
       xml do
         element "title-group"
+        ordered
 
         map_attribute "id", to: :id
         map_element "article-title", to: :article_title

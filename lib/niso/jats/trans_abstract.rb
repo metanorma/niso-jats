@@ -15,6 +15,7 @@ module Niso
 
       xml do
         element "trans-abstract"
+        ordered
 
         map_attribute "abstract-type", to: :abstract_type
         map_attribute "id", to: :id

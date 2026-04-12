@@ -19,6 +19,7 @@ module Niso
 
       xml do
         element "pub-date"
+        ordered
 
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "calendar", to: :calendar

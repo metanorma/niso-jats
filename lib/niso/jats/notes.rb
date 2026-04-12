@@ -51,6 +51,7 @@ module Niso
 
       xml do
         element "notes"
+        ordered
 
         map_attribute "id", to: :id
         map_attribute "notes-type", to: :notes_type

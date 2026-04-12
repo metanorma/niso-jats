@@ -24,6 +24,7 @@ module Niso
 
       xml do
         element "event-desc"
+        ordered
 
         map_content to: :content
         map_attribute "id", to: :id

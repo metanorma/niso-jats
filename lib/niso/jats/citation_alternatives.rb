@@ -11,6 +11,7 @@ module Niso
 
       xml do
         element "citation-alternatives"
+        ordered
 
         map_attribute "id", to: :id
         map_element "object-id", to: :jats_object_id

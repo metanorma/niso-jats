@@ -13,6 +13,7 @@ module Niso
 
       xml do
         element "sec-meta"
+        ordered
 
         map_attribute "id", to: :id
         map_element "object-id", to: :jats_object_id

@@ -12,6 +12,7 @@ module Niso
 
       xml do
         element "journal-title-group"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

@@ -53,6 +53,7 @@ module Niso
 
       xml do
         element "front-stub"
+        ordered
 
         map_attribute "id", to: :id
         map_element "article-id", to: :article_id

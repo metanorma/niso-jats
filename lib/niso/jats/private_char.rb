@@ -13,6 +13,7 @@ module Niso
 
       xml do
         element "private-char"
+        ordered
 
         map_attribute "description", to: :description
         map_attribute "id", to: :id

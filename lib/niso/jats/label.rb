@@ -29,6 +29,7 @@ module Niso
 
       xml do
         element "label"
+        ordered
 
         map_content to: :content
         map_attribute "alt", to: :alt

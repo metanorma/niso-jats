@@ -50,6 +50,7 @@ module Niso
 
       xml do
         element "question-preamble"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id

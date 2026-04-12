@@ -54,6 +54,7 @@ module Niso
 
       xml do
         element "answer"
+        ordered
 
         map_attribute "content-type", to: :content_type
         map_attribute "id", to: :id
