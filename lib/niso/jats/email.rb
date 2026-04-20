@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Email < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :hreflang, :string
       attribute :id, :string

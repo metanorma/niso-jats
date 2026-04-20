@@ -5,7 +5,7 @@ module Niso
     class Sup < Lutaml::Model::Serializable
       include BasicText
 
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :arrange, :string
       attribute :id, :string
       attribute :specific_use, :string

@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class StringName < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :id, :string
       attribute :name_style, :string, default: -> { "western" }

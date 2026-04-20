@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class LicenseParagraph < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :p, Paragraph
       attribute :ext_link, ExtLink, collection: true

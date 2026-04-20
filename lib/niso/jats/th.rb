@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Th < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :abbr, :string
       attribute :align, :string
       attribute :axis, :string

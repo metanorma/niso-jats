@@ -5,7 +5,7 @@ module Niso
     class Bold < Lutaml::Model::Serializable
       include BasicText
 
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :specific_use, :string
       attribute :toggle, :string

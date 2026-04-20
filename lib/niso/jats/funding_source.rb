@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class FundingSource < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :country, :string
       attribute :hreflang, :string
       attribute :id, :string

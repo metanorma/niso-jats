@@ -20,7 +20,7 @@ module Niso
       attribute :char, :string
       attribute :charoff, :string
       attribute :valign, :string, values: %w[top middle bottom]
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :bold, Bold, collection: true
       attribute :fixed_case, FixedCase, collection: true
       attribute :italic, Italic, collection: true
