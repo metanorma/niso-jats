@@ -5,7 +5,7 @@ module Niso
     class Comment < Lutaml::Model::Serializable
       include BasicText
 
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string

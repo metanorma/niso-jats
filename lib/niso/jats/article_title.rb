@@ -5,7 +5,7 @@ module Niso
     class ArticleTitle < Lutaml::Model::Serializable
       include BasicText
 
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :lang, :xml_lang
       attribute :break, Break, collection: true

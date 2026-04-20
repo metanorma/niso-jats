@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class UnstructuredKwdGroup < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :id, :string
       attribute :kwd_group_type, :string

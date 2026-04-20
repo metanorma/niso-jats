@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class RelatedArticle < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :elocation_id, :string
       attribute :ext_link_type, :string
       attribute :hreflang, :string

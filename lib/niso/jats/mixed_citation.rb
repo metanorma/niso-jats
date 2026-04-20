@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class MixedCitation < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :hreflang, :string
       attribute :id, :string
       attribute :publication_format, :string

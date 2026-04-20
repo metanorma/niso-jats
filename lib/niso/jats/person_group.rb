@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class PersonGroup < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :custom_type, :string
       attribute :id, :string
       attribute :person_group_type, :string

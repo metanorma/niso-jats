@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class ExtLink < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :ext_link_type, :string
       attribute :href, :xlink_href

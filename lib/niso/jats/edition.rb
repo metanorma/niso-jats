@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Edition < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :designator, :string
       attribute :id, :string
