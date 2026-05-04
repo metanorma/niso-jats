@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class FundingStatement < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :rid, :string
       attribute :specific_use, :string
@@ -29,7 +29,7 @@ module Niso
 
       xml do
         element "funding-statement"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Collab < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :collab_type, :string
       attribute :hreflang, :string
       attribute :id, :string
@@ -61,7 +61,7 @@ module Niso
 
       xml do
         element "collab"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "collab-type", to: :collab_type

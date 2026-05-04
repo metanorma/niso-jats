@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Kwd < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :content_type, :string
       attribute :id, :string
@@ -29,7 +29,7 @@ module Niso
 
       xml do
         element "kwd"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

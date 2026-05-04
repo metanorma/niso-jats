@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class SeriesTitle < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :id, :string
       attribute :specific_use, :string
@@ -26,7 +26,7 @@ module Niso
 
       xml do
         element "series-title"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

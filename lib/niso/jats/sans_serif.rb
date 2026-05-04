@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class SansSerif < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :specific_use, :string
       attribute :toggle, :string
@@ -48,7 +48,7 @@ module Niso
 
       xml do
         element "sans-serif"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

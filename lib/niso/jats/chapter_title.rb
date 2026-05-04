@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class ChapterTitle < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :specific_use, :string
       attribute :lang, :xml_lang
@@ -40,7 +40,7 @@ module Niso
 
       xml do
         element "chapter-title"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

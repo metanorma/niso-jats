@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Subject < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :content_type, :string
       attribute :id, :string
@@ -35,7 +35,7 @@ module Niso
 
       xml do
         element "subject"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

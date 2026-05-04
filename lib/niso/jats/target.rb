@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Target < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :specific_use, :string
       attribute :target_type, :string
@@ -26,7 +26,7 @@ module Niso
 
       xml do
         element "target"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

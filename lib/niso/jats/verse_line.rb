@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class VerseLine < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :id, :string
       attribute :indent_level, :string
@@ -44,7 +44,7 @@ module Niso
 
       xml do
         element "verse-line"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

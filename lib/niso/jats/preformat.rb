@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Preformat < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :orientation, :string, default: -> { "portrait" }
       attribute :position, :string, default: -> { "float" }
@@ -40,7 +40,7 @@ module Niso
 
       xml do
         element "preformat"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

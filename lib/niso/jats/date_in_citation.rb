@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class DateInCitation < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :calendar, :string
       attribute :content_type, :string
       attribute :id, :string
@@ -18,7 +18,7 @@ module Niso
 
       xml do
         element "date-in-citation"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "calendar", to: :calendar

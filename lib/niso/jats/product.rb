@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Product < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :hreflang, :string
       attribute :id, :string
       attribute :product_type, :string
@@ -107,7 +107,7 @@ module Niso
 
       xml do
         element "product"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "hreflang", to: :hreflang

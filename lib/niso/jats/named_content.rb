@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class NamedContent < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :alt, :string
       attribute :content_type, :string
       attribute :hreflang, :string
@@ -84,7 +84,7 @@ module Niso
 
       xml do
         element "named-content"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "alt", to: :alt
