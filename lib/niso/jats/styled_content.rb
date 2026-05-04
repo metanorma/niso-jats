@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class StyledContent < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :alt, :string
       attribute :id, :string
       attribute :specific_use, :string
@@ -81,7 +81,7 @@ module Niso
 
       xml do
         element "styled-content"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "alt", to: :alt

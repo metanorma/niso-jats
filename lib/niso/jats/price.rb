@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Price < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :currency, :string
       attribute :id, :string
@@ -23,7 +23,7 @@ module Niso
 
       xml do
         element "price"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

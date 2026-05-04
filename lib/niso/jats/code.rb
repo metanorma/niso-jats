@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Code < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :code_type, :string
       attribute :code_version, :string
       attribute :executable, :string
@@ -47,7 +47,7 @@ module Niso
 
       xml do
         element "code"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "code-type", to: :code_type

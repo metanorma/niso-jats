@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class AwardId < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :award_id_type, :string
       attribute :award_type, :string
@@ -41,7 +41,7 @@ module Niso
 
       xml do
         element "award-id"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

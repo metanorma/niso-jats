@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Role < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :assigning_authority, :string
       attribute :content_type, :string
       attribute :degree_contribution, :string
@@ -32,7 +32,7 @@ module Niso
 
       xml do
         element "role"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority

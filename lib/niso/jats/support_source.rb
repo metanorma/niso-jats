@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class SupportSource < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :country, :string
       attribute :hreflang, :string
       attribute :id, :string
@@ -42,7 +42,7 @@ module Niso
 
       xml do
         element "support-source"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "country", to: :country

@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class EventDesc < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :id, :string
       attribute :specific_use, :string
       attribute :lang, :xml_lang
@@ -24,7 +24,7 @@ module Niso
 
       xml do
         element "event-desc"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "id", to: :id

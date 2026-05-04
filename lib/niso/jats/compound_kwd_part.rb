@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class CompoundKwdPart < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :content_type, :string
       attribute :id, :string
       attribute :bold, Bold, collection: true
@@ -33,7 +33,7 @@ module Niso
 
       xml do
         element "compound-kwd-part"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "content-type", to: :content_type

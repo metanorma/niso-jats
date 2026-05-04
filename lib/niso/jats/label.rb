@@ -3,7 +3,7 @@
 module Niso
   module Jats
     class Label < Lutaml::Model::Serializable
-      attribute :content, :string
+      attribute :content, :string, collection: true
       attribute :alt, :string
       attribute :id, :string
       attribute :lang, :xml_lang
@@ -29,7 +29,7 @@ module Niso
 
       xml do
         element "label"
-        ordered
+        mixed_content
 
         map_content to: :content
         map_attribute "alt", to: :alt
