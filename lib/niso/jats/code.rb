@@ -48,7 +48,6 @@ module Niso
       xml do
         element "code"
         mixed_content
-
         map_content to: :content
         map_attribute "code-type", to: :code_type
         map_attribute "code-version", to: :code_version

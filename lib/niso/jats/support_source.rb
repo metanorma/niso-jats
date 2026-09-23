@@ -43,7 +43,6 @@ module Niso
       xml do
         element "support-source"
         mixed_content
-
         map_content to: :content
         map_attribute "country", to: :country
         map_attribute "hreflang", to: :hreflang

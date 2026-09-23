@@ -48,7 +48,6 @@ module Niso
       xml do
         element "chem-struct"
         mixed_content
-
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

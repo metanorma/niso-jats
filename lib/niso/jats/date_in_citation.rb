@@ -19,7 +19,6 @@ module Niso
       xml do
         element "date-in-citation"
         mixed_content
-
         map_content to: :content
         map_attribute "calendar", to: :calendar
         map_attribute "content-type", to: :content_type

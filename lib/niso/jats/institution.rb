@@ -16,7 +16,6 @@ module Niso
       xml do
         element "institution"
         mixed_content
-
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "hreflang", to: :hreflang

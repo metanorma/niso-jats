@@ -42,7 +42,6 @@ module Niso
       xml do
         element "award-id"
         mixed_content
-
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "award-id-type", to: :award_id_type

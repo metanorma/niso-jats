@@ -33,7 +33,6 @@ module Niso
       xml do
         element "role"
         mixed_content
-
         map_content to: :content
         map_attribute "assigning-authority", to: :assigning_authority
         map_attribute "content-type", to: :content_type

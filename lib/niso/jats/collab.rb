@@ -62,7 +62,6 @@ module Niso
       xml do
         element "collab"
         mixed_content
-
         map_content to: :content
         map_attribute "collab-type", to: :collab_type
         map_attribute "hreflang", to: :hreflang

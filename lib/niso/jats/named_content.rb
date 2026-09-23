@@ -85,7 +85,6 @@ module Niso
       xml do
         element "named-content"
         mixed_content
-
         map_content to: :content
         map_attribute "alt", to: :alt
         map_attribute "content-type", to: :content_type
