@@ -98,7 +98,6 @@ module Niso
       xml do
         element "related-object"
         mixed_content
-
         map_content to: :content
         map_attribute "content-type", to: :content_type
         map_attribute "document-id", to: :document_id

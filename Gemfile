@@ -10,7 +10,7 @@ gem "lutaml-model", github: "lutaml/lutaml-model", branch: "main"
 gem "nokogiri"
 gem "oasis-etm",
     github: "lutaml/oasis-etm",
-    branch: "fix/mixed-content-collection"
+    branch: "main"
 gem "rake", "~> 13.0"
 gem "rspec", "~> 3.11"
 gem "rubocop"

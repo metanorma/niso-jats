@@ -41,7 +41,6 @@ module Niso
       xml do
         element "part-title"
         mixed_content
-
         map_content to: :content
         map_attribute "id", to: :id
         map_attribute "specific-use", to: :specific_use

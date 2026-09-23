@@ -30,7 +30,6 @@ module Niso
       xml do
         element "label"
         mixed_content
-
         map_content to: :content
         map_attribute "alt", to: :alt
         map_attribute "id", to: :id

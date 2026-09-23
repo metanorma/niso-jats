@@ -108,7 +108,6 @@ module Niso
       xml do
         element "product"
         mixed_content
-
         map_content to: :content
         map_attribute "hreflang", to: :hreflang
         map_attribute "id", to: :id
